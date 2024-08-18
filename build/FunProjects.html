@@ -12,19 +12,47 @@
 <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
 
 </head>
+<header class="font-Daruma dark:bg-rata-eyeliner dark:text-slate-50 bg-slate-50 text-rata-eyeliner sticky top-0 z-40">
+  <section class="max-w-4xl mx-auto p-4 flex justify-between items-center">
+      <h1 class="font-Daruma text-3xl font-medium"><a href="#hero">Emilia Hernandez</a>
+      </h1>
+      <div>
+          <button id="mobile-open-button" class="text-3xl sm:hidden focus:outline-none">
+              &#9776;
+          </button>
+          <nav class="hidden sm:block space-x-8 text-xl" aria-label="main">
+              <a href="#work" class="hover:opacity-90">Work</a>
+              <a href="" class="hover:opacity-90">Projects</a>
+              <a href="" class="hover:opacity-90">Resume</a>
+          </nav>
+      </div>
+  </section>
+</header>
 <body class="min-h-screen bg-slate-50 dark:bg-rata-eyeliner dark:text-slate-50 font-RedHat z-0">
     <main class="mx-auto">
 
       <section id="LLD" class=" p-4 z-30 pb-2 ">
-        <div class="dark:text-slate-50 justify-center max-w-4xl mx-auto grid grid-cols-6 gap-2 text-rata-eyeliner pt-10">
-            <div class="pl-5 col-span-3 gap-2">
-                <h3 class="text-4xl pb-2 dark:text-zip-poncho text-zip-blue font-Daruma">Lucky Little Darlings</h3>
-                <h4 class="dark:text-slate-50 text-zip-blue font-Daruma text-2xl">An original brand of art, products, and digital media, starring cute, little characters</h4>
+        <div>
+
+          <article class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl px-8 pb-24 pt-4 max-w-screen-2xl mx-auto mt-12 mb-10">
+            <img src="img/FunProjects.png" alt="University of Southern California" class="absolute inset-0 h-full w-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
+            <h3 class="z-10 text-3xl font-bold text-white">Fun Projects</h3>
+        </article>
+
+        </div>
+        <div class="dark:text-slate-50 justify-center max-w-4xl mx-auto grid pt-10">
+          <img class="rounded-lg" src="img/LuckylittleDarlings-cards (1).png">
+            </div>
+        <div class="dark:text-slate-50 justify-center max-w-4xl mx-auto grid grid-cols-12 gap-2 text-rata-eyeliner pt-10">
+            <div class="pl-5 col-span-8 gap-2  text-rata-eyeliner dark:text-slate-50 p-5 rounded-lg w-fit">
+                <h3 class="text-4xl pb-2 font-Daruma">Lucky Little Darlings</h3>
+                <h4 class=" text-2xl font-medium">An original brand of art, products, and digital media - starring cute, little characters</h4>
             </div>
             <div class="pl-5 col-span-1"></div>
-              <div class="pl-5 col-span-2">
-                <div class="relative bg-zip-blue dark:bg-zip-poncho dark:text-rata-eyeliner text-slate-50 p-5 rounded-lg w-fit">
-                  <p class=" mb-4 font-Daruma">What I do:</p>
+              <div class="pl-5 col-span-3">
+                <div class="relative  text-rata-eyeliner dark:text-slate-50 p-5 rounded-lg w-fit border-solid border-2 dark:border-slate-50 border-rata-eyeliner">
+                  <p class=" mb-4 font-Daruma text-xl">What I do:</p>
                   <ul class="list-disc list-inside">
                     <li>Design</li>
                     <li>Commerce</li>
@@ -32,29 +60,33 @@
                     <li>Development</li>
                   </ul>
                   <!-- Image floated at the bottom right corner, half inside and half outside -->
-                  <img src="img/20.png" alt="Decorative image" class="absolute bottom-0 right-0 w-32 h-32 object-cover rounded-full -mr-20 mb-20">
+                  <img src="img/Rata-Walking.png" alt="Decorative image" class="absolute bottom-0 right-0 w-1/2 h-1/2 -mr-16 mb-20">
                 </div>
                 
                 
             </div>
         </div>
     </section>
-    <section id="lldImage" class="flex-col-reverse justify-center sm:flex-row p-6 items-center gap-8 mb-12 dark:border-b-sky-100 border-dashed border-b-4 border-b-slate-950">
-      <div class="dark:text-slate-50 justify-center max-w-4xl mx-auto grid pt-10">
-<img class="rounded-lg" src="img/header.png">
+    <section id="lldImage" class="flex-col-reverse justify-center sm:flex-row  items-center gap-8 mb-12 dark:border-b-sky-100 border-dashed border-b-4 border-b-slate-950">
+  <div class="relative left-0 max-w-4xl mx-auto mb-10">
+    <button type="button" class="relative font-Daruma text-rata-eyeliner dark:text-slate-50 bg-zip-poncho focus:outline-none font-medium rounded-full text-md px-5 py-2.5 ml-0 mt-5 dark:bg-zip-blue border-solid border-2 dark:border-slate-50 border-rata-eyeliner z-10 pl-10">
+      <!-- Button Text -->
+      Explore Lucky Little Darlings
+      <!-- Image -->
+      <img src="img/Zip Walking.png" alt="Button Icon" class="absolute -bottom-1 -left-10 w-20 h-auto z-0" />
+    </button>
   </div>
-  <div class="left-0 max-w-4xl mx-auto">
-    <button type="button" class="font-Daruma text-rata-eyeliner dark:text-slate-50 bg-zip-poncho focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 ml-0 mt-2 dark:bg-zip-blue border-solid border-2 dark:border-slate-50 border-rata-eyeliner">Explore Lucky Little Darlings</button>
-  </div>
+  
+  
   </section>
 
 
 <section id="3DModels" class="p-4 z-30 pb-10 dark:border-b-sky-100 border-dashed border-b-4 border-b-slate-950">
-  <div class="dark:text-slate-50 justify-center max-w-4xl mx-auto grid grid-cols-4 gap-2 text-rata-eyeliner">        
+  <div class="dark:text-slate-50 justify-center max-w-4xl mx-auto grid grid-cols-5 gap-2 text-rata-eyeliner">        
     <div class="pl-5 col-span-2">
-          <img>
+          <img src="img/Lucky Little Backpack 2.png">
       </div>
-      <div class="pl-5 col-span-2 gap-2">
+      <div class="pl-5 col-span-2 gap-2 pt-12">
           <h3 class="text-4xl pb-2 dark:text-zip-poncho text-zip-blue font-Daruma">3D Models</h3>
           <p class="dark:text-slate-50 text-zip-blue font-Daruma text-2xl">Using Womp3D, I have started to learn the joys of 3D modeling </p>
           <br>
@@ -74,17 +106,15 @@
   <div class="justify-center max-w-4xl mx-auto grid grid-cols-12 gap-2 ">   
     <div class="pl-5 col-span-3 gap-2 p-10">
       <div class="relative bg-zip-blue dark:bg-zip-poncho dark:text-rata-eyeliner text-slate-50 p-5 rounded-lg w-fit">
-        <p class=" mb-4 font-Daruma">What I do:</p>
+        <p class=" mb-4 font-Daruma text-xl">What I did:</p>
         <ul class="list-disc list-inside">
           <li>Mural</li>
           <li>Signage</li>
           <li>Showcases</li>
         </ul>
-        <!-- Image floated at the bottom right corner, half inside and half outside -->
-        <img src="img/20.png" alt="Decorative image" class="absolute bottom-0 right-0 w-32 h-32 object-cover rounded-full -mr-20 mb-20">
       </div>
       <br>
-      <button type="button" class="font-Daruma text-rata-eyeliner dark:text-slate-50 bg-zip-poncho focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-zip-blue border-solid border-2 dark:border-slate-50 border-rata-eyeliner">Explore Public Art</button>
+      <button type="button" class="font-Daruma text-rata-eyeliner dark:text-slate-50 bg-zip-poncho focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-zip-blue border-solid border-2 dark:border-slate-50 border-rata-eyeliner"><a href="public-art.html">Explore Public Art</a></button>
   </div>     
     <div class="pl-5 col-span-8">
       <img src="img/Group 2.png">
@@ -110,7 +140,7 @@
             <li>Project Management</li>
           </ul>
           <!-- Image floated at the bottom right corner, half inside and half outside -->
-          <img src="img/20.png" alt="Decorative image" class="absolute bottom-0 right-0 w-32 h-32 object-cover rounded-full -mr-20 mb-20">
+          <img src="img/UnderConstruction.png" alt="Decorative image" class="absolute bottom-0 right-0 w-24 h-24 object-cover rounded-full -mr-14 mb-20">
         </div>
           <br>
           <button type="button" class="font-Daruma text-rata-eyeliner dark:text-slate-50 bg-zip-poncho focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-zip-blue border-solid border-2 dark:border-slate-50 border-rata-eyeliner">Explore my Games</button>
