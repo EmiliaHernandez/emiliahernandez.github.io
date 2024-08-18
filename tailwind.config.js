@@ -4,9 +4,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'zip-poncho': '#CDF9AA',
+        'zip-poncho': 'rgb(249 236 170)',
         'zip-blue': '#751A46',
-        'rata-eyeliner':'#1D1E23'
+        'rata-eyeliner':'rgb(13 18 37)'
       }
     },
     fontFamily: {
