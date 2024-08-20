@@ -2224,6 +2224,10 @@ details.collapse summary::-webkit-details-marker {
   margin-bottom: -1px;
 }
 
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -2892,6 +2896,10 @@ details.collapse summary::-webkit-details-marker {
 
 .pb-5 {
   padding-bottom: 1.25rem;
+}
+
+.pb-20 {
+  padding-bottom: 5rem;
 }
 
 .text-left {
