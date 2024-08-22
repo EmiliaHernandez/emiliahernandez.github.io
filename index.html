@@ -10,17 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
-<script defer>
-    if (localStorage.getItem('dark-mode') === 'true' || (!('dark-mode' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.querySelector('html').classList.add('dark');
-    } else {
-        document.querySelector('html').classList.remove('dark');
-    }
-    </script>
-    <script>lightSwitch.addEventListener('change', () => {
-        console.log('Checkbox changed');
-        // other code
-      });</script>
+
 </head>
 <body class="min-h-screen bg-slate-50 dark:bg-rata-eyeliner dark:text-slate-50 font-RedHat">
     <header class="dark:rata-black-eyeliner.text-slate-50 bg-slate-100.text-black sticky top-0 z-10">
@@ -315,12 +305,18 @@
                     </section>
 
     </main>
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
-</body>
-    <script>
+    <script defer>
+        if (localStorage.getItem('dark-mode') === 'true' || (!('dark-mode' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.querySelector('html').classList.add('dark');
+        } else {
+            document.querySelector('html').classList.remove('dark');
+        }
+        </script>
+        <script>lightSwitch.addEventListener('change', () => {
+            console.log('Checkbox changed');
+            // other code
+          });</script>
+          <script>
         const lightSwitches = document.querySelectorAll('.light-switch');
         if (lightSwitches.length > 0) {
           lightSwitches.forEach((lightSwitch, i) => {
@@ -344,11 +340,9 @@
             });
           });
         }
-<<<<<<< Updated upstream
-    </script>
-=======
         </script>
->>>>>>> Stashed changes
+</body>
+    
     <footer class="footer dark:bg-zip-poncho dark:text-rata-eyeliner bg-rata-eyeliner text-slate-50 p-10 mt-20">
         <nav>
           <h6 class="footer-title"><a href="#workExperience">Work Experience</a></h6>
