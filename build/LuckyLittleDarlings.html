@@ -10,7 +10,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
-
+<script>
+    if (localStorage.getItem('dark-mode') === 'true' || (!('dark-mode' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.querySelector('html').classList.add('dark');
+    } else {
+        document.querySelector('html').classList.remove('dark');
+    }
+    </script>
 </head>
 <body class="min-h-screen bg-slate-50 dark:bg-rata-eyeliner dark:text-slate-50 font-RedHat z-0">
     <header class="dark:rata-black-eyeliner.text-slate-50 bg-slate-100.text-black sticky top-0 z-10">
@@ -66,13 +72,27 @@
               <div class="dropdown dropdown-hover pr-5">
                 <div tabindex="0" role="button" class=" m-1 font-bold"><a href="img/Emilia Hernandez - Resume 2024 - Summer.pdf">Resume</a></div>
               </div>
+              <div class="flex flex-col justify-center ml-3">
+                <input type="checkbox" name="light-switch" class="light-switch sr-only" />
+                <label class="relative cursor-pointer p-2" for="light-switch">
+                    <svg class="dark:hidden" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                        <path class="fill-slate-300" d="M7 0h2v2H7zM12.88 1.637l1.414 1.415-1.415 1.413-1.413-1.414zM14 7h2v2h-2zM12.95 14.433l-1.414-1.413 1.413-1.415 1.415 1.414zM7 14h2v2H7zM2.98 14.364l-1.413-1.415 1.414-1.414 1.414 1.415zM0 7h2v2H0zM3.05 1.706 4.463 3.12 3.05 4.535 1.636 3.12z" />
+                        <path class="fill-slate-400" d="M8 4C5.8 4 4 5.8 4 8s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4Z" />
+                    </svg>
+                    <svg class="hidden dark:block" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                        <path class="fill-slate-400" d="M6.2 1C3.2 1.8 1 4.6 1 7.9 1 11.8 4.2 15 8.1 15c3.3 0 6-2.2 6.9-5.2C9.7 11.2 4.8 6.3 6.2 1Z" />
+                        <path class="fill-slate-500" d="M12.5 5a.625.625 0 0 1-.625-.625 1.252 1.252 0 0 0-1.25-1.25.625.625 0 1 1 0-1.25 1.252 1.252 0 0 0 1.25-1.25.625.625 0 1 1 1.25 0c.001.69.56 1.249 1.25 1.25a.625.625 0 1 1 0 1.25c-.69.001-1.249.56-1.25 1.25A.625.625 0 0 1 12.5 5Z" />
+                    </svg>
+                    <span class="sr-only">Switch to light / dark version</span>
+                </label>
+            </div>
               <div>
             </div>
           </div>
     </header>
     <main class="mx-auto">
         <div class="relative max-w-4xl mx-auto pt-10">
-            <img src="img/LLDBanner.jpg" alt="University of Southern California" class="object-cover rounded-lg w-full h-full">
+            <img src="img/LLDBanner.jpg" alt="Illustration of bunny staring at stars on a mountain" class="object-cover rounded-lg w-full h-full">
             <div class="absolute bottom-4 right-4 text-slate-50 p-4 rounded-lg text-right">
                 <h1 class="text-4xl font-bold font-Daruma">Lucky Little Darlings</h1>
                 <p class="mt-2 font-Daruma"></p>
@@ -87,7 +107,7 @@
                 
             </div>
               <div class="pl-5 col-span-12 sm:col-span-5 pb-10">
-<img class="rounded-lg" src="img/2d_Emilia-Appreciate.png">
+<img class="rounded-lg" alt="illustration of all the darlings with text: appreciate the little things" src="img/2d_Emilia-Appreciate.png">
             </div>
         </div>
     </Section>
@@ -104,7 +124,7 @@
 <section class=" mt-10 relative  max-w-4xl mx-auto ">
     <div class="dark:text-slate-50 justify-center grid grid-cols-12 gap-2 ">
                  <div class=" mx-auto p-5 col-span-12 sm:col-span-4 text-rata-eyeliner border-2 border-solid border-rata-eyeliner dark:border-slate-50 rounded-lg w-fit">
-<img class="mx-auto rounded-lg" src="img/SocialMedia_pink.jpg">
+<img class="mx-auto rounded-lg" src="img/SocialMedia_pink.jpg" alt="phone mockup of LLD tumblr page">
 <h3 class="pt-5 text-center text-4xl pb-2 font-Daruma text-zip-blue dark:text-zip-poncho">Social Media
 </h3>
 <h4 class="pl-5 pt-2 font-medium text-rata-eyeliner dark:text-slate-50">
@@ -123,7 +143,7 @@ I manage the accounts and publish most of the posts.
         </div> 
 <!--game dev-->
         <div class="mx-auto p-5 col-span-12 sm:col-span-4 text-rata-eyeliner border-2 border-solid border-rata-eyeliner dark:border-slate-50 rounded-lg w-fit">
-            <img class="mx-auto rounded-lg" src="img/game_pink.jpg">
+            <img class="mx-auto rounded-lg" src="img/game_pink.jpg" alt="mockup of tablet with video game screenshot">
             <h3 class="pt-5 pb-2 text-center text-4xl font-Daruma text-zip-blue dark:text-zip-poncho">Game Dev
             </h3>
             <h4 class="pl-5 font-medium text-rata-eyeliner dark:text-slate-50">
@@ -132,14 +152,14 @@ I manage the accounts and publish most of the posts.
                 We made a short game, featuring the darlings.</li>
                 <li class="pb-2">I took a lead on the project, art, and development.
             </li>
-            <li class="pb-2">More info is available on my <a class="dark:text-zip-poncho text-zip-blue" href="Game-jams.html/#LLDgame">Game Jam page.</a>
+            <li class="pb-2">More info is available on my <a class="dark:text-zip-poncho text-zip-blue" href="video-games.html#lldGame">vide games page.</a>
             </li>
                 </ul>
             </h4>
                     </div> 
                     <!--commerce-->
         <div class=" mx-auto p-5 col-span-12 sm:col-span-4 text-rata-eyeliner border-2 border-solid border-rata-eyeliner dark:border-slate-50 rounded-lg w-fit">
-            <img class="mx-auto rounded-lg" src="img/shop_pink.jpg">
+            <img class="mx-auto rounded-lg" src="img/shop_pink.jpg" alt="mockup of LLD shop storefront">
             <h3 class="pt-5 text-center text-4xl pb-2 font-Daruma text-zip-blue dark:text-zip-poncho">Commerce
             </h3>
             <h4 class="pl-5 font-medium text-rata-eyeliner dark:text-slate-50">
@@ -178,91 +198,91 @@ I manage the accounts and publish most of the posts.
                 <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 max-w-4xl mx-auto pb-10 pt-1">
                     <div class="grid gap-2">
                 <div>
-                    <img class="h-auto max-w-full rounded-lg" src="img/2D_Fruits.png" alt="">
+                    <img class="h-auto max-w-full rounded-lg" src="img/2D_Fruits.png" alt="illustration of all the darlings with fruit hats">
                 </div>                
                 <div>
-                    <img class="h-auto max-w-full rounded-lg" src="img/2D_One Hundred Pictures.png" alt="">
+                    <img class="h-auto max-w-full rounded-lg" src="img/2D_One Hundred Pictures.png" alt="illustration of panda taking photos of posing lion">
                 </div>
                 <div>
-                    <img class="h-auto max-w-full rounded-lg" src="img/2D_Emilia - always in my heart.png" alt="">
+                    <img class="h-auto max-w-full rounded-lg" src="img/2D_Emilia - always in my heart.png" alt="illustration of locket with a darling in each side of the picture pocket">
                 </div>
                 <div>
-                    <img class="h-auto max-w-full rounded-lg" src="img/2D_Strength is in all of us.png" alt="">
+                    <img class="h-auto max-w-full rounded-lg" src="img/2D_Strength is in all of us.png" alt="illustration of all the darlings doing olympic sports">
                 </div>
 
                 <div>
-                    <img class="h-auto max-w-full rounded-lg" src="img/2D_Amora - Lucky LIttle Darlings Character Bio.png" alt="">
+                    <img class="h-auto max-w-full rounded-lg" src="img/2D_Amora - Lucky LIttle Darlings Character Bio.png" alt="illustration of pink dog - amora">
                 </div>
                 <div>
-                    <img class="h-auto max-w-full rounded-lg" src="img/2D_Juniper - Lucky LIttle Darlings Character Bio.png" alt="">
+                    <img class="h-auto max-w-full rounded-lg" src="img/2D_Juniper - Lucky LIttle Darlings Character Bio.png" alt="illustration of purple panda- juniper">
                 </div>
-
-            
-            </div>
-            <div class="grid gap-2">
-                <div>
-                    <img class="h-auto max-w-full rounded-lg" src="img/2D_Flowers.png" alt="">
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-lg" src="img/2D_Dance_Dance_20240726_181356_0000.png" alt="">
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-lg" src="img/2D_Emilia - Love you bro.jpg" alt="">
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-lg" src="img/2D_Emilia - Lucky LIttle Darlings Leonessa Comic.jpg" alt="">
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-lg" src="img/2D_Zip - Lucky LIttle Darlings Character Bio.png" alt="">
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-lg" src="img/2D_.png" alt="">
-                </div>
-
 
             
             </div>
             <div class="grid gap-2">
                 <div>
-                    <img class="h-auto max-w-full rounded-lg" src="img/2D_Emilia - Going Places.png" alt="">
+                    <img class="h-auto max-w-full rounded-lg" src="img/2D_Flowers.png" alt="illustration of all the darlings holding a unique set of flowers">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-lg" src="img/2D_Dance_Dance_20240726_181356_0000.png" alt="illustration of racoon and dog dancing with the text - dance dance">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-lg" src="img/2D_Emilia - Love you bro.jpg" alt="illustration of 2 cats admiring each other - they are bros">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-lg" src="img/2D_Emilia - Lucky LIttle Darlings Leonessa Comic.jpg" alt="illustration of lion drawing a face tattoo with marker">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-lg" src="img/2D_Zip - Lucky LIttle Darlings Character Bio.png" alt="illustration of blue cat- zip">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-lg" src="img/2D_.png" alt="illustration of cyan raccoon - celestine">
+                </div>
+
+
+            
+            </div>
+            <div class="grid gap-2">
+                <div>
+                    <img class="h-auto max-w-full rounded-lg" src="img/2D_Emilia - Going Places.png" alt="illustration of 4 darlings walking with the text - going places">
                 </div>
                 
                 <div>
-                    <img class="h-auto max-w-full rounded-lg" src="img/2D_GlassesShop.png" alt="">
+                    <img class="h-auto max-w-full rounded-lg" src="img/2D_GlassesShop.png" alt="illustration of 6 darlings wearing silly sunglasses">
                 </div>
                 <div>
-                    <img class="h-auto max-w-full rounded-lg" src="img/2D_You have beautiful eyes.png" alt="">
+                    <img class="h-auto max-w-full rounded-lg" src="img/2D_You have beautiful eyes.png" alt="illustration of panda with star eyes admiring red cat with star eyes">
                 </div>
                 <div>
-                    <img class="h-auto max-w-full rounded-lg" src="img/2D_Emilia-Sticker Sheet.png" alt="">
+                    <img class="h-auto max-w-full rounded-lg" src="img/2D_Emilia-Sticker Sheet.png" alt="assortment of stickers illustrated by Emilia">
                 </div>
                 <div>
-                    <img class="h-auto max-w-full rounded-lg" src="img/2D_Rata - Lucky LIttle Darlings Character Bio.png" alt="">
+                    <img class="h-auto max-w-full rounded-lg" src="img/2D_Rata - Lucky LIttle Darlings Character Bio.png" alt="illustration of green rat- rata">
                 </div>
                 <div>
-                    <img class="h-auto max-w-full rounded-lg" src="img/2D_Dandy - Lucky LIttle Darlings Character Bio.png" alt="">
+                    <img class="h-auto max-w-full rounded-lg" src="img/2D_Dandy - Lucky LIttle Darlings Character Bio.png" alt="illlustration of orange bunny-dandy">
                 </div>
 
             </div>
             <div class="grid gap-2">
                 <div>
-                    <img class="h-auto max-w-full rounded-lg" src="img/2D_Love is all around.jpg" alt="">
+                    <img class="h-auto max-w-full rounded-lg" src="img/2D_Love is all around.jpg" alt="illustration of all the darlings laying in a circle in grass with the text - love is all around">
                 </div>
                 <div>
-                    <img class="h-auto max-w-full rounded-lg" src="img/2D_Gizmo is 4 u.png" alt="">
+                    <img class="h-auto max-w-full rounded-lg" src="img/2D_Gizmo is 4 u.png" alt=" illustration of the red cat-gizmo handing you tulips">
                 </div>
                 <div>
-                    <img class="h-auto max-w-full rounded-lg" src="img/2D_Emilia - Summer is here.jpg" alt="">
+                    <img class="h-auto max-w-full rounded-lg" src="img/2D_Emilia - Summer is here.jpg" alt="illustration of darlings swimming in ocean, a giant sun has leonessa's face">
                 </div>
                 <div>
-                    <img class="h-auto max-w-full rounded-lg" src="img/Dandy_Sky.jpg" alt="">
+                    <img class="h-auto max-w-full rounded-lg" src="img/Dandy_Sky.jpg" alt="illustration of orange bunny-dandy">
                 </div>
                 
                 <div>
-                    <img class="h-auto max-w-full rounded-lg" src="img/2D_Leonessa - Lucky LIttle Darlings Character Bio.png" alt="">
+                    <img class="h-auto max-w-full rounded-lg" src="img/2D_Leonessa - Lucky LIttle Darlings Character Bio.png" alt="illustration of lion-lionessa">
                 </div>
                 <div>
-                    <img class="h-auto max-w-full rounded-lg" src="img/2D_Gizmo.png" alt="">
+                    <img class="h-auto max-w-full rounded-lg" src="img/2D_Gizmo.png" alt="illustration of red cat-gizmo, he has big star eyes">
                 </div>
 
             </div>
@@ -279,26 +299,26 @@ I manage the accounts and publish most of the posts.
             <div class="grid grid-cols-1 sm:grid-cols-1 gap-4 max-w-4xl mx-auto pt-5">
                 <div class="grid gap-4">
                     <div>
-                        <img class="h-auto max-w-full rounded-lg" src="img/3D_LLD_squad1.jpg" alt="">
+                        <img class="h-auto max-w-full rounded-lg" src="img/3D_LLD_squad1.jpg" alt="3d model of 4 darlings sitting in yellow background by Emilia">
                     </div>
                     </div>
                     </div>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl mx-auto pb-10 pt-5">
                     <div class="grid gap-4">
                 <div>
-                    <img class="h-auto max-w-full rounded-lg" src="img/LLDBackpack.jpg" alt="">
+                    <img class="h-auto max-w-full rounded-lg" src="img/LLDBackpack.jpg" alt="3d model of backpack with a giant rat plushy and colorful pins of the darlings">
                 </div>
         
             </div>
             <div class="grid gap-4">
                 <div>
-                    <img class="h-auto max-w-full rounded-lg" src="img/3D_Juni_OrangeJuice1.jpg" alt="">
+                    <img class="h-auto max-w-full rounded-lg" src="img/3D_Juni_OrangeJuice1.jpg" alt="3d model of panda with large glass of orange juice by Emilia">
                 </div>
         
             </div>
             <div class="grid gap-4">
                 <div>
-                    <img class="h-auto max-w-full rounded-lg" src="img/3D_zip1.png" alt="">
+                    <img class="h-auto max-w-full rounded-lg" alt="3d model of cat on skateboard by Emilia" src="img/3D_zip1.png">
                 </div>
             </div>
             
@@ -490,6 +510,31 @@ I manage the accounts and publish most of the posts.
             </div>
         </div>
 </Section>
+<script>
+    const lightSwitches = document.querySelectorAll('.light-switch');
+    if (lightSwitches.length > 0) {
+      lightSwitches.forEach((lightSwitch, i) => {
+        if (localStorage.getItem('dark-mode') === 'true') {
+          lightSwitch.checked = true;
+        }
+        lightSwitch.addEventListener('change', () => {
+          const { checked } = lightSwitch;
+          lightSwitches.forEach((el, n) => {
+            if (n !== i) {
+              el.checked = checked;
+            }
+          });
+          if (lightSwitch.checked) {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('dark-mode', true);
+          } else {
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem('dark-mode', false);
+          }
+        });
+      });
+    }
+    </script>
 </body>
 <footer class="footer dark:bg-zip-poncho dark:text-rata-eyeliner bg-rata-eyeliner text-slate-50 p-10 mt-20">
     <nav>
@@ -518,12 +563,12 @@ I manage the accounts and publish most of the posts.
       </p>
     </aside>
     <nav class="md:place-self-center md:justify-self-end">
-      <div class="grid grid-flow-col gap-4">
+      <div class="grid grid-flow-col gap-4 text-center">
         <a target="_blank" href="https://www.linkedin.com/in/emilia-hernandez-560489159/">
-            <svg class="fill-zip-poncho dark:fill-rata-eyeliner" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"/></svg>
+            <svg class="fill-zip-poncho dark:fill-rata-eyeliner mx-auto" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"/></svg>LinkedIn
         </a>
-        <a target="_blank" href="https://github.com/EmiliaHernandez">
-            <svg class="fill-zip-poncho dark:fill-rata-eyeliner" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        <a class="text-center" target="_blank" href="https://github.com/EmiliaHernandez">
+            <svg class="fill-zip-poncho dark:fill-rata-eyeliner mx-auto" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>Github
         </a>
       
       </div>
