@@ -10,6 +10,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+<script>
+  if (localStorage.getItem('dark-mode') === 'true' || (!('dark-mode' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.querySelector('html').classList.add('dark');
+  } else {
+      document.querySelector('html').classList.remove('dark');
+  }
+  </script>
 </head>
 <body class="min-h-screen bg-slate-50  dark:bg-rata-eyeliner dark:text-slate-50 font-RedHat">
   <header class="dark:rata-black-eyeliner.text-slate-50 bg-slate-100.text-black sticky top-0 z-10">
@@ -65,6 +72,20 @@
           <div class="dropdown dropdown-hover pr-5">
             <div tabindex="0" role="button" class=" m-1 font-bold"><a href="img/Emilia Hernandez - Resume 2024 - Summer.pdf">Resume</a></div>
           </div>
+          <div class="flex flex-col justify-center ml-3">
+            <input type="checkbox" name="light-switch" class="light-switch sr-only" />
+            <label class="relative cursor-pointer p-2" for="light-switch">
+                <svg class="dark:hidden" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                    <path class="fill-slate-300" d="M7 0h2v2H7zM12.88 1.637l1.414 1.415-1.415 1.413-1.413-1.414zM14 7h2v2h-2zM12.95 14.433l-1.414-1.413 1.413-1.415 1.415 1.414zM7 14h2v2H7zM2.98 14.364l-1.413-1.415 1.414-1.414 1.414 1.415zM0 7h2v2H0zM3.05 1.706 4.463 3.12 3.05 4.535 1.636 3.12z" />
+                    <path class="fill-slate-400" d="M8 4C5.8 4 4 5.8 4 8s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4Z" />
+                </svg>
+                <svg class="hidden dark:block" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                    <path class="fill-slate-400" d="M6.2 1C3.2 1.8 1 4.6 1 7.9 1 11.8 4.2 15 8.1 15c3.3 0 6-2.2 6.9-5.2C9.7 11.2 4.8 6.3 6.2 1Z" />
+                    <path class="fill-slate-500" d="M12.5 5a.625.625 0 0 1-.625-.625 1.252 1.252 0 0 0-1.25-1.25.625.625 0 1 1 0-1.25 1.252 1.252 0 0 0 1.25-1.25.625.625 0 1 1 1.25 0c.001.69.56 1.249 1.25 1.25a.625.625 0 1 1 0 1.25c-.69.001-1.249.56-1.25 1.25A.625.625 0 0 1 12.5 5Z" />
+                </svg>
+                <span class="sr-only">Switch to light / dark version</span>
+            </label>
+        </div>
           <div>
         </div>
       </div>
@@ -79,7 +100,7 @@
                             <h3 class="pt-2 font-medium">Web Designer, May 2021 - May 2023</h3>
                             <h3 class="pt-2">I worked in a team of 2-3 web designers who were in charge of any site changes for 3 sites under the ucf domain. Most projects were completed collaboratively, but I am showcasing the pages that I had the largest hand in designing/developing.</h3>
         </div>
-        </section>
+        </section>a
 
         <section id="Palooza" class="dark:bg-rata-eyeliner  p-4 z-30 pb-10 dark:border-b-sky-100 border-dashed border-b-4 border-b-slate-950">
             <div class="dark:text-slate-50 justify-center max-w-4xl mx-auto grid grid-cols-12 gap-1 dark:bg-rata-eyeliner  text-rata-eyeliner pt-5">
@@ -88,16 +109,16 @@
                     
                     <div class="carousel carousel-vertical rounded-box h-96 border-2 border-zip-blue dark:border-rata-eyeliner">
                         <div class="carousel-item w-full">
-                          <img src="img/about-0.png" />
+                          <img alt="screenshot of about screen" src="img/about-0.png" />
                         </div>
                         <div class="carousel-item w-full">
-                          <img src="img/about-1.png" />
+                          <img alt="screenshot of about screen" src="img/about-1.png" />
                         </div>
                         <div class="carousel-item -full">
-                          <img src="img/about-2.png" />
+                          <img alt="screenshot of about screen" src="img/about-2.png" />
                         </div>
                         <div class="carousel-item -full">
-                          <img src="img/about-3.png" />
+                          <img alt="screenshot of about screen" src="img/about-3.png" />
                         </div>
                       </div>
                       <p class="text-center pb-1 text-zip-blue dark:text-zip-poncho font-bold">Scroll over images :)</p>
@@ -124,13 +145,13 @@
                 <div class="pl-5 sm:col-span-6 col-span-12 sm:order-2">
                     <div class="carousel carousel-vertical rounded-box h-96 border-2 border-zip-blue dark:border-rata-eyeliner">
                         <div class="carousel-item w-full">
-                          <img src="img/turntables-0.png" />
+                          <img alt="screenshot of dj homepage screen" src="img/turntables-0.png" />
                         </div>
                         <div class="carousel-item w-full">
-                          <img src="img/turntables-1.png" />
+                          <img alt="screenshot of dj homepage screen" src="img/turntables-1.png" />
                         </div>
                         <div class="carousel-item w-full">
-                          <img src="img/turntables-2.png" />
+                          <img alt="screenshot of dj homepage screen" src="img/turntables-2.png" />
                         </div>
                       </div>
                 </div>
@@ -157,7 +178,7 @@
                      <Br> <p>While my job wasn't to create graphic designs, I did have a strong love for illustration, and I took this opportunity to take advantage of the Adobe Creative Suite, which the graphic designers had access to.</p>
                         <br>
                         <p>During this time, I practiced using Illustrator, and this ultimately led to me designing signage, and a mural for the campus. I'm very grateful to have been given the access to that technology, and take my art to larger, more permanent places.</p>
-                        <img src="img/Group 1.png">
+                        <img alt="screenshot of 3 graphic design posters" src="img/Group 1.png">
                 </div>
             </div>
         </section>
@@ -168,13 +189,13 @@
                         <div class="pl-5 sm:col-span-2 col-span-4 sm:order-2">
                             <div class="carousel carousel-vertical rounded-box h-96 border-2 border-zip-blue dark:border-rata-eyeliner">
                                 <div class="carousel-item w-full">
-                                  <img src="img/SG-0.png" />
+                                  <img alt="screenshot of student government initiatives page" src="img/SG-0.png" />
                                 </div>
                                 <div class="carousel-item w-full">
-                                  <img src="img/sg-1.png" />
+                                  <img alt="screenshot of student government initiatives page" src="img/sg-1.png" />
                                 </div>
                                 <div class="carousel-item w-full">
-                                  <img src="img/SG-2.png" />
+                                  <img alt="screenshot of student government initiatives page" src="img/SG-2.png" />
                                 </div>
                               </div>
                         </div>
@@ -199,6 +220,31 @@
                 </div>
                 </section>
     </main>
+    <script>
+      const lightSwitches = document.querySelectorAll('.light-switch');
+      if (lightSwitches.length > 0) {
+        lightSwitches.forEach((lightSwitch, i) => {
+          if (localStorage.getItem('dark-mode') === 'true') {
+            lightSwitch.checked = true;
+          }
+          lightSwitch.addEventListener('change', () => {
+            const { checked } = lightSwitch;
+            lightSwitches.forEach((el, n) => {
+              if (n !== i) {
+                el.checked = checked;
+              }
+            });
+            if (lightSwitch.checked) {
+              document.documentElement.classList.add('dark');
+              localStorage.setItem('dark-mode', true);
+            } else {
+              document.documentElement.classList.remove('dark');
+              localStorage.setItem('dark-mode', false);
+            }
+          });
+        });
+      }
+      </script>
 </body>
 <footer class="footer dark:bg-zip-poncho dark:text-rata-eyeliner bg-rata-eyeliner text-slate-50 p-10 mt-20">
   <nav>
@@ -229,11 +275,11 @@
   <nav class="md:place-self-center md:justify-self-end">
     <div class="grid grid-flow-col gap-4">
       <a target="_blank" href="https://www.linkedin.com/in/emilia-hernandez-560489159/">
-          <svg class="fill-zip-poncho dark:fill-rata-eyeliner" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"/></svg>
-      </a>
-      <a target="_blank" href="https://github.com/EmiliaHernandez">
-          <svg class="fill-zip-poncho dark:fill-rata-eyeliner" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-      </a>
+        <svg class="fill-zip-poncho dark:fill-rata-eyeliner mx-auto" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"/></svg>LinkedIn
+    </a>
+    <a class="text-center" target="_blank" href="https://github.com/EmiliaHernandez">
+        <svg class="fill-zip-poncho dark:fill-rata-eyeliner mx-auto" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>Github
+    </a>
     
     </div>
   </nav>

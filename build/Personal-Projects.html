@@ -3,49 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Projects</title>
+    <title>Personal Projects by Emilia</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="../src/input.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
-
+<script>
+  if (localStorage.getItem('dark-mode') === 'true' || (!('dark-mode' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.querySelector('html').classList.add('dark');
+  } else {
+      document.querySelector('html').classList.remove('dark');
+  }
+  </script>
 </head>
-<header class="font-Daruma dark:bg-rata-eyeliner dark:text-slate-50 bg-slate-50 text-rata-eyeliner sticky top-0 z-40">
-  <section class="max-w-4xl mx-auto p-4 flex justify-between items-center">
-      <h1 class="font-Daruma text-3xl font-medium"><a href="#hero">Emilia Hernandez</a>
-      </h1>
-      <div>
-          <button id="mobile-open-button" class="text-3xl sm:hidden focus:outline-none">
-              &#9776;
-          </button>
-          <nav class="hidden sm:block space-x-8 text-xl" aria-label="main">
-              <a href="#work" class="hover:opacity-90">Work</a>
-              <a href="" class="hover:opacity-90">Projects</a>
-              <a href="" class="hover:opacity-90">Resume</a>
-          </nav>
-      </div>
-  </section>
-</header>
 <body class="min-h-screen bg-slate-50 dark:bg-rata-eyeliner dark:text-slate-50 font-RedHat z-0">
-    <main class="mx-auto">
+  <header class="dark:rata-black-eyeliner.text-slate-50 bg-slate-100.text-black sticky top-0 z-10">
+    <div class="navbar bg-slate-50 dark:bg-rata-eyeliner">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost sm:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-3 shadow">
+              <li><a href="../index.html#workExperience" class="mt-2">Work Experience</a></li>
+              <li>
+                <a href="Personal-Projects.html">Personal Projects</a>
+              </li>
+              <li><a href="img/Emilia Hernandez - Resume 2024 - Summer.pdf">Resume</a></li>
+            </ul>
+          </div>
+          <a class="btn btn-ghost font-Daruma text-xl" href="../index.html">Emilia Hernandez</a>
+        </div>
 
+        <div class="navbar-end hidden lg:flex">            
+            <div class="dropdown dropdown-hover">
+            <div tabindex="0" role="button" class="pr-5 m-3 font-bold" ><a href="../index.html#workExperience">Work Experience</a></div>
+            <ul tabindex="0" class="dropdown-content menu text-slate-50 bg-zip-blue rounded-box z-50 w-52 p-2 shadow">
+              <li><a href="EverAg.html">Ever.Ag</a></li>
+              <li><a href="colabl.html">CoLabl</a></li>
+              <li><a href="CareerFairPlus.html">CF+</a></li>
+              <li><a href="ucf.html">UCF</a></li>
+            </ul>
+          </div>
+          <div class="dropdown dropdown-hover pr-5">
+            <div tabindex="0" role="button" class=" m-1 font-bold"><a href="Personal-Projects.html">Personal Projects</a></div>
+            <ul tabindex="0" class="dropdown-content menu text-slate-50 bg-zip-blue rounded-box w-52 z-[40] p-2 shadow">
+              <li><a href="LuckyLittleDarlings.html">Lucky Little Darlings</a></li>
+              <li><a href="3D-Art.html">3D Art</a></li>
+              <li><a href="video-games.html">Video Games</a></li>
+              <li><a href="Art-on-display.html">Art on Display</a></li>
+            </ul>
+          </div>
+          <div class="dropdown dropdown-hover pr-5">
+            <div tabindex="0" role="button" class=" m-1 font-bold"><a href="img/Emilia Hernandez - Resume 2024 - Summer.pdf">Resume</a></div>
+          </div>
+          <div class="flex flex-col justify-center ml-3">
+            <input type="checkbox" name="light-switch" class="light-switch sr-only" />
+            <label class="relative cursor-pointer p-2" for="light-switch">
+                <svg class="dark:hidden" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                    <path class="fill-slate-300" d="M7 0h2v2H7zM12.88 1.637l1.414 1.415-1.415 1.413-1.413-1.414zM14 7h2v2h-2zM12.95 14.433l-1.414-1.413 1.413-1.415 1.415 1.414zM7 14h2v2H7zM2.98 14.364l-1.413-1.415 1.414-1.414 1.414 1.415zM0 7h2v2H0zM3.05 1.706 4.463 3.12 3.05 4.535 1.636 3.12z" />
+                    <path class="fill-slate-400" d="M8 4C5.8 4 4 5.8 4 8s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4Z" />
+                </svg>
+                <svg class="hidden dark:block" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                    <path class="fill-slate-400" d="M6.2 1C3.2 1.8 1 4.6 1 7.9 1 11.8 4.2 15 8.1 15c3.3 0 6-2.2 6.9-5.2C9.7 11.2 4.8 6.3 6.2 1Z" />
+                    <path class="fill-slate-500" d="M12.5 5a.625.625 0 0 1-.625-.625 1.252 1.252 0 0 0-1.25-1.25.625.625 0 1 1 0-1.25 1.252 1.252 0 0 0 1.25-1.25.625.625 0 1 1 1.25 0c.001.69.56 1.249 1.25 1.25a.625.625 0 1 1 0 1.25c-.69.001-1.249.56-1.25 1.25A.625.625 0 0 1 12.5 5Z" />
+                </svg>
+                <span class="sr-only">Switch to light / dark version</span>
+            </label>
+        </div>
+          <div>
+        </div>
+      </div>
+</header>
+    <main class="mx-auto">
+      <div class="relative max-w-4xl mx-auto pt-10">
+        <img src="img/FunProjects.jpg" alt="preview of rpg game I drew" class="object-cover rounded-lg w-full h-full">
+        <div class="absolute bottom-4 right-4 text-rata-eyeliner p-4 rounded-lg text-right">
+            <h1 class="pr-5 text-4xl font-bold font-Daruma">Personal Projects</h1>
+            <p class="mt-2 font-Daruma"></p>
+        </div>
+    </div>
       <section id="LLD" class=" p-4 z-30 pb-2 ">
         <div>
 
         </div>
-        <div class="dark:text-slate-50 justify-center max-w-4xl mx-auto grid pt-10">
-          <img class="rounded-lg" src="img/LuckylittleDarlings-cards.png">
-            </div>
-        <div class="dark:text-slate-50 justify-center max-w-4xl mx-auto grid grid-cols-12 gap-2 text-rata-eyeliner pt-10">
-            <div class="pl-5 col-span-8 gap-2  text-rata-eyeliner dark:text-slate-50 p-5 rounded-lg w-fit">
+
+        <div class="dark:text-slate-50 justify-center max-w-4xl mx-auto grid grid-cols-12 gap-2 text-rata-eyeliner">
+            <div class="pt-10 pl-5 col-span-12 sm:col-span-8 gap-2  text-rata-eyeliner dark:text-slate-50  rounded-lg w-fit">
                 <h3 class="text-4xl pb-2 dark:text-zip-poncho text-zip-blue font-Daruma">Lucky Little Darlings</h3>
                 <h4 class=" text-2xl">An original brand of art, products, and digital media - starring cute, little characters</h4>
             </div>
             <div class="pl-5 col-span-1"></div>
-              <div class="pl-5 col-span-3">
-                <div class="relative  text-rata-eyeliner dark:text-slate-50 p-5 rounded-lg w-fit border-solid border-2 dark:border-slate-50 border-rata-eyeliner">
+              <div class="pl-4 col-span-12 sm:col-span-3 mx-auto pt-1">
+                <div class="relative  bg-zip-blue dark:bg-zip-poncho dark:text-rata-eyeliner text-slate-50 p-5 rounded-lg w-fit">
                   <p class=" mb-4 font-Daruma text-xl">What I do:</p>
                   <ul class="list-disc list-inside">
                     <li>Design</li>
@@ -54,37 +119,42 @@
                     <li>Development</li>
                   </ul>
                   <!-- Image floated at the bottom right corner, half inside and half outside -->
-                  <img src="img/Rata-Walking.png" alt="Decorative image" class="absolute bottom-0 right-0 w-1/2 h-1/2 -mr-16 mb-20">
+                  <img src="img/Rata-Walking.png" alt="Decorative image" class="absolute bottom-0 right-1 w-1/2 h-1/2 -mr-12 mb-20">
                 </div>
                 
                 
             </div>
         </div>
+        <div class="dark:text-slate-50 justify-center max-w-4xl mx-auto grid grid-cols-12">
+
+          <div class="mx-auto pl-5 col-span-12 sm:col-span-8 gap-2  text-rata-eyeliner dark:text-slate-50 p-5 rounded-lg w-fit">
+          <img class="rounded-lg" src="img/2D_LuckyLittleDarlings Pride.png">
+        </div>
+        <div class="mx-auto pl-5 col-span-12 sm:col-span-4 gap-2  text-rata-eyeliner dark:text-slate-50 p-5 rounded-lg w-fit">
+              <div class="flex justify-center items-center sm:pt-16">
+        <button type="button" class="relative font-Daruma text-rata-eyeliner dark:text-slate-50 bg-zip-poncho focus:outline-none font-medium rounded-full text-md px-5 ml-0 mt-5 dark:bg-zip-blue border-solid border-2 dark:border-slate-50 border-rata-eyeliner py-2.5 z-10 pl-10">
+          <a href="LuckyLittleDarlings.html">Explore Lucky Little Darlings</a>
+          <img src="img/Zip Walking.png" alt="Button Icon" class="absolute -bottom-1 -left-10 w-20 h-auto z-0" />
+        </button>
+      </div></div>
+            </div>
     </section>
-    <section id="lldImage" class="flex-col-reverse justify-center sm:flex-row  items-center gap-8 mb-12 dark:border-b-sky-100 border-dashed border-b-4 border-b-slate-950 mx-auto">
-  <div class="relative max-w-4xl mx-auto mb-10">
-    <button type="button" class="relative font-Daruma text-rata-eyeliner dark:text-slate-50 bg-zip-poncho focus:outline-none font-medium rounded-full text-md px-5 py-2.5 ml-0 mt-5 dark:bg-zip-blue border-solid border-2 dark:border-slate-50 border-rata-eyeliner z-10 pl-10">
-      <!-- Button Text -->
-      Explore Lucky Little Darlings
-      <!-- Image -->
-      <img src="img/Zip Walking.png" alt="Button Icon" class="absolute -bottom-1 -left-10 w-20 h-auto z-0" />
-    </button>
-  </div>
-  
-  
-  </section>
+    <section id="lldImage" class="flex justify-center items-center pt-5 dark:border-slate-50 border-dashed border-b-4 border-rata-eyeliner">
+
+    </section>
+    
 
 
-<section id="3DModels" class="p-4 z-30 pb-10 dark:border-b-sky-100 border-dashed border-b-4 border-b-slate-950">
+<section id="3DModels" class="p-4 z-30 pb-10 dark:border-slate-50 border-dashed border-b-4 border-rata-eyeliner">
   <div class="dark:text-slate-50 justify-center max-w-4xl mx-auto grid grid-cols-5 gap-2 text-rata-eyeliner">        
-    <div class="pl-5 col-span-2">
-          <img class="w-3/4" src="img/Lucky Little Backpack 2.png">
+    <div class="pl-5 col-span-12 sm:col-span-2 mx-auto">
+          <img class="w-3/4 mx-auto" src="img/Lucky Little Backpack 2.png">
       </div>
-      <div class="pl-5 col-span-3 gap-2 pt-12">
+      <div class="pl-5 col-span-12 sm:col-span-3 gap-2 pt-12">
           <h3 class="text-4xl pb-2 dark:text-zip-poncho text-zip-blue font-Daruma">3D Models</h3>
           <p class="dark:text-slate-50 text-zip-blue text-2xl">Using Womp3D, I have started to learn the joys of 3D modeling </p>
           <br>
-          <button type="button" class="relative font-Daruma text-rata-eyeliner dark:text-slate-50 bg-zip-poncho focus:outline-none font-medium rounded-full text-md px-5 py-2.5 ml-0 mt-5 dark:bg-zip-blue border-solid border-2 dark:border-slate-50 border-rata-eyeliner z-10">Explore 3D models</button>
+          <button type="button" class="relative font-Daruma text-rata-eyeliner dark:text-slate-50 bg-zip-poncho focus:outline-none font-medium rounded-full text-md px-5 py-2.5 ml-0 mt-5 dark:bg-zip-blue border-solid border-2 dark:border-slate-50 border-rata-eyeliner z-10"><a href="3D-Art.html">Explore 3D models</a></button>
       </div>
   </div>
 </section>
@@ -96,9 +166,12 @@
                   <h3 class="text-2xl font-RedHat">My artwork can be found on the campus of the University of Central Florida due to student opportunities I had, thanks UCF!</h3>
 </div>
 </section>
-<section id="artongDisplay2" class="p-4 z-30 dark:border-b-sky-100 border-dashed border-b-4 border-b-slate-950">
+<section id="artongDisplay2" class="p-4 z-30 dark:border-slate-50 border-dashed border-b-4 border-rata-eyeliner">
   <div class="justify-center max-w-4xl mx-auto grid grid-cols-12 gap-2 ">   
-    <div class="pl-5 col-span-3 gap-2 p-10">
+     <div class="pl-5 col-span-12 sm:col-span-8 sm:order-2">
+      <img src="img/Group 2.png">
+      </div>   
+      <div class="mx-auto pl-5 col-span-12 sm:col-span-3 gap-2 p-10 sm:order-1">
       <div class="relative bg-zip-blue dark:bg-zip-poncho dark:text-rata-eyeliner text-slate-50 p-5 rounded-lg w-fit">
         <p class=" mb-4 font-Daruma text-xl">What I did:</p>
         <ul class="list-disc list-inside">
@@ -108,22 +181,20 @@
         </ul>
       </div>
       <br>
-      <button type="button" class="relative font-Daruma text-rata-eyeliner dark:text-slate-50 bg-zip-poncho focus:outline-none font-medium rounded-full text-md px-5 py-2.5 ml-0 mt-5 dark:bg-zip-blue border-solid border-2 dark:border-slate-50 border-rata-eyeliner z-10"><a href="public-art.html">Explore Public Art</a></button>
+      <button type="button" class="relative font-Daruma text-rata-eyeliner dark:text-slate-50 bg-zip-poncho focus:outline-none font-medium rounded-full text-md px-5 py-2.5 ml-0 mt-5 dark:bg-zip-blue border-solid border-2 dark:border-slate-50 border-rata-eyeliner z-10"><a href="Art-on-display.html">Explore Art on Display</a></button>
   </div>     
-    <div class="pl-5 col-span-8">
-      <img src="img/Group 2.png">
-      </div>
+
   </div>
 </section>
 <section id="gameDev" class="p-4 z-30 pb-10 ">
   <div class="dark:text-slate-50 justify-center max-w-4xl mx-auto grid grid-cols-5 gap-2 text-rata-eyeliner pt-10">        
-    <div class="pl-5 col-span-3">
+    <div class="pl-5 col-span-12 sm:col-span-3">
       
       <h3 class="text-4xl pb-2 dark:text-zip-poncho text-zip-blue font-Daruma">Game Jams</h3>
       <p class="dark:text-slate-50 text-zip-blue text-2xl">That means I joined the challenge to create a game in 72 hours</p>
           <img src="img/Group 4.png">
       </div>
-      <div class="pl-5 col-span-2 gap-2">
+      <div class="mx-auto pl-5 col-span-12 sm:col-span-2 gap-2">
         <div class="relative bg-zip-blue dark:bg-zip-poncho dark:text-rata-eyeliner text-slate-50 p-5 rounded-lg w-fit">
           <p class=" mb-4 font-Daruma text-xl">What I do:</p>
           <ul class="list-disc list-inside">
@@ -137,9 +208,73 @@
           <img src="img/UnderConstruction.png" alt="Decorative image" class="absolute bottom-0 right-0 w-24 h-24 object-cover rounded-full -mr-14 mb-20">
         </div>
           <br>
-          <button type="button" class="relative font-Daruma text-rata-eyeliner dark:text-slate-50 bg-zip-poncho focus:outline-none font-medium rounded-full text-md px-5 py-2.5 ml-0 mt-5 dark:bg-zip-blue border-solid border-2 dark:border-slate-50 border-rata-eyeliner z-10">Explore my Games</button>
+          <button type="button" class="relative font-Daruma text-rata-eyeliner dark:text-slate-50 bg-zip-poncho focus:outline-none font-medium rounded-full text-md px-5 py-2.5 ml-0 mt-5 dark:bg-zip-blue border-solid border-2 dark:border-slate-50 border-rata-eyeliner z-10"><a href="video-games.html">Explore my Games</a></button>
       </div>
   </div>
 </section>
+<script>
+  const lightSwitches = document.querySelectorAll('.light-switch');
+  if (lightSwitches.length > 0) {
+    lightSwitches.forEach((lightSwitch, i) => {
+      if (localStorage.getItem('dark-mode') === 'true') {
+        lightSwitch.checked = true;
+      }
+      lightSwitch.addEventListener('change', () => {
+        const { checked } = lightSwitch;
+        lightSwitches.forEach((el, n) => {
+          if (n !== i) {
+            el.checked = checked;
+          }
+        });
+        if (lightSwitch.checked) {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('dark-mode', true);
+        } else {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('dark-mode', false);
+        }
+      });
+    });
+  }
+  </script>
 </body>
+<footer class="footer dark:bg-zip-poncho dark:text-rata-eyeliner bg-rata-eyeliner text-slate-50 p-10 mt-20">
+  <nav>
+    <h6 class="footer-title"><a href="../index.html#workExperience">Work Experience</a></h6>
+    <a class="link link-hover" href="EverAg.html">Ever.Ag</a>
+    <a class="link link-hover" href="colabl.html">CoLabl</a>
+    <a class="link link-hover" href="CareerFairPlus.html">CF+</a>
+    <a class="link link-hover" href="ucf.html">UCF</a>
+  </nav>
+  <nav>
+    <h6 class="footer-title"><a href="Personal-Projects.html">Personal Projects</a></h6>
+    <a class="link link-hover" href="LuckyLittleDarlings.html">Lucky Little Darlings</a>
+    <a class="link link-hover" href="3D-Art.html">3D Art</a>
+    <a class="link link-hover" href="video-games.html">Video Games</a>
+    <a class="link link-hover" href="Art-on-display.html">Art on Display</a>
+  </nav>
+  <nav>
+    <h6 class="footer-title"><a href="img/Emilia Hernandez - Resume 2024 - Summer.pdf">Resume</a></h6>
+  </nav>
+</footer>
+<footer class="footer dark:bg-zip-poncho dark:text-rata-eyeliner bg-rata-eyeliner text-zip-poncho border-base-300 border-t px-10 py-4">
+  <aside class="grid-flow-col items-center">
+    <p class="italic font-medium">
+      Site Developed by Emilia Hernandez
+    </p>
+  </aside>
+  <nav class="md:place-self-center md:justify-self-end">
+    <div class="grid grid-flow-col gap-4">
+      <a target="_blank" href="https://www.linkedin.com/in/emilia-hernandez-560489159/">
+        <svg class="fill-zip-poncho dark:fill-rata-eyeliner mx-auto" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"/></svg>LinkedIn
+    </a>
+    <a class="text-center" target="_blank" href="https://github.com/EmiliaHernandez">
+        <svg class="fill-zip-poncho dark:fill-rata-eyeliner mx-auto" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>Github
+    </a>
+    
+    </div>
+  </nav>
+</footer>
+</section>
+</footer>
 </html>
