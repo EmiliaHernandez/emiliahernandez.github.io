@@ -2603,6 +2603,10 @@ details.collapse summary::-webkit-details-marker {
   margin-top: 1.25rem;
 }
 
+.-mr-24 {
+  margin-right: -6rem;
+}
+
 .block {
   display: block;
 }
