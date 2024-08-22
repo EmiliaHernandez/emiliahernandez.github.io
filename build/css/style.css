@@ -2530,6 +2530,10 @@ details.collapse summary::-webkit-details-marker {
   grid-column: span 5 / span 5;
 }
 
+.col-span-11 {
+  grid-column: span 11 / span 11;
+}
+
 .m-1 {
   margin: 0.25rem;
 }
@@ -3270,6 +3274,10 @@ details.collapse summary::-webkit-details-marker {
 
   .sm\:pt-20 {
     padding-top: 5rem;
+  }
+
+  .sm\:pt-12 {
+    padding-top: 3rem;
   }
 
   .sm\:text-left {
