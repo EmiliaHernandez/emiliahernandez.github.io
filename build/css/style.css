@@ -230,6 +230,23 @@ select {
   text-transform: none;
 }
 
+  .blinking-cursor {
+    animation: blink 1s infinite;
+  }
+
+  @keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+  }
+
+  .textboxHome{
+    background-color: black;
+  }
+
+
+
+
+
 /*
 1. Correct the inability to style clickable types in iOS and Safari.
 2. Remove default button styles.

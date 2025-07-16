@@ -80,7 +80,65 @@
             <div class="text-slate-50 justify-center max-w-5xl mx-auto grid grid-cols-12 gap-2 ">        
               <div class="pl-5 col-span-12 sm:col-span-7">
                     <img alt="gif of me on the computer" class="w-3/4 mx-auto" src="build/img/AnimationbyEmilia.gif">
-                </div>
+                   <div class="textboxHome border-2 border-slate-50 relative p-5 bg-black" style="bottom:10vw;">
+  <h1 class="text-white text-xl md:text-2xl">
+    <span id="typewriter-text"></span><span class="blinking-cursor">|</span>
+  </h1>
+</div>
+</div>
+<script>
+  const lines = [
+    "(Deploying website...)",
+    "(Rendering 3D models on Womp3D...)",
+    "(Booting up Adobe Illustrator...)",
+    "(Loading Figma workspace...)",
+    "(Designing Hubspot modules...)",
+    "(Editing graphics for printing...)"
+  ];
+
+  const shuffledLines = lines
+    .map(value => ({ value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value);
+
+  const textElement = document.getElementById("typewriter-text");
+  let lineIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  let currentLine = shuffledLines[lineIndex];
+
+  const typeSpeed = 50;
+  const deleteSpeed = 30;
+  const delayBetweenLines = 1500;
+
+  function type() {
+    if (isDeleting) {
+      textElement.textContent = currentLine.substring(0, charIndex--);
+      if (charIndex < 0) {
+        isDeleting = false;
+        lineIndex++;
+        if (lineIndex >= shuffledLines.length) {
+          lineIndex = 0;
+          shuffledLines.sort(() => Math.random() - 0.5);
+        }
+        currentLine = shuffledLines[lineIndex];
+        setTimeout(type, 300);
+      } else {
+        setTimeout(type, deleteSpeed);
+      }
+    } else {
+      textElement.textContent = currentLine.substring(0, charIndex++);
+      if (charIndex > currentLine.length) {
+        isDeleting = true;
+        setTimeout(type, delayBetweenLines);
+      } else {
+        setTimeout(type, typeSpeed);
+      }
+    }
+  }
+
+  type();
+</script>
                 <div class="p-6 col-span-12 sm:col-span-5 gap-2 pt-6">
                     <h1 class="text-zip-poncho font-Daruma text-5xl">I'm Emilia</h1>
                 <h2 class="max-w-md text-2xl font-bold  sm:text-2xl sm:text-left text-slate-50">Multi-media Designer and Developer</span>
