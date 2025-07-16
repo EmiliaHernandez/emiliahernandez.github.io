@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
-
+ <script type="module" src="./build/js/home.js"></script>
 </head>
 <body class="min-h-screen bg-rata-eyeliner text-slate-50 font-RedHat">
     <header class="rata-black-eyeliner.text-slate-50 bg-slate-100.text-black sticky top-0 z-10">
@@ -77,75 +77,23 @@
     </header>
         <main class="mx-auto">
         <section id="hero" class="p-4 z-30 pb-10 ">
-            <div class="text-slate-50 justify-center max-w-5xl mx-auto grid grid-cols-12 gap-2 ">        
-              <div class="pl-5 col-span-12 sm:col-span-7">
-                    <img alt="gif of me on the computer" class="w-3/4 mx-auto" src="build/img/AnimationbyEmilia.gif">
+            <div class="items-center text-slate-50 justify-center max-w-5xl mx-auto grid grid-cols-12 gap-2 ">        
+              <div class="content-center pl-5 col-span-12 sm:col-span-6">
+                    <img alt="gif of me on the computer" class=" mx-auto" src="build/img/AnimationbyEmilia.gif">
                    <div class="textboxHome border-2 border-slate-50 relative p-5 bg-black" style="bottom:10vw;">
   <h1 class="text-white text-xl md:text-2xl">
-    <span id="typewriter-text"></span><span class="blinking-cursor">|</span>
+    <span><strong>Status: </strong></span><span id="typewriter-text"></span><span class="blinking-cursor">|</span>
   </h1>
 </div>
 </div>
-<script>
-  const lines = [
-    "(Deploying website...)",
-    "(Rendering 3D models on Womp3D...)",
-    "(Booting up Adobe Illustrator...)",
-    "(Loading Figma workspace...)",
-    "(Designing Hubspot modules...)",
-    "(Editing graphics for printing...)"
-  ];
-
-  const shuffledLines = lines
-    .map(value => ({ value, sort: Math.random() }))
-    .sort((a, b) => a.sort - b.sort)
-    .map(({ value }) => value);
-
-  const textElement = document.getElementById("typewriter-text");
-  let lineIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
-  let currentLine = shuffledLines[lineIndex];
-
-  const typeSpeed = 50;
-  const deleteSpeed = 30;
-  const delayBetweenLines = 1500;
-
-  function type() {
-    if (isDeleting) {
-      textElement.textContent = currentLine.substring(0, charIndex--);
-      if (charIndex < 0) {
-        isDeleting = false;
-        lineIndex++;
-        if (lineIndex >= shuffledLines.length) {
-          lineIndex = 0;
-          shuffledLines.sort(() => Math.random() - 0.5);
-        }
-        currentLine = shuffledLines[lineIndex];
-        setTimeout(type, 300);
-      } else {
-        setTimeout(type, deleteSpeed);
-      }
-    } else {
-      textElement.textContent = currentLine.substring(0, charIndex++);
-      if (charIndex > currentLine.length) {
-        isDeleting = true;
-        setTimeout(type, delayBetweenLines);
-      } else {
-        setTimeout(type, typeSpeed);
-      }
-    }
-  }
-
-  type();
-</script>
-                <div class="p-6 col-span-12 sm:col-span-5 gap-2 pt-6">
+<div class="col-span-1"></div>
+                <div class="sm:px-96 col-span-12 sm:col-span-4 gap-2 m-auto pl-48">
                     <h1 class="text-zip-poncho font-Daruma text-5xl">I'm Emilia</h1>
-                <h2 class="max-w-md text-2xl font-bold  sm:text-2xl sm:text-left text-slate-50">Multi-media Designer and Developer</span>
+                <h2 class="max-w-md text-2xl font-bold  sm:text-2xl sm:text-left text-slate-50">Multi-media Designer + Developer</span>
                 </h2>
-                <p class="max-width text-2xl mt-4  sm:text-left text-slate-50 pb-10">I'm fascinated by digital media and I love experimenting with creative tools.<br>
-                    My professional experience has been focused on websites, and my personal projects are mostly illustrative and focused on storytelling!</p>
+                <p class="max-width text-xl mt-4  sm:text-left text-slate-50 pb-10">I'm fascinated by digital media and I love experimenting with creative tools. My professional experience has been focused on websites, and my personal projects are mostly illustrative and focused on storytelling!</p>
                 </div>
+                <div class="col-span-1"></div>
             </div>
           </section>
 
@@ -158,15 +106,14 @@
             <div class="justify-center max-w-4xl mx-auto grid grid-cols-5 gap-2 bg-zip-poncho text-rata-eyeliner">
                 <!-- Development Column -->
                 <div class="pl-5 col-span-5 sm:col-span-2 sm:border-r-rata-eyeliner sm:border-dashed sm:border-r-4 ">
-                    <h3 class="underline font-Daruma text-2xl pb-2">Development</h3>
+                    <h3 class="underline font-Daruma text-2xl pb-2">Programming</h3>
                     <ul class="grid grid-cols-2 gap-1 list-disc">
                         <li>HTML/CSS</li>
                         <li>Javascript</li>
                         <li>Bootstrap</li>
-                        <li>PHP</li>
+                        <li>Next.js</li>
                         <li>React</li>
-                        <li>Divi</li>
-                        <li>Tailwind CSS</li>
+                        <li>TailwindCSS</li>
                     </ul>
                 </div>
                 <!-- Design Column -->
@@ -178,13 +125,12 @@
                         <li>Indesign</li>
                         <li>Figma</li>
                         <li>Procreate</li>
-                        <li>Canva</li>
-                        <li>Womp</li>
+                        <li>Womp3D</li>
                     </ul>
                 </div>
                 <!-- CMS Column -->
                 <div class="col-span-5 sm:col-span-1 pl-5">
-                    <h3 class="underline font-Daruma text-2xl pb-2">CMS</h3>
+                    <h3 class="underline font-Daruma text-2xl pb-2">Web Design</h3>
                     <ul class="list-disc gap-1">
                         <li>Wordpress</li>
                         <li>Hubspot</li>
