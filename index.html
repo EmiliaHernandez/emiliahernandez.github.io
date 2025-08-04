@@ -9,295 +9,267 @@
 <meta name="description" content="I'm Emilia Hernandez and I am a web designer and developer that focuses on building projects with all the wonderful digital media tools I can find.">
 <meta property="og:type" content="website" />
     <link rel="stylesheet" href="build/css/style.css">
-    <link rel="stylesheet" href="src/input.css">
+    <link href="./src/output.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="icon" type="image/x-icon" href="build/img/favicon.ico">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
  <script type="module" src="./build/js/home.js"></script>
+ <script>
+  if (localStorage.getItem('dark-mode') === 'true' || (!('dark-mode' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.querySelector('html').classList.add('dark');
+  } else {
+      document.querySelector('html').classList.remove('dark');
+  }
+  </script>
 </head>
 <body class="min-h-screen bg-rata-eyeliner text-slate-50 font-RedHat">
-    <header class="rata-black-eyeliner.text-slate-50 bg-slate-100.text-black sticky top-0 z-10">
-        <div class="navbar bg-rata-eyeliner">
-            <div class="navbar-start">
-              <div class="dropdown">
-                <div tabindex="0" aria-label="Main Menu" role="button" class="btn btn-ghost sm:hidden">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M4 6h16M4 12h8m-8 6h16" />
-                  </svg>
-                </div>
-                <ul
-                  tabindex="0"
-                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-3 shadow">
-                  <li><a href="index.html#workExperience" class="mt-2">Work Experience</a></li>
-                  <li>
-                    <a href="build/Personal-Projects.html">Personal Projects</a>
-                  </li>
-                  <li><a href="build/img/Emilia Hernandez Resume _ Public.pdf">Resume</a></li>
-                </ul>
-              </div>
-              <a class="btn btn-ghost font-Daruma text-xl" href="index.html">Emilia Hernandez</a>
+  <header class="dark:rata-black-eyeliner.text-slate-50 bg-slate-100.text-black sticky top-0 z-10 dark">
+    <div class="navbar bg-rata-eyeliner">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" aria-label="Main Menu" role="button" class="btn btn-ghost sm:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
             </div>
-    
-            <div class="navbar-end hidden lg:flex">            
-                <div class="dropdown dropdown-hover">
-                <div tabindex="0" role="button" class="pr-10 m-3 font-bold" ><a href="index.html#workExperience">Work Experience</a></div>
-                <ul tabindex="0" class="dropdown-content menu text-slate-50 bg-zip-blue rounded-box z-50 w-52 p-2 shadow">
-                  <li><a href="build/EverAg.html">Ever.Ag</a></li>
-                  <li><a href="build/colabl.html">CoLabl</a></li>
-                  <li><a href="build/CareerFairPlus.html">CF+</a></li>
-                  <li><a href="build/ucf.html">UCF</a></li>
-                </ul>
-              </div>
-              <div class="dropdown dropdown-hover pr-10">
-                <div tabindex="0" role="button" class=" m-1 font-bold"><a href="build/Personal-Projects.html">Personal Projects</a></div>
-                <ul tabindex="0" class="dropdown-content menu text-slate-50 bg-zip-blue rounded-box w-52 z-[40] p-2 shadow">
-                  <li><a href="build/LuckyLittleDarlings.html">Lucky Little Darlings</a></li>
-                  <li><a href="build/3D-Art.html">3D Art</a></li>
-                  <li><a href="build/video-games.html">Video Games</a></li>
-                  <li><a href="build/Art-on-display.html">Art on Display</a></li>
-                </ul>
-              </div>
-              <div class="dropdown dropdown-hover pr-10">
-                <div tabindex="0" role="button" class=" m-1 font-bold"><a href="build/img/Emilia Hernandez Resume _ Public.pdf">Resume</a></div>
-              </div>
-              <div>
-            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content text-slate-50 bg-rata-eyeliner rounded-box z-[1] mt-3 w-52 p-3 shadow">
+              <li><a href="build/WebDev.html" class="mt-2">Web Dev</a></li>
+              <li>
+                <a href="build/GraphicDesign.html">Graphic Design</a>
+              </li>
+              <li>
+                <a href="build/UX-UI.html">UX/UI Design</a>
+              </li>
+              <li>
+                <a href="build/3D-Art.html">3D Modeling</a>
+              </li>
+               <li>
+                <a href="build/SocialMedia.html">Social Media</a>
+              </li>
+              <li>
+                <a href="build/video-games.html">Game Dev</a>
+              </li>
+              <li><a href="img/Emilia Hernandez Resume _ Public.pdf">Resume</a></li>
+            </ul>
           </div>
-    </header>
-        <main class="mx-auto">
-        <section id="hero" class="p-4 z-30 pb-10 ">
-            <div class="items-center text-slate-50 justify-center max-w-5xl mx-auto grid grid-cols-12 gap-2 ">        
-              <div class="content-center pl-5 col-span-12 sm:col-span-6">
-                    <img alt="gif of me on the computer" class=" mx-auto" src="build/img/AnimationbyEmilia.gif">
-                   <div class="textboxHome border-2 border-slate-50 relative p-5 bg-black" style="bottom:10vw;">
-  <h1 class="text-white text-xl md:text-2xl">
+          <a class="btn btn-ghost text-xl" href="../index.html">Emilia Hernandez</a>
+        </div>
+
+        <div class="navbar-end hidden lg:flex">            
+            <div class="dropdown dropdown-hover">
+            <div tabindex="0" role="button" class="pr-10 m-3 font-bold" ><a>Dev Projects</a></div>
+            <ul tabindex="0" class="dropdown-content menu text-black bg-pink-300 rounded-box z-50 w-52 p-2 shadow">
+              <li><a href="build/WebDev.html">Web Dev</a></li>
+              <li><a href="build/video-games.html">Game Dev</a></li>
+            </ul>
+          </div>
+          <div class="dropdown dropdown-hover pr-10">
+            <div tabindex="0" role="button" class=" m-1 font-bold"><a>Design Projects</a></div>
+            <ul tabindex="0" class="dropdown-content menu text-black bg-pink-300 rounded-box w-52 z-[40] p-2 shadow">
+              
+              <li><a href="build/GraphicDesign.html">Graphic Design</a></li>
+              <li><a href="build/UX-UI.html">UX/UI</a></li>
+              <li><a href="build/3D-Art.html">3D Art</a></li>
+              <li><a href="build/SocialMedia.html">Social Media</a></li>
+            </ul>
+          </div>
+          <div class="dropdown dropdown-hover pr-10">
+            <div tabindex="0" role="button" class=" m-1 font-bold"><a href="build/img/Emilia Hernandez Resume _ Public.pdf">Resume</a></div>
+          </div>
+
+          <div>
+        </div>
+      </div>
+</header>
+        <main class="mx-auto w-[90%] max-w-[1400px]">
+        <section id="hero" class="p-4 z-30">
+            <div class="items-center text-slate-50 justify-center w-[90%] mx-auto grid grid-cols-12 gap-2 ">        
+              <div class="content-center pr-7 col-span-12 sm:col-span-6">
+                    <img alt="gif of me on the computer" class=" mx-auto" src="build/img/AboutMeAnimation-Emilia Hernandez.gif">
+                   <div class="textboxHome border-2 border-slate-50 relative p-5 bg-black" style="bottom:2vw;">
+  <h1 class="text-white text-xl">
     <span><strong>Status: </strong></span><span id="typewriter-text"></span><span class="blinking-cursor">|</span>
   </h1>
 </div>
 </div>
-<div class="col-span-1"></div>
-                <div class="sm:px-96 col-span-12 sm:col-span-4 gap-2 m-auto pl-48">
-                    <h1 class="text-zip-poncho font-Daruma text-5xl">I'm Emilia</h1>
-                <h2 class="max-w-md text-2xl font-bold  sm:text-2xl sm:text-left text-slate-50">Multi-media Designer + Developer</span>
+                <div class=" col-span-12 sm:col-span-5 gap-2 m-auto">
+                    <h1 class="text-pink-400 text-[32px] sm:text-[3.5vw] font-Helvetica font-bold">I'm Emilia,</h1>
+                <h2 class="max-w-md font-bold text-[25px] sm:text-[1.8vw] sm:text-left text-slate-50">Multi-Media Designer + Developer</span>
                 </h2>
-                <p class="max-width text-xl mt-4  sm:text-left text-slate-50 pb-10">I'm fascinated by digital media and I love experimenting with creative tools. My professional experience has been focused on websites, and my personal projects are mostly illustrative and focused on storytelling!</p>
+                <p class="max-width text-[14px] sm:text-[1.5vw] mt-4 sm:text-left text-slate-50 pb-10">My digital media services bring ideas to life and result in high-quality, thoughtfully designed assets. My primary specialty is Web Design and Development, and you can explore my other design projects below to fully understand what I can do for you!</p>
+                <div class="grid grid-flow-col gap-4">
+            <a class="transition ease-in-out  hover:-translate-y-1 hover:scale-110" target="_blank" href="https://www.linkedin.com/in/emilia-hernandez-560489159/">
+                <svg class=" hover:fill-purple-300 fill-pink-400 mx-auto" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"/></svg>
+            </a>
+            <a class="text-center transition ease-in-out  hover:-translate-y-1 hover:scale-110" target="_blank" href="https://github.com/EmiliaHernandez">
+                <svg class="hover:fill-purple-300 fill-pink-400 mx-auto" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg> <button class="relative text-rata-eyeliner  focus:outline-none font-medium rounded-full px-1 text-md py-1 bg-pink-400 hover:bg-purple-300 border-solid border-1 transition ease-in-out  hover:-translate-y-1 hover:scale-110"><a href="build/img/Emilia Hernandez Resume _ Public.pdf">Resume</a></button>
+          
+          </div>
                 </div>
-                <div class="col-span-1"></div>
             </div>
           </section>
+          
+<!--Nav for Specialties-->
+<Section class="mt-7 w-[90%] m-auto"><br>
+<h2 class="w-3\/4 m-auto text-left sm:text-[2.5vw] text-[4.5vw] pb-4 text-pink-400  font-Helvetica font-bold mt-7">View projects by <span class="text-purple-300">specialty</span> here or<br> check out <span class="text-purple-300">featured projects below</span></h2>
+<div class="gap-8 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 m-auto text-center w-3\/4">
+ <a href="./build/WebDev.html" class="group relative transition ease-in-out  hover:-translate-y-1 hover:scale-110">
+    <!-- Default image -->
+    <img src="build/img/Icons/WebDev1.png"
+         class="w-full col-span-1 block group-hover:hidden"/>
+    <!-- Hover image -->
+    <img src="build/img/Icons/WebDev2.png"
+         class="w-full col-span-1 hidden group-hover:block" />
+      <div class="relative text-rata-eyeliner font-medium rounded-full px-3 text-md p-2 bg-pink-400   inline-block mt-2">Web Dev</div>
 
-        <section class="max-w-4xl mx-auto flex sm:flex-row items-center z-0">
-            <button class="rounded absolute bg-zip-poncho mb-4 pt-2 pr-10 pl-5">
-                <h5 class="text-left sm:text-3xl pb-4  text-rata-eyeliner font-Daruma">My Favorite Tools</h5>
-            </button>
-        </section>
-        <section id="favorite-tools" class="bg-zip-poncho p-4 z-30 pb-10 pt-10">
-            <div class="justify-center max-w-4xl mx-auto grid grid-cols-5 gap-2 bg-zip-poncho text-rata-eyeliner">
-                <!-- Development Column -->
-                <div class="pl-5 col-span-5 sm:col-span-2 sm:border-r-rata-eyeliner sm:border-dashed sm:border-r-4 ">
-                    <h3 class="underline font-Daruma text-2xl pb-2">Programming</h3>
-                    <ul class="grid grid-cols-2 gap-1 list-disc">
-                        <li>HTML/CSS</li>
-                        <li>Javascript</li>
-                        <li>Bootstrap</li>
-                        <li>Next.js</li>
-                        <li>React</li>
-                        <li>TailwindCSS</li>
-                    </ul>
-                </div>
-                <!-- Design Column -->
-                <div class="pl-5 col-span-5 sm:col-span-2  sm:border-dashed sm:border-r-4 sm:border-r-rata-eyeliner">
-                    <h3 class="underline font-Daruma text-2xl pb-2">Design</h3>
-                    <ul class="grid grid-cols-2 gap-1 list-disc">
-                        <li>Illustrator</li>
-                        <li>Photoshop</li>
-                        <li>Indesign</li>
-                        <li>Figma</li>
-                        <li>Procreate</li>
-                        <li>Womp3D</li>
-                    </ul>
-                </div>
-                <!-- CMS Column -->
-                <div class="col-span-5 sm:col-span-1 pl-5">
-                    <h3 class="underline font-Daruma text-2xl pb-2">Web Design</h3>
-                    <ul class="list-disc gap-1">
-                        <li>Wordpress</li>
-                        <li>Hubspot</li>
-                        <li>Knak</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <!-- Experience tabs-->
-        <section id="workExperience" class="max-w-4xl mx-auto flex sm:flex-row items-center z-0">
-            <button class="rounded absolute bg-rata-eyeliner mb-4 pt-2 pr-6 pl-6 right-12">
-                <h5 class="text-right sm:text-3xl pb-4 text-zip-poncho  font-Daruma">Experience</h5>
-            </button>
-        </section>
-        <section id="everAg" class="bg-rata-eyeliner  p-4 z-30 pb-10 border-zip-poncho border-dashed border-b-4 ">
-            <div class="text-slate-50 justify-center max-w-4xl mx-auto grid grid-cols-4 gap-2 bg-rata-eyeliner  text-rata-eyeliner pt-10">
-                <!-- pic -->
-                <div class="pl-5 col-span-4  sm:col-span-2">
-                    <img alt="screenshot of page I created for ever.ag" class="rounded-lg" src="build/img/EverAg preview.jpg">
+ </a>
 
-                </div>
-                <!-- description -->
-                <div class="pl-5 col-span-4  sm:col-span-2">
-                    <h3 class="text-3xl pb-2 font-bold">Ever.Ag</h3>
-                    <h4 class=" pb-2">Web Design Intern | May 2023- Present</h4>
-                    <Br>
-                        <p class="font-bold">Learn more about my role in...</p>
-                            <ul class="list-disc pl-8">
-                            <li>Design and development for landing pages and Emails</li>
-                            <li>Site Mock-up creation using Figma</li>
-                            <li>Supporting a site migration</li>
-                        </ul>
-                        <button class="relative text-slate-50  focus:outline-none font-medium rounded-full text-md p-3 mt-5 bg-zip-blue border-solid border-2 border-slate-50 "><a href="build/EverAg.html">View Ever.Ag Samples</a></button>
-                </div>
-            </div>
-        </section>
-        <!--colabl-->
-        <section id="coLabl" class="bg-rata-eyeliner p-4 z-30 pb-10 border-b-zip-poncho border-dashed border-b-4 ">
-            <div class="text-slate-50 justify-center max-w-4xl mx-auto grid grid-cols-4 gap-2 bg-rata-eyeliner   pt-10">
-                                
-                <!-- pic -->
-                <div class="pl-5 col-span-4  sm:col-span-2 sm:order-2">
-                    <img alt="screenshot of page I created coLabl" class="rounded-lg" src="build/img/Colabl Preview.jpg">
+  <a href="./build/GraphicDesign.html" class="group relative transition ease-in-out  hover:-translate-y-1 hover:scale-110">
+    <!-- Default image -->
+    <img src="build/img/Icons/GraphicDesign1.png"
+         class="w-full col-span-1 block group-hover:hidden"/>
+    <!-- Hover image -->
+    <img src="build/img/Icons/GraphicDesign2.png"
+         class="w-full col-span-1 hidden group-hover:block" />
+      <div class="relative text-rata-eyeliner font-medium rounded-full px-3 text-md p-2 bg-pink-400   inline-block mt-2">Graphic Design</div>
 
-                </div>
-                <!-- description -->
-                                <div class="pl-5 col-span-4  sm:col-span-2 sm:order-1">
-                                    <h3 class="text-3xl pb-2 font-bold">CoLabl</h3>
-                                    <h4 class=" pb-2">Digital and Design Intern | Apr. 2024- May 2024</h4>
-                                    <Br>
-                                        <p class="font-bold">Learn more about my role in...</p>
-                                            <ul class="list-disc pl-8">
-                                            <li>Design - assets for the Live Más Scholar app</li>
-                                            <li>Site Mock-up creation using Figma</li>
-                                            <li>Delivery of designs to developers</li>
-                                        </ul>
-                                        <button class="relative text-slate-50  focus:outline-none font-medium rounded-full text-md p-3 mt-5 bg-zip-blue border-solid border-2 border-slate-50 "><a class="p-3" href="build/colabl.html">View CoLabl Samples</a></button>
-                                </div>
-            </div>
-        </section>
-        <!--Career Fair Plus-->
-        <section id="cfp" class="bg-rata-eyeliner  p-4 z-30 pb-10 border-zip-poncho border-dashed border-b-4 ">
-            <div class="text-slate-50 justify-center max-w-4xl mx-auto grid grid-cols-4 gap-2 bg-rata-eyeliner  text-rata-eyeliner pt-10">
-                <!-- pic -->
-                <div class="pl-5 col-span-4  sm:col-span-2">
-                    <img alt="screenshot of page I created for CF+" class="rounded-lg" src="build/img/CFP_Cover1.jpg">
+ </a>
 
-                </div>
-                <!-- description -->
-                <div class="pl-5 col-span-4  sm:col-span-2">
-                    <h3 class="text-3xl pb-2 font-bold">Career Fair Plus</h3>
-                    <h4 class=" pb-2">Web Intern | Feb. 2022- Feb. 2024</h4>
-                    <Br>
-                        <p class="font-bold">Learn more about my role in...</p>
-                            <ul class="list-disc pl-8">
-                            <li>Updates to the CF+ blog on Hubspot</li>
-                            <li>Production of various digital assets</li>
-                            <li>Design and development of emails</li>
-                        </ul>
-                        <button class="relative text-slate-50  focus:outline-none font-medium rounded-full text-md p-3 mt-5 bg-zip-blue border-solid border-2 border-slate-50 "><a class="p-3" href="build/CareerFairPlus.html">View CF+ Samples</a></button>
-                </div>
-            </div>
-        </section>
-                <!--osiDG-->
-                <section id="osiDG" class="bg-rata-eyeliner  p-4 z-30 pb-10 ">
-                    <div class=" text-slate-50 justify-center max-w-4xl mx-auto grid grid-cols-4 gap-2 bg-rata-eyeliner  text-rata-eyeliner pt-10">
-                                        
-                        <!-- pic -->
-                        <div class="sm:order-2 pl-5 col-span-4  sm:col-span-2">
-                            <img alt="screenshot of page I created for UCF" class="rounded-lg" src="build/img/about-0.jpg">
-        
-                        </div>
-<!-- description -->
-                                        <div class="pl-5 col-span-4  sm:col-span-2 sm:order-1">
-                                            <h3 class="text-3xl pb-2 font-bold">UCF</h3>
-                                            <h4 class=" pb-2">Web Designer | May 2021- May 2023</h4>
-                                            <Br>
-                                                <p class="font-bold">Learn more about my role in...</p>
-                                                    <ul class="list-disc pl-8">
-                                                    <li>Design and development for 3 sites</li>
-                                                    <li>Graphic design creation</li>
-                                                    <li>Design proposal and delivery</li>
-                                                </ul>
-                                                <button class="relative text-slate-50  focus:outline-none font-medium rounded-full text-md p-3 mt-5 bg-zip-blue border-solid border-2 border-slate-50"><a href="build/ucf.html">View UCF Samples</a></button>
-                                        </div>                   
-                                     </div>
-                </section>
+   <a href="./build/UX-UI.html" class="group relative transition ease-in-out  hover:-translate-y-1 hover:scale-110">
+    <!-- Default image -->
+    <img src="build/img/Icons/UXUI1.png"
+         class="w-full col-span-1 block group-hover:hidden"/>
+    <!-- Hover image -->
+    <img src="build/img/Icons/UXUI2.png"
+         class="w-full col-span-1 hidden group-hover:block" />
+      <div class="relative text-rata-eyeliner font-medium rounded-full px-3 text-md p-2 bg-pink-400   inline-block mt-2">UX/UI Design</div>
 
-                <section class="max-w-4xl mx-auto text-center pt-10 ">
-                    <div>
-                        <h2 class="text-4xl pt-5 pb-2 font-Daruma text-zip-blue text-zip-poncho">
-                            In my free time, I've made other creative projects you may be interested in:
-                        </h2>
-                    </div>
-                    </section>
-                    <!--LLD-->
-                    <section class=" mt-10 relative  max-w-4xl mx-auto">
-                        <div class="text-slate-50 justify-center grid grid-cols-12 gap-2 mx-auto">
-                                    
-                            <div class="mx-auto p-5 col-span-12 sm:col-span-6 text-rata-eyeliner border-2 border-solid  border-slate-50 rounded-lg w-fit flex flex-col items-center">
-                                <h3 class="pt-5 pb-2 text-center text-4xl font-Daruma text-zip-poncho">Lucky Little Darlings</h3>
-                                <h4 class="pl-5 font-medium  text-slate-50 text-center">
-                                    An art project where I create digital and physical items based on original characters
-                                </h4>
-                                <button class="relative text-slate-50  focus:outline-none font-medium rounded-full text-md p-3 mt-5 bg-zip-blue border-solid border-2 border-slate-50">
-                                    <a href="build/LuckyLittleDarlings.html" class="block">View LLD Project</a>
-                                </button>
-                            </div>
-<!--3D Art-->
-<div class="mx-auto p-5 col-span-12 sm:col-span-6  border-2 border-solid  border-slate-50 rounded-lg w-fit flex flex-col items-center">
-    <h3 class="pt-5 pb-2 text-center text-4xl font-Daruma  text-zip-poncho">3D Art</h3>
-    <h4 class="pl-5 font-medium  text-slate-50 text-center">
-        As a hobby, I create 3D art in Womp3D, and all my renders are here for viewing
-    </h4>
-    <button class="relative text-slate-50  focus:outline-none font-medium rounded-full text-md p-3 mt-5 bg-zip-blue border-solid border-2 border-slate-50">
-        <a href="build/3D-Art.html" class="block">View 3D renders</a>
-    </button>
+ </a>
+
+    <a href="./build/3D-Art.html" class="group relative transition ease-in-out  hover:-translate-y-1 hover:scale-110">
+    <!-- Default image -->
+    <img src="build/img/Icons/3DModeling1.png"
+         class="w-full col-span-1 block group-hover:hidden"/>
+    <!-- Hover image -->
+    <img src="build/img/Icons/3DModeling2.png"
+         class="w-full col-span-1 hidden group-hover:block" />
+      <div class="relative text-rata-eyeliner font-medium rounded-full px-3 text-md p-2 bg-pink-400   inline-block mt-2">3D Modeling</div>
+
+ </a>
+
+     <a href="./build/video-games.html" class="group relative transition ease-in-out  hover:-translate-y-1 hover:scale-110">
+    <!-- Default image -->
+    <img src="build/img/Icons/GameDev1.png"
+         class="w-full col-span-1 block group-hover:hidden"/>
+    <!-- Hover image -->
+    <img src="build/img/Icons/GameDev2.png"
+         class="w-full col-span-1 hidden group-hover:block" />
+      <div class="relative text-rata-eyeliner font-medium rounded-full px-3 text-md p-2 bg-pink-400   inline-block mt-2">Game Dev</div>
+
+ </a>
+   
+      <a href="./build/SocialMedia.html" class="group relative transition ease-in-out  hover:-translate-y-1 hover:scale-110">
+    <!-- Default image -->
+    <img src="build/img/Icons/Social1.png"
+         class="w-full col-span-1 block group-hover:hidden"/>
+    <!-- Hover image -->
+    <img src="build/img/Icons/Social2.png"
+         class="w-full col-span-1 hidden group-hover:block" />
+      <div class="relative text-rata-eyeliner font-medium rounded-full px-3 text-md p-2 bg-pink-400   inline-block mt-2">Social Media</div>
+
+ </a>
 </div>
+</Section>
+<!--featured projects-->
+        <section id="SOC" class=" mt-32 bg-rata-eyeliner z-30 pb-10 border-zip-poncho ">
+            
+                <h5 class="text-center sm:text-[2.5vw] text-[4.5vw] pb-4 text-pink-400  font-Helvetica font-bold">Featured Projects</h5>
+            <div class="text-slate-50 justify-center w-3\/4 mx-auto grid grid-cols-4 gap-2 bg-rata-eyeliner   pt-10">
+                
+                <!-- pic -->
+                <div class="pl-5 col-span-4  sm:col-span-2">
+                    <img alt="screenshot of page I created for ever.ag" class="rounded-lg" src="build/img/Summer of Connection Emilia.png">
 
-
-
-<div class="mx-auto p-5 col-span-12 sm:col-span-6 border-2 border-solid  border-slate-50 rounded-lg w-fit flex flex-col items-center">
-    <h3 class="pt-5 pb-2 text-center text-4xl font-Daruma  text-zip-poncho">Video Games</h3>
-    <h4 class="pl-5 font-medium text-center">
-        I have made 5 video games - as a project, art, and development lead
-    </h4>
-    <button class="relative text-slate-50  focus:outline-none font-medium rounded-full text-md p-3 mt-5 bg-zip-blue border-solid border-2 border-slate-50">
-        <a href="build/video-games.html" class="block">View video games</a>
-    </button>
-</div>
-      
-
-<div class="mx-auto p-5 col-span-12 sm:col-span-6 border-2 border-solid  border-slate-50 rounded-lg w-fit flex flex-col items-center">
-    <h3 class="pt-5 pb-2 text-center text-4xl font-Daruma  text-zip-poncho">Art on Display</h3>
-    <h4 class="pl-5 font-medium   text-center">
-        I have designed a mural and sidewalk signage for the university I graduated from!
-    </h4>
-    <button class="relative text-slate-50  focus:outline-none font-medium rounded-full text-md p-3 mt-5 bg-zip-blue border-solid border-2 border-slate-50">
-        <a href="build/Art-on-display.html" class="block">View mural and signage</a>
-    </button>
-</div><!--commerce-->
-                           
-                                   
-                            </div>
+                </div>
+                <!-- description -->
+                <div class="pl-5 col-span-4  sm:col-span-2">
+                  <h4 class="font-bold pb-2">Taco Bell Foundation x CoLabl</h4>
+                    <h3 class="text-3xl pb-2 font-bold">Live Mas Scholarship(LMS) Assets</h3>
                     
-                        </div>
-                    </section>
+                    <Br>
+                        <p class="font-bold">Learn more about my role in...</p>
+                            <ul class="list-disc pl-8">
+                            <li>Creating designs for the conference postcard and sticker pack</li>
+                            <li>Designing with Figma, Adobe Illustrator, and Womp3D</li>
+                            <li>Designing a webpage for the LMS portal</li>
+                        </ul>
+                        <button class=" relative text-rata-eyeliner  focus:outline-none font-medium rounded-full text-md p-3 mt-5 bg-pink-400 hover:bg-purple-300 border-solid border-1"><a href="build/lms.html">View LMS Designs</a></button>
+                </div>
+            </div>
+        </section>
+
+<!--EdEcho-->
+                <section id="SOC" class="bg-rata-eyeliner z-30 pb-10 border-zip-poncho ">
+            <div class="text-slate-50 justify-center w-3\/4 mx-auto grid grid-cols-4 gap-2 bg-rata-eyeliner   pt-10">
+                 <!-- pic -->
+                <div class="pl-5 col-span-4 sm:order-2 sm:col-span-2">
+                    <img alt="echo website mockup" class="rounded-lg" src="build/img/Echo site 2025.png">
+
+                </div>
+                <!-- description -->
+                <div class="pl-5 col-span-4 sm:order-1 sm:col-span-2">
+                  <h4 class="font-bold pb-2">ECHO (Early Cardiovascular Health Outreach)</h4>
+                    <h3 class="text-3xl pb-2 font-bold">EdEcho.org</h3>
+                    <Br>
+                        <p class="font-bold">Learn more about my role in...</p>
+                            <ul class="list-disc pl-8">
+                            <li>Designing ECHO's website using Figma</li>
+                            <li>Transforming the prototype into a live site using React, Next.Js, and TailwindCSS</li>
+                        </ul>
+                        <button class="relative text-rata-eyeliner  focus:outline-none font-medium rounded-full text-md p-3 mt-5 bg-pink-400 hover:bg-purple-300 border-solid border-1"><a href="build/Echo.html">View Echo Designs</a></button>
+                </div>
+               
+            </div>
+        </section>
+
+        <section id="everAg" class="bg-rata-eyeliner z-30 pb-10">
+            <div class="text-slate-50 justify-center w-3\/4 mx-auto grid grid-cols-4 gap-2 bg-rata-eyeliner   pt-10">
+                
+                <!-- pic -->
+                <div class="pl-5 col-span-4  sm:col-span-2">
+                    <img alt="screenshot of page I created for ever.ag" class="rounded-lg" src="build/img/ucfArt.png">
+
+                </div>
+                <!-- description -->
+                <div class="pl-5 col-span-4  sm:col-span-2">
+                  <h4 class=" pb-2">University of Central Florida</h4>
+                    <h3 class="text-3xl pb-2 font-bold">Campus Art + Web Design</h3>
+                    
+                    <Br>
+                        <p class="font-bold">Learn more about my role in...</p>
+                            <ul class="list-disc pl-8">
+                            <li>Co-managing 3 UCF subdomain sites</li>
+                            <li>Designing a campus mural and stormdrain signage</li>
+                            <li>Participating in art shows</li>
+                        </ul>
+                        <button class="relative text-rata-eyeliner  focus:outline-none font-medium rounded-full text-md p-3 mt-5 bg-pink-400 hover:bg-purple-300 border-solid border-1"><a href="build/ucf.html">View UCF Designs</a></button>
+                </div>
+            </div>
+        </section>
+
 
     </main>
     <script>
@@ -309,44 +281,42 @@
         </script>
 </body>
     
-    <footer class="footer bg-zip-poncho text-rata-eyeliner bg-rata-eyeliner  p-10 mt-20">
-        <nav>
-          <h6 class="footer-title"><a href="#workExperience">Work Experience</a></h6>
-          <a class="link link-hover" href="build/EverAg.html">Ever.Ag</a>
-          <a class="link link-hover" href="build/colabl.html">CoLabl</a>
-          <a class="link link-hover" href="build/CareerFairPlus.html">CF+</a>
-          <a class="link link-hover" href="build/ucf.html">UCF</a>
-        </nav>
-        <nav>
-          <h6 class="footer-title"><a href="build/Personal-Projects.html">Personal Projects</a></h6>
-          <a class="link link-hover" href="build/LuckyLittleDarlings.html">Lucky Little Darlings</a>
-          <a class="link link-hover" href="build/3D-Art.html">3D Art</a>
-          <a class="link link-hover" href="build/video-games.html">Video Games</a>
-          <a class="link link-hover" href="build/Art-on-display.html">Art on Display</a>
-        </nav>
-        <nav>
-          <h6 class="footer-title"><a href="build/img/Emilia Hernandez Resume _ Public.pdf">Resume</a></h6>
-        </nav>
-      </footer>
-      <footer class="footer bg-zip-poncho text-rata-eyeliner  border-base-300 border-t px-10 py-4">
-        <aside class="grid-flow-col items-center">
-          <p class="italic font-medium">
-            Site Developed by Emilia Hernandez
-            
-          </p>
-        </aside>
-        <nav class="md:place-self-center md:justify-self-end">
-          <div class="grid grid-flow-col gap-4">
-            <a target="_blank" href="https://www.linkedin.com/in/emilia-hernandez-560489159/">
-                <svg class="fill-zip-poncho fill-rata-eyeliner mx-auto" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"/></svg>LinkedIn
-            </a>
-            <a class="text-center" target="_blank" href="https://github.com/EmiliaHernandez">
-                <svg class="fill-zip-poncho fill-rata-eyeliner mx-auto" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>Github
-            </a>
-          
-          </div>
-        </nav>
-      </footer>
+  <footer class="footer bg-purple-300 text-rata-eyeliner p-10 mt-20">
+    <nav>
+      <h6 class="footer-title"><a>Design Projects</a></h6>
+      <a class="link link-hover" href="build/UX-UI.html">UX/UI Design</a>
+      <a class="link link-hover" href="build/GraphicDesign.html">Graphic Design</a>
+      <a class="link link-hover" href="build/3D-Art.html">3D Modeling</a>
+      <a class="link link-hover" href="build/SocialMedia.html">Social Media</a>
+    </nav>
+    <nav>
+      <h6 class="footer-title"><a>Dev Projects</a></h6>
+      <a class="link link-hover" href="build/WebDev.html">Web Dev</a>
+      <a class="link link-hover" href="build/video-games.html">Game Dev</a>
+    </nav>
+    <nav>
+      <h6 class="footer-title"><a href="build/img/Emilia Hernandez Resume _ Public.pdf">Resume</a></h6>
+    </nav>
+  </footer>
+  <footer class="footer bg-purple-300 text-rata-eyeliner border-base-300 border-t px-10 py-4">
+    <aside class="grid-flow-col items-center">
+      <p class="italic font-medium">
+        Site Developed by Emilia Hernandez
+        
+      </p>
+    </aside>
+    <nav class="md:place-self-center md:justify-self-end">
+      <div class="grid grid-flow-col gap-4">
+        <a target="_blank" href="https://www.linkedin.com/in/emilia-hernandez-560489159/">
+          <svg class="fill-rata-eyeliner mx-auto" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"/></svg>LinkedIn
+      </a>
+      <a class="text-center" target="_blank" href="https://github.com/EmiliaHernandez">
+          <svg class="fill-rata-eyeliner mx-auto" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>Github
+      </a>
+      
+      </div>
+    </nav>
+  </footer>
     </section>
 </footer>
 </html>

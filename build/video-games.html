@@ -1,134 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
 <meta name="description" content="I've participated in 5 game jams and was a lead developer and artist for all of them.">
-    <title>Video Games by Emilia</title>
+    <title>Game Dev by Emilia</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="../src/output.css" rel="stylesheet">
     <link rel="stylesheet" href="../src/input.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
-<script>
-  if (localStorage.getItem('dark-mode') === 'true' || (!('dark-mode' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      document.querySelector('html').classList.add('dark');
-  } else {
-      document.querySelector('html').classList.remove('dark');
-  }
-  </script>
 </head>
-<body class="min-h-screen bg-slate-50 dark:bg-rata-eyeliner dark:text-slate-50 font-RedHat z-0">
-    <header class="dark:rata-black-eyeliner.text-slate-50 bg-slate-100.text-black sticky top-0 z-10">
-        <div class="navbar bg-slate-50 dark:bg-rata-eyeliner">
-            <div class="navbar-start">
-              <div class="dropdown">
-                <div tabindex="0" aria-label="Main Menu" role="button" class="btn btn-ghost sm:hidden">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M4 6h16M4 12h8m-8 6h16" />
-                  </svg>
-                </div>
-                <ul
-                  tabindex="0"
-                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-3 shadow">
-                  <li><a href="../index.html#workExperience" class="mt-2">Work Experience</a></li>
-                  <li>
-                    <a href="Personal-Projects.html">Personal Projects</a>
-                  </li>
-                  <li><a href="img/Emilia Hernandez Resume _ Public.pdf">Resume</a></li>
-                </ul>
-              </div>
-              <a class="btn btn-ghost font-Daruma text-xl" href="../index.html">Emilia Hernandez</a>
+<body class="min-h-screen bg-rata-eyeliner text-slate-50 font-RedHat z-0 dark">
+   <header class="rata-black-eyeliner text-slate-50  sticky top-0 z-10">
+    <div class="navbar bg-rata-eyeliner">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" aria-label="Main Menu" role="button" class="btn btn-ghost sm:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
             </div>
-
-            <div class="navbar-end hidden lg:flex">            
-                <div class="dropdown dropdown-hover">
-                <div tabindex="0" role="button" class="pr-10 m-3 font-bold" ><a href="../index.html#workExperience">Work Experience</a></div>
-                <ul tabindex="0" class="dropdown-content menu text-slate-50 bg-zip-blue rounded-box z-50 w-52 p-2 shadow">
-                  <li><a href="EverAg.html">Ever.Ag</a></li>
-                  <li><a href="colabl.html">CoLabl</a></li>
-                  <li><a href="CareerFairPlus.html">CF+</a></li>
-                  <li><a href="ucf.html">UCF</a></li>
-                </ul>
-              </div>
-              <div class="dropdown dropdown-hover pr-10">
-                <div tabindex="0" role="button" class=" m-1 font-bold"><a href="Personal-Projects.html">Personal Projects</a></div>
-                <ul tabindex="0" class="dropdown-content menu text-slate-50 bg-zip-blue rounded-box w-52 z-[40] p-2 shadow">
-                  <li><a href="LuckyLittleDarlings.html">Lucky Little Darlings</a></li>
-                  <li><a href="3D-Art.html">3D Art</a></li>
-                  <li><a href="video-games.html">Video Games</a></li>
-                  <li><a href="Art-on-display.html">Art on Display</a></li>
-                </ul>
-              </div>
-              <div class="dropdown dropdown-hover pr-10">
-                <div tabindex="0" role="button" class=" m-1 font-bold"><a href="img/Emilia Hernandez Resume _ Public.pdf">Resume</a></div>
-              </div>
-
-              <div>
-            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content text-slate-50 bg-rata-eyeliner rounded-box z-[1] mt-3 w-52 p-3 shadow">
+              <li><a href="WebDev.html" class="mt-2">Web Dev</a></li>
+              <li>
+                <a href="GraphicDesign.html">Graphic Design</a>
+              </li>
+              <li>
+                <a href="UX-UI.html">UX/UI Design</a>
+              </li>
+              <li>
+                <a href="3D-Art.html">3D Modeling</a>
+              </li>
+               <li>
+                <a href="SocialMedia.html">Social Media</a>
+              </li>
+              <li>
+                <a href="video-games.html">Game Dev</a>
+              </li>
+              <li><a href="img/Emilia Hernandez Resume _ Public.pdf">Resume</a></li>
+            </ul>
           </div>
-    </header>
-    <main class="mx-auto">
-        <div class="relative max-w-4xl mx-auto pt-10">
-            <img src="img/GameDesign_and_DevelopmentByEmiliaHernandez.jpg" alt="preview of rpg game I drew" class="object-cover rounded-lg w-full h-full">
-            <div class="absolute bottom-4 right-4 text-slate-50 p-4 rounded-lg text-right">
-              <h1 class="text-4xl font-bold font-Daruma">Video Games</h1>
-              <p class="mt-2 font-Daruma"></p>
-          </div>
+          <a class="btn btn-ghost text-xl" href="../index.html">Emilia Hernandez</a>
         </div>
-        <section class="max-w-4xl mx-auto">
-            <h3 class="text-xl mt-10 sm:pt-8 p-5 sm:p-0">
-                Since 2018, I've been making games for weekend-long game jams. I have been the project/art/writing lead for all of those mentioned here. Games are my favorite types of interactive media as a consumer, and I've enjoyed making them as an artist/dev who loves digital media and story-telling.
+
+        <div class="navbar-end hidden lg:flex">            
+            <div class="dropdown dropdown-hover">
+            <div tabindex="0" role="button" class="pr-10 m-3 font-bold" ><a>Dev Projects</a></div>
+            <ul tabindex="0" class="dropdown-content menu text-black bg-pink-300 rounded-box z-50 w-52 p-2 shadow">
+              <li><a href="WebDev.html">Web Dev</a></li>
+              <li><a href="video-games.html">Game Dev</a></li>
+            </ul>
+          </div>
+          <div class="dropdown dropdown-hover pr-10">
+            <div tabindex="0" role="button" class=" m-1 font-bold"><a>Design Projects</a></div>
+            <ul tabindex="0" class="dropdown-content menu text-black bg-pink-300 rounded-box w-52 z-[40] p-2 shadow">
+              
+              <li><a href="GraphicDesign.html">Graphic Design</a></li>
+              <li><a href="UX-UI.html">UX/UI</a></li>
+              <li><a href="3D-Art.html">3D Art</a></li>
+              <li><a href="SocialMedia.html">Social Media</a></li>
+            </ul>
+          </div>
+          <div class="dropdown dropdown-hover pr-10">
+            <div tabindex="0" role="button" class=" m-1 font-bold"><a href="img/Emilia Hernandez Resume _ Public.pdf">Resume</a></div>
+          </div>
+
+          <div>
+        </div>
+      </div>
+</header>
+    <main class="mx-auto max-w-[90%] bg-rata-eyeliner text-slate-50">
+<section class="mx-auto pt-10 grid sm:grid-cols-6 grid-cols-1 gap-16"> 
+          <div class=" hidden sm:block sm:col-span-2 sm:order-2 content-center"><img class="w-full block m-auto" src="img/Icons/GameDev1.png"></div>
+          <div class="col-span-4 sm:order-1"><h1 class=" p-5 sm:p-0 m-auto text-left text-[32px] sm:text-[3.5vw] sm:text-5xl pb-4 text-pink-400  font-Helvetica font-bold">Game Development</span></h1>
+            <h3 class="text-[14px] sm:text-[1.5vw] sm:pb-8 sm:pt-8 p-5 sm:p-0">
+                                Since 2018, I've been making games for weekend-long game jams. I have been the project/art/writing lead for all the ones below. Games are my favorite type of interactive media as a consumer, and I've enjoyed making them as an artist/dev who loves digital media and story-telling.
+
             </h3>
+            </div>
         </section>
+        <br>
+ <hr>
 <!--LLD Game-->
-        <Section id="lldGame" class="dark:border-b-sky-100 border-dashed border-b-4 border-b-slate-950">
-        <div class="pb-8 dark:text-slate-50 justify-center max-w-4xl mx-auto grid grid-cols-12 gap-2 text-rata-eyeliner pt-10">
-            <div class="pl-5 col-span-12 sm:col-span-4 gap-2  p-5 rounded-lg w-fit">
-                <h3 class="text-4xl pb-2 font-Daruma text-zip-blue dark:text-zip-poncho">Lucky Little Darlings</h3>
-                <h4 class=" font-medium text-rata-eyeliner dark:text-slate-50">created for LDJAM #55</h4>
+        <Section id="lldGame" class="">
+        <div class="pb-8 text-slate-50 justify-center  mx-auto grid grid-cols-12 gap-2  pt-10">
+            <div class=" col-span-12 sm:col-span-6 gap-2 rounded-lg w-fit">
+                <h3 class="text-[14px] sm:text-[3.5vw] pb-2  font-bold text-pink-400">Lucky Little Darlings</h3>
+                <h4 class="text-[14px] sm:text-[1.5vw] font-medium text-rata-eyeliner dark:text-slate-50">created for LDJAM #55</h4>
                 
             </div>
-              <div class="pl-5 col-span-12 sm:col-span-5">
-                <iframe class="rounded-lg hidden sm:block" frameborder="0" src="https://itch.io/embed/2650592?link_color=751A46" width="530" height="167"><a href="https://ponchodarling.itch.io/lucky-little-darlings-ldjam">Lucky Little Darlings - Ludum Dare 55 Edition by poncho.darling</a></iframe>
+              <div class=" col-span-12 sm:col-span-5">
+                <iframe class="rounded-lg hidden sm:block right-0" frameborder="0" src="https://itch.io/embed/2650592?link_color=751A46" width="530" height="167"><a href="https://ponchodarling.itch.io/lucky-little-darlings-ldjam">Lucky Little Darlings - Ludum Dare 55 Edition by poncho.darling</a></iframe>
                 <iframe class="mx-auto rounded-lg sm:hidden visible" frameborder="0" src="https://itch.io/embed/2650592?link_color=751A46" width="208" height="167"><a href="https://ponchodarling.itch.io/lucky-little-darlings-ldjam">Lucky Little Darlings - Ludum Dare 55 Edition by poncho.darling</a></iframe>
             </div>
+            
         </div>
-      <div class="max-w-4xl mx-auto p-5 sm:p-0">
-        <div role="tablist" class="tabs tabs-lifted">
-            <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Description" checked="checked" />
-            <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
-                <p>LLD is a hidden object game with mostly narrative elements, focusing on a trio of siblings that have magical capabilities. They run an online shop of retro/vintage items that are cloned with magic, but it isn't bringing in enough money, so they decide to summon lovable creatures to make a business with them that will capture the adoration of the masses(because they are so cute and cute sells).</p>
+        
+      <div class=" mx-auto px-5 sm:p-0">
+<p class="text-[14px] sm:text-[1.5vw]">LLD is a hidden object game with mostly narrative elements, focusing on a trio of siblings that have magical capabilities. They run an online shop of retro/vintage items that are cloned with magic, but it isn't bringing in enough money, so they decide to summon lovable creatures to make a business with them that will capture the adoration of the masses(because they are so cute and cute sells).</p>
                     <br><p>Created in 72 hours</p>
-            </div>
-          
-            <input
-              type="radio"
-              name="my_tabs_2"
-              role="tab"
-              class="tab"
-              aria-label="Technology" />
-            <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
-              <span><p class="font-bold">Game Engine:</p> Unity</span>
               <br>
+              <div class=" text-rata-eyeliner justify-center  mx-auto grid grid-cols-12 gap-2 bg-purple-300 rounded-md">
+            <div class=" col-span-12 sm:col-span-3 gap-2  p-5 rounded-lg w-fit">
+              <span><p class="font-bold">Game Engine:</p> Unity</span>
               <span><p class="font-bold pt-5">Unity Library:</p> Fungus Engine</span>
               <br>
               <span><p class="font-bold pt-5">Art Creation:</p> Procreate, Illustrator, Canva</span>
-              <br>
-              <p class="font-bold pt-5">Music:</p>
-              <ul class="pl-5 list-disc">
+</div>
+<div class=" col-span-12 sm:col-span-5 gap-2 p-5 rounded-lg w-fit">
+               <p class="font-bold">Music:</p>
+              <ul class=" list-disc text-wrap">
                 <li>Multi-instrument beat maker: Chrome Music Lab</li>
                 <li>Xylophone sounds: playxylo.com</li>
                 <li>Drum/Kick set: splice.com</li>
@@ -138,11 +135,9 @@
                 <li>Other Audios: Recorded at home</li>
                 <li>Miscellaneous: Pixabay royalty free sfx</li>
               </ul>
-            </div>
-          
-            <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Credits" />
-            <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
-                <p class="font-bold">My Work</p>
+</div>
+<div class=" col-span-12 sm:col-span-4 gap-2  p-5 rounded-lg w-fit">
+ <p class="font-bold">My Work</p>
                 <ul class="list-disc pl-10">
                     <li>Project Management</li>
                     <li>Development - WebGL and Windows build</li>
@@ -159,15 +154,11 @@
                 <ul class="list-disc pl-10">
                     <li>Music - All sound and SFX</li>
                 </ul>
-            </div>
-            <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Theme" />
-            <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
-                <p>The theme of this game jam was "summoning", and truthfully, I did not think I would be participating in another game jame, especially in my last semester of university when things were so busy. However, this theme seemed too exciting, and I came back from my game jam break to make one more as a student. I had already been drawing illustrations of the central characters in the game, and I saw this as an opportunity to make something entirely new, and to take a break from the web development work. This was also my first time collaborating with another artist, and she was a great help for the hidden level room.</p>
-            </div>
+</div>
+</div>
 
-          </div>
       </div>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl mx-auto pb-10 pt-10">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4  mx-auto pb-10 pt-10">
             <div class="grid gap-4">
                 <div>
                     <img class="mx-auto h-auto max-w-full rounded-lg" src="img/LuckyLittleDarlings - Bedroom.png" alt="screenshot of lucky little darlings game scene">
@@ -187,37 +178,29 @@
             </div>
 
         </div>
-    </Section>
+    </Section><br>
+ <hr>
 <!--Her Bedtime Stories-->
-    <Section class="dark:border-b-sky-100 border-dashed border-b-4 border-b-slate-950">
-        <div class="dark:text-slate-50 justify-center max-w-4xl mx-auto pb-8 grid grid-cols-12 gap-2 text-rata-eyeliner pt-10">
-            <div class="pl-5 col-span-12 sm:col-span-3 gap-2  p-5 rounded-lg w-fit sm-order3">
-                <h3 class="text-4xl pb-2 font-Daruma text-zip-blue dark:text-zip-poncho">Her Bedtime Stories</h3>
-                <h4 class=" font-medium text-rata-eyeliner dark:text-slate-50">created for LDJAM #48</h4>
+    <Section class="">
+        <div class="dark:text-slate-50 justify-center  mx-auto pb-8 grid grid-cols-12 gap-2 text-rata-eyeliner pt-10">
+            <div class=" col-span-12 sm:col-span-5 gap-2 rounded-lg w-fit sm-order3">
+                <h3 class="text-[14px] sm:text-[3.5vw] pb-2  font-bold text-pink-400">Her Bedtime Stories</h3>
+                <h4 class="text-[14px] sm:text-[1.5vw] font-medium text-rata-eyeliner dark:text-slate-50">created for LDJAM #48</h4>
             </div>            
-            <div class="pl-5 col-span-1 sm-order-2"></div>
-<div class="pl-5 col-span-12 sm:col-span-6 sm:order-1">
+            <div class=" col-span-1 sm-order-2"></div>
+<div class=" col-span-12 sm:col-span-6 sm:order-1">
   <iframe class="rounded-lg hidden sm:block" frameborder="0" src="https://itch.io/embed/1017225?link_color=751A46" width="530" height="167"><a href="https://ponchodarling.itch.io/her-bedtime-stories">Her Bedtime Stories by poncho.darling</a></iframe>
   <iframe class="mx-auto rounded-lg sm:hidden visible" frameborder="0" src="https://itch.io/embed/1017225?link_color=751A46" width="208" height="167"><a href="https://ponchodarling.itch.io/her-bedtime-stories">Her Bedtime Stories by poncho.darling</a></iframe>
             </div>
           
         </div>
-      <div class="max-w-4xl mx-auto p-5 sm:p-0">
-        <div role="tablist" class="tabs tabs-lifted">
-            <input type="radio" name="my_tabs_3" role="tab" class="tab" aria-label="Description" checked="checked" />
-            <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
-                <span><p class="font-bold">Sensitive Content Warning:</p><p>Her Bedtime Stories is a visual novel about a recovering victim of assault who is stuck in a loop of negative memories and interpretations. Her Bedtime Stories tells the story of giving in to thoughts related to trauma, through the visual device of a platform that is constantly sinking deeper into a mine. Your role is to observe and help when you can.</p></span>
-                    <br><p>Created in 72 hours</p>
-            </div>
-          
-            <input
-              type="radio"
-              name="my_tabs_3"
-              role="tab"
-              class="tab"
-              aria-label="Technology" />
-            <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
-              <span><p class="font-bold">Game Engine:</p> Unity</span>
+        <!--game info-->
+      <div class=" mx-auto px-5 sm:p-0"><span><p class="font-bold text-[14px] sm:text-[1.5vw]">Sensitive Content Warning:</p><p class="text-[14px] sm:text-[1.5vw]">Her Bedtime Stories is a visual novel about a recovering victim of assault who is stuck in a loop of negative memories and interpretations. Her Bedtime Stories tells the story of giving in to thoughts related to trauma, through the visual device of a platform that is constantly sinking deeper into a mine. Your role is to observe and help when you can.</p></span>
+                    <br><p class="text-[14px] sm:text-[1.5vw]">Created in 72 hours</p>
+              <br>
+              <div class=" text-rata-eyeliner justify-center  mx-auto grid grid-cols-12 gap-2 bg-purple-300 rounded-md">
+            <div class=" col-span-12 sm:col-span-3 gap-2  p-5 rounded-lg w-fit">
+                           <span><p class="font-bold">Game Engine:</p> Unity</span>
               <br>
               <span><p class="font-bold pt-5">Unity Library:</p> Fungus Engine</span>
               <br>
@@ -227,11 +210,9 @@
               <ul>
                 <li> Bosca Ceoli</li>
               </ul>
-            </div>
-          
-            <input type="radio" name="my_tabs_3" role="tab" class="tab" aria-label="Credits" />
-            <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
-                <p class="font-bold">My Work</p>
+</div>
+<div class=" col-span-12 sm:col-span-8 gap-2  p-5 rounded-lg w-fit">
+ <p class="font-bold">My Work</p>
                 <ul class="list-disc pl-10">
                     <li>Project Management</li>
                     <li>Development - WebGL and Windows build</li>
@@ -243,18 +224,12 @@
                 <ul class="list-disc pl-10">
                     <li>Music</li>
                 </ul>
-                <br>
-            </div>
+</div>
+</div>
 
-            <input type="radio" name="my_tabs_3" role="tab" class="tab" aria-label="Theme" />
-            <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
-                <p>The theme of this game jam was "deeper and deeper", and my interpretation of that was that it may become harder to get out of a hole the deeper you are, mentally. However, I did want this game to end positively, and I included a reminder to keep those close to you around for support and strength during hard times. My creative process involved thinking about situations that are grounded in reality, that people may have gone through, or know of someone else going through them. As well as that, I thought about more abstract ways of expressing pain that could be striking and cutting in a way that gets players to think deeper about their actions.</p>
-            </div>
-
-
-          </div>
       </div>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl mx-auto pb-10 pt-10">
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4  mx-auto pb-10 pt-10">
 
                         <div class="grid gap-4">
                 <div>
@@ -275,36 +250,28 @@
             </div>
 
         </div>
-    </Section>
-    <!--Spirit Scouts-->
-<Section>
-  <div class="dark:text-slate-50 justify-center max-w-4xl mx-auto grid grid-cols-12 gap-2 text-rata-eyeliner pt-10 pb-8">
-      <div class="pl-5 col-span-12 sm:col-span-4 gap-2  p-5 rounded-lg w-fit">
-          <h3 class="text-4xl pb-2 font-Daruma text-zip-blue dark:text-zip-poncho">Spirit Scouts</h3>
-          <h4 class=" font-medium text-rata-eyeliner dark:text-slate-50">created for LDJAM #47</h4>
-          
-      </div>
-        <div class="pl-5 col-span-12 sm:col-span-5">
-          <iframe class="rounded-lg hidden sm:block" frameborder="0" src="https://itch.io/embed/780757?link_color=751A46" width="552" height="167"><a href="https://ponchodarling.itch.io/spirit-scouts">Spirit Scouts by poncho.darling</a></iframe>
+    </Section><br>
+ <hr>
+ <!--Spirit scouts new-->
+ <Section class="">
+        <div class="dark:text-slate-50 justify-center  mx-auto pb-8 grid grid-cols-12 gap-2 text-rata-eyeliner pt-10">
+            <div class=" col-span-12 sm:col-span-5 gap-2 rounded-lg w-fit sm-order3">
+                <h3 class="text-[14px] sm:text-[3.5vw] pb-2  font-bold text-pink-400">Spirit Scouts</h3>
+                <h4 class="text-[14px] sm:text-[1.5vw] font-medium text-rata-eyeliner dark:text-slate-50">created for LDJAM #47</h4>
+            </div>            
+            <div class=" col-span-1 sm-order-2"></div>
+<div class=" col-span-12 sm:col-span-6 sm:order-1">
+  <iframe class="rounded-lg hidden sm:block" frameborder="0" src="https://itch.io/embed/780757?link_color=751A46" width="552" height="167"><a href="https://ponchodarling.itch.io/spirit-scouts">Spirit Scouts by poncho.darling</a></iframe>
           <iframe class="mx-auto rounded-lg sm:hidden visible" frameborder="0" src="https://itch.io/embed/780757?link_color=751A46" width="208" height="167"><a href="https://ponchodarling.itch.io/spirit-scouts">Spirit Scouts by poncho.darling</a></iframe>
-
-      </div>
-  </div>
-<div class="max-w-4xl mx-auto p-5 sm:p-0">
-  <div role="tablist" class="tabs tabs-lifted">
-      <input type="radio" name="my_tabs_6" role="tab" class="tab" aria-label="Description" checked="checked" />
-      <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
-          <p>Spirit scouts is a sentence puzzle game where you are looking for your soul mate in outer-space, based on surrounding bits of conversations. As you make a statement, find the corresponding response. Play as different recently deceased souls looking for someone they have been missing from their lifetime.</p>
+            </div>
+          
+        </div>
+        <!--game info-->
+      <div class=" mx-auto px-5 sm:p-0"><p class="text-[14px] sm:text-[1.5vw]">Spirit scouts is a sentence puzzle game where you are looking for your soul mate in outer-space, based on surrounding bits of conversations. As you make a statement, find the corresponding response. Play as different recently deceased souls looking for someone they have been missing from their lifetime.</p>
               <br><p>Created in 24 hours</p>
-      </div>
-    
-      <input
-        type="radio"
-        name="my_tabs_6"
-        role="tab"
-        class="tab"
-        aria-label="Technology" />
-      <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
+              <br>
+              <div class=" text-rata-eyeliner justify-center  mx-auto grid grid-cols-12 gap-2 bg-purple-300 rounded-md">
+            <div class=" col-span-12 sm:col-span-3 gap-2  p-5 rounded-lg w-fit">
         <span><p class="font-bold">Game Engine:</p> Unity</span>
         <br>
         <span><p class="font-bold pt-5">Unity Library:</p> Fungus Engine</span>
@@ -315,11 +282,9 @@
         <ul>
           <li>Bosca Ceoli</li>
         </ul>
-      </div>
-    
-      <input type="radio" name="my_tabs_6" role="tab" class="tab" aria-label="Credits" />
-      <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
-          <p class="font-bold">My Work</p>
+</div>
+<div class=" col-span-12 sm:col-span-8 gap-2  p-5 rounded-lg w-fit">
+ <p class="font-bold">My Work</p>
           <ul class="list-disc pl-10">
               <li>Project Management</li>
               <li>Development - WebGL and Windows build</li>
@@ -331,76 +296,68 @@
           <ul class="list-disc pl-10">
               <li>Music</li>
           </ul>
+</div>
+</div>
+
       </div>
 
-      <input type="radio" name="my_tabs_6" role="tab" class="tab" aria-label="Theme" />
-      <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
-          <p>The theme of this jam was "Stuck in a loop", and I incorporated this into the game through the mechanics. If you make the wrong pairing/don't complete the puzzle correctly, you restart the level until you are correct. Spirit Scouts was created in 24 hours. This was part of the 72-hour game jam, but my computer crashed at the start, and I was determined to still turn something in! This simple game is meant to be more lighthearted than my prior game, Highlights. It's filled with fun dialogue, cute animals, and many colors. While the mechanics are simple, I'm proud of it considering the time restriction and slow device times.</p>
-      </div>
-    </div>
-</div>
-  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl mx-auto pb-10 pt-10">
-      <div class="grid gap-4">
-          <div>
-              <img class="mx-auto h-auto max-w-full rounded-lg" src="img/SpiritScouts_1.png" alt="spirit scouts title screen of floating characters">
-          </div>
-      </div>
-      
-      <div class="grid gap-4">
-          <div>
-              <img class="mx-auto h-auto max-w-full rounded-lg" src="img/SpiritScouts_2.png" alt="screenshot of interlude">
-          </div>
-      </div>
-      <div class="grid gap-4">
-          <div>
-              <img class="mx-auto h-auto max-w-full rounded-lg" src="img/SpiritScouts_3.png" alt="screenshot of gameplay and level hint">
-          </div>
-      </div>
-  </div>
-</Section>
-<!--Highlights-->
-<Section class="dark:border-b-sky-100 border-dashed border-b-4 border-b-slate-950">
-    <div class="pb-8 dark:text-slate-50 justify-center max-w-4xl mx-auto grid grid-cols-12 gap-2 text-rata-eyeliner pt-10">
-        <div class="pl-5 col-span-12 sm:col-span-4 gap-2  p-5 rounded-lg w-fit">
-            <h3 class="text-4xl pb-2 font-Daruma text-zip-blue dark:text-zip-poncho">Highlights</h3>
-            <h4 class=" font-medium text-rata-eyeliner dark:text-slate-50">created for LDJAM #46</h4>
-            
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4  mx-auto pb-10 pt-10">
+
+                        <div class="grid gap-4">
+                <div>
+                    <img class="mx-auto h-auto max-w-full rounded-lg" src="img/SpiritScouts_1.png" alt="spirit scouts title screen of floating characters">
+                </div>
+                </div>
+            <div class="grid gap-4">
+                <div>
+                    <img class="mx-auto h-auto max-w-full rounded-lg" src="img/SpiritScouts_2.png" alt="screenshot of interlude">
+                </div>
+            </div>
+            <div class="grid gap-4">
+                <div>
+                    <img class="mx-auto h-auto max-w-full rounded-lg" src="img/SpiritScouts_3.png" alt="screenshot of gameplay and level hint">
+                </div>
+            </div>
+
+            </div>
+
         </div>
-          <div class="pl-5 col-span-12 sm:col-span-5">
-                            <iframe class="rounded-lg hidden sm:block" frameborder="0" src="https://itch.io/embed/620472?link_color=751A46" width="552" height="167"><a href="https://ponchodarling.itch.io/highlights">Highlights by poncho.darling</a></iframe>
+    </Section><br>
+ <hr>
+<br>
+<!--Highlights New-->
+ <Section class="">
+        <div class="dark:text-slate-50 justify-center  mx-auto pb-8 grid grid-cols-12 gap-2 text-rata-eyeliner pt-10">
+            <div class=" col-span-12 sm:col-span-5 gap-2 rounded-lg w-fit sm-order3">
+                <h3 class="text-[14px] sm:text-[3.5vw] pb-2  font-bold text-pink-400">Highlights</h3>
+                <h4 class="text-[14px] sm:text-[1.5vw] font-medium text-rata-eyeliner dark:text-slate-50">created for LDJAM #46</h4>
+            </div>            
+            <div class=" col-span-1 sm-order-2"></div>
+<div class=" col-span-12 sm:col-span-6 sm:order-1">
+  <iframe class="rounded-lg hidden sm:block" frameborder="0" src="https://itch.io/embed/620472?link_color=751A46" width="552" height="167"><a href="https://ponchodarling.itch.io/highlights">Highlights by poncho.darling</a></iframe>
                 <iframe class="mx-auto rounded-lg sm:hidden visible" frameborder="0" src="https://itch.io/embed/620472?link_color=751A46" width="208" height="167"><a href="https://ponchodarling.itch.io/highlights">Highlights by poncho.darling</a></iframe>
+            </div>
+          
         </div>
-    </div>
-  <div class="max-w-4xl mx-auto p-5 sm:p-0">
-    <div role="tablist" class="tabs tabs-lifted">
-        <input type="radio" name="my_tabs_4" role="tab" class="tab" aria-label="Description" checked="checked" />
-        <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
-            <p>Highlights is a visual novel about putting together conversation pieces with those you have lost touch with, in an attempt to come back from a depressive lapse. In the game, you decide what key points to bring up in a conversation in hopes of mending different relationships.</p>
+        <!--game info-->
+      <div class=" mx-auto px-5 sm:p-0"><p class="text-[14px] sm:text-[1.5vw]">Highlights is a visual novel about putting together conversation pieces with those you have lost touch with, in an attempt to come back from a depressive lapse. In the game, you decide what key points to bring up in a conversation in hopes of mending different relationships.</p>
                 <br><p>Created in 72 hours</p>
-        </div>
-      
-        <input
-          type="radio"
-          name="my_tabs_4"
-          role="tab"
-          class="tab"
-          aria-label="Technology" />
-        <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
-          <span><p class="font-bold">Game Engine:</p> Unity</span>
-          <br>
-          <span><p class="font-bold pt-5">Unity Library:</p> Fungus Engine</span>
-          <br>
-          <span><p class="font-bold pt-5">Art Creation:</p> Ibis Paint</span>
-          <br>
-          <p class="font-bold pt-5">Music:</p>
-          <ul>
-            <li>Bosca Ceoli</li>
-          </ul>
-        </div>
-      
-        <input type="radio" name="my_tabs_4" role="tab" class="tab" aria-label="Credits" />
-        <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
-            <p class="font-bold">My Work</p>
+              <br>
+              <div class=" text-rata-eyeliner justify-center  mx-auto grid grid-cols-12 gap-2 bg-purple-300 rounded-md">
+            <div class=" col-span-12 sm:col-span-3 gap-2  p-5 rounded-lg w-fit">
+        <span><p class="font-bold">Game Engine:</p> Unity</span>
+        <br>
+        <span><p class="font-bold pt-5">Unity Library:</p> Fungus Engine</span>
+        <br>
+        <span><p class="font-bold pt-5">Art Creation:</p> Aseprite</span>
+        <br>
+        <p class="font-bold pt-5">Music:</p>
+        <ul>
+          <li>Bosca Ceoli</li>
+        </ul>
+</div>
+<div class=" col-span-12 sm:col-span-8 gap-2  p-5 rounded-lg w-fit">
+<p class="font-bold">My Work</p>
             <ul class="list-disc pl-10">
                 <li>Project Management</li>
                 <li>Development - WebGL and Windows build</li>
@@ -412,15 +369,12 @@
             <ul class="list-disc pl-10">
                 <li>Music</li>
             </ul>
-        </div>
+</div>
+</div>
 
-        <input type="radio" name="my_tabs_4" role="tab" class="tab" aria-label="Theme" />
-        <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
-            <p>The theme was "Keep it alive", and my interpretation of this was to have the player attempt to keep a relationship alive by selecting the right dialogue options. This game was created at the earlier days of the COVID-19 pandemic, and I certainly felt like I took relationships and experiences for granted. I wanted to create something more meaningful than my prior project(mentioned below), and wanted to create something that was story-rich. The game gives the player the opportunity to talk to four different characters who have things they would like to hear, but it is up to the player to figure that out.</p>
-        </div>
       </div>
-  </div>
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl mx-auto pb-10 pt-10">
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4  mx-auto pb-10 pt-10">
         <div class="grid gap-4">
             <div>
                 <img class="mx-auto h-auto max-w-full p-5 sm:p-0 rounded-lg" src="img/highlights_1.jpg" alt="screenshot of conversation with childhood friend">
@@ -437,38 +391,34 @@
                 <img class="mx-auto h-auto max-w-full p-5 sm:p-0 rounded-lg" src="img/highlights_3.jpg" alt="screenshot of conversation with old teacher">
             </div>
         </div>
-    </div>
-</Section>
-<!--Small Town-->
-<Section class="dark:border-b-sky-100 border-dashed border-b-4 border-b-slate-950">
-    <div class="dark:text-slate-50 justify-center max-w-4xl mx-auto pb-8 grid grid-cols-12 gap-2 text-rata-eyeliner pt-10">
-        <div class="pl-5 col-span-12 sm:col-span-4 gap-2  p-5 rounded-lg w-fit">
-            <h3 class="text-4xl pb-2 font-Daruma text-zip-blue dark:text-zip-poncho">Small Town</h3>
-            <h4 class=" font-medium text-rata-eyeliner dark:text-slate-50">created for LDJAM #45</h4>
-            
-        </div>
-                <div class="pl-5 col-span-12 sm:col-span-5">
-          <iframe class="rounded-lg hidden sm:block" frameborder="0" src="https://itch.io/embed/496236?link_color=751A46" width="552" height="167"><a href="https://ponchodarling.itch.io/small-town">Small Town by poncho.darling</a></iframe>
-          <iframe class="mx-auto rounded-lg sm:hidden visible"  frameborder="0" src="https://itch.io/embed/496236?link_color=751A46" width="208" height="167"><a href="https://ponchodarling.itch.io/small-town">Small Town by poncho.darling</a></iframe>
-        </div>
 
-      
-    </div>
-  <div class="max-w-4xl mx-auto p-5 sm:p-0">
-    <div role="tablist" class="tabs tabs-lifted">
-        <input type="radio" name="my_tabs_5" role="tab" class="tab" aria-label="Description" checked="checked" />
-        <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
-            <p>Small town is a click-and-find game about finding the perfect gift for a special someone with Christmas right around the corner. Most shops are closed, so options are limited, but you are trying your best. Pick a place to buy the perfect present for your significant other, they deserve the best!</p>
-                <br><p>Created in 72 hours</p>
+            </div>
+
         </div>
-      
-        <input
-          type="radio"
-          name="my_tabs_5"
-          role="tab"
-          class="tab"
-          aria-label="Technology" />
-        <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
+    </Section><br>
+ <hr>
+<br>
+
+<!--Small town new-->
+ <Section class="">
+        <div class="dark:text-slate-50 justify-center  mx-auto pb-8 grid grid-cols-12 gap-2 text-rata-eyeliner pt-10">
+            <div class=" col-span-12 sm:col-span-5 gap-2 rounded-lg w-fit sm-order3">
+                <h3 class="text-[14px] sm:text-[3.5vw] pb-2  font-bold text-pink-400">Small Town</h3>
+                <h4 class="text-[14px] sm:text-[1.5vw] font-medium text-rata-eyeliner dark:text-slate-50">created for LDJAM #45</h4>
+            </div>            
+            <div class=" col-span-1 sm-order-2"></div>
+<div class=" col-span-12 sm:col-span-6 sm:order-1">
+<iframe class="rounded-lg hidden sm:block" frameborder="0" src="https://itch.io/embed/496236?link_color=751A46" width="552" height="167"><a href="https://ponchodarling.itch.io/small-town">Small Town by poncho.darling</a></iframe>
+          <iframe class="mx-auto rounded-lg sm:hidden visible"  frameborder="0" src="https://itch.io/embed/496236?link_color=751A46" width="208" height="167"><a href="https://ponchodarling.itch.io/small-town">Small Town by poncho.darling</a></iframe>
+            </div>
+          
+        </div>
+        <!--game info-->
+      <div class=" mx-auto px-5 sm:p-0"><p class="text-[14px] sm:text-[1.5vw]">Small town is a click-and-find game about finding the perfect gift for a special someone with Christmas right around the corner. Most shops are closed, so options are limited, but you are trying your best. Pick a place to buy the perfect present for your significant other, they deserve the best!</p>
+                <br><p>Created in 72 hours</p>
+              <br>
+              <div class=" text-rata-eyeliner justify-center  mx-auto grid grid-cols-12 gap-2 bg-purple-300 rounded-md">
+            <div class=" col-span-12 sm:col-span-3 gap-2  p-5 rounded-lg w-fit">
           <span><p class="font-bold">Game Engine:</p> Unity</span>
           <br>
           <span><p class="font-bold pt-5">Unity Library:</p> Fungus Engine</span>
@@ -479,10 +429,8 @@
           <ul>
             <li> Bosca Ceoli</li>
           </ul>
-        </div>
-      
-        <input type="radio" name="my_tabs_5" role="tab" class="tab" aria-label="Credits" />
-        <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
+</div>
+<div class=" col-span-12 sm:col-span-8 gap-2  p-5 rounded-lg w-fit">
             <p class="font-bold">My Work</p>
             <ul class="list-disc pl-10">
                 <li>Project Management</li>
@@ -495,20 +443,12 @@
             <ul class="list-disc pl-10">
                 <li>Music</li>
             </ul>
-            <br>
-        </div>
-
-        <input type="radio" name="my_tabs_5" role="tab" class="tab" aria-label="Theme" />
-        <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
-            <p>
-                Small Town was my first game jam submission from 2019, and I wanted to create something lighthearted, although I always knew my work would delve into heavy topics later on. The theme of this game jam was "Start with nothing", and my interpretation was very straightforward. The player has no present to give to their loved ones and the goal is to go looking for something. The mechanics are simple, look around the room and find all the items eligible for purchase, then select one. As my first project, I had a hard time understanding the scope of the game, and did not create a proper ending, but I have several environments and dialogues written up that I was happy to get done at the very least.</p>
-        </div>
+</div>
+</div>
 
       </div>
-  </div>
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl mx-auto pb-10 pt-10">
 
-
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4  mx-auto pb-10 pt-10">
         <div class="grid gap-4">
             <div>
                 <img class="mx-auto h-auto max-w-full rounded-lg" src="img/Smalltown_2.jpg" alt="screenshot of cat in a backpack">
@@ -525,50 +465,46 @@
             </div>
         </div>
 
+            </div>
+
         </div>
-
-    </div>
-</Section>
-
-
+    </Section>
+</main>
 </body>
-<footer class="footer dark:bg-zip-poncho dark:text-rata-eyeliner bg-rata-eyeliner text-slate-50 p-10 mt-20">
+  <footer class="footer bg-purple-300 text-rata-eyeliner p-10 mt-20">
     <nav>
-      <h6 class="footer-title"><a href="../index.html#workExperience">Work Experience</a></h6>
-      <a class="link link-hover" href="EverAg.html">Ever.Ag</a>
-      <a class="link link-hover" href="colabl.html">CoLabl</a>
-      <a class="link link-hover" href="CareerFairPlus.html">CF+</a>
-      <a class="link link-hover" href="ucf.html">UCF</a>
+      <h6 class="footer-title"><a>Design Projects</a></h6>
+      <a class="link link-hover" href="UX-UI.html">UX/UI Design</a>
+      <a class="link link-hover" href="GraphicDesign.html">Graphic Design</a>
+      <a class="link link-hover" href="3D-Art.html">3D Modeling</a>
+      <a class="link link-hover" href="SocialMedia.html">Social Media</a>
     </nav>
     <nav>
-      <h6 class="footer-title"><a href="Personal-Projects.html">Personal Projects</a></h6>
-      <a class="link link-hover" href="LuckyLittleDarlings.html">Lucky Little Darlings</a>
-      <a class="link link-hover" href="3D-Art.html">3D Art</a>
-      <a class="link link-hover" href="video-games.html">Video Games</a>
-      <a class="link link-hover" href="Art-on-display.html">Art on Display</a>
+      <h6 class="footer-title"><a>Dev Projects</a></h6>
+      <a class="link link-hover" href="WebDev.html">Web Dev</a>
+      <a class="link link-hover" href="video-games.html">Game Dev</a>
     </nav>
     <nav>
       <h6 class="footer-title"><a href="img/Emilia Hernandez Resume _ Public.pdf">Resume</a></h6>
     </nav>
   </footer>
-  <footer class="footer dark:bg-zip-poncho dark:text-rata-eyeliner bg-rata-eyeliner text-zip-poncho border-base-300 border-t px-10 py-4">
+  <footer class="footer bg-purple-300 text-rata-eyeliner border-base-300 border-t px-10 py-4">
     <aside class="grid-flow-col items-center">
       <p class="italic font-medium">
         Site Developed by Emilia Hernandez
+        
       </p>
     </aside>
     <nav class="md:place-self-center md:justify-self-end">
       <div class="grid grid-flow-col gap-4">
         <a target="_blank" href="https://www.linkedin.com/in/emilia-hernandez-560489159/">
-          <svg class="fill-zip-poncho dark:fill-rata-eyeliner mx-auto" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"/></svg>LinkedIn
+          <svg class="fill-rata-eyeliner mx-auto" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"/></svg>LinkedIn
       </a>
       <a class="text-center" target="_blank" href="https://github.com/EmiliaHernandez">
-          <svg class="fill-zip-poncho dark:fill-rata-eyeliner mx-auto" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>Github
+          <svg class="fill-rata-eyeliner mx-auto" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>Github
       </a>
       
       </div>
     </nav>
   </footer>
-</section>
-</footer>
 </html>

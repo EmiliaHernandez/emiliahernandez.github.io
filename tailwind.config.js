@@ -8,7 +8,7 @@ module.exports = {
       colors: {
         'zip-poncho': 'rgb(249 236 170)',
         'zip-blue': '#751A46',
-        'rata-eyeliner':'rgb(13 18 37)'
+        'rata-eyeliner':'#000000'
       }
     },
     fontFamily: {
