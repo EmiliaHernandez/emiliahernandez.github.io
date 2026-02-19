@@ -1279,12 +1279,22 @@ html {
 }
 
 .navbar-start {
-  width: 50%;
+  width: 30%;
   justify-content: flex-start;
 }
 
 .navbar-end {
-  width: 50%;
+  width: 70%;
+  justify-content: flex-end;
+}
+
+.footer-start {
+  width: 70%;
+  justify-content: flex-start;
+}
+
+.footer-end {
+  width: 30%;
   justify-content: flex-end;
 }
 
