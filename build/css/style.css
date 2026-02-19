@@ -84,6 +84,72 @@ hr {
   /* 3 */
 }
 
+.service-card-container{
+display: flex;
+padding: 10px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 15px;
+flex: 1 0 0;
+border-radius: 20px;
+border: 1px dashed #FFF;
+}
+
+.service-card-inner{
+  border-radius: 20px;
+background: var(--A2, #FFFAEF);
+display: flex;
+padding: 20px 10px;
+flex-direction: column;
+gap: 10px;
+align-self: stretch;
+}
+.testimonial-card-inner{
+  border-radius: 20px;
+background: var(--A2, #FFFAEF);
+display: flex;
+padding: 30px;
+flex-direction: column;
+gap: 10px;
+align-self: stretch;
+}
+
+.service-card-heading{
+  flex: 1 0 0;
+  color: #202020;
+text-align: center;
+font-family: Sansita One, sans-serif;
+font-size: 20px;
+font-style: normal;
+font-weight: 800;
+line-height: var(--Static-Title-Large-Line-Height, 28px); /* 175% */
+letter-spacing: var(--Static-Title-Large-Tracking, 0);
+}
+
+.service-card-body{
+  flex: 1 0 0;
+  color: #202020;
+text-align: center;
+font-family: Poppins, sans-serif;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: var(--Static-Title-Large-Line-Height, 28px); /* 175% */
+letter-spacing: var(--Static-Title-Large-Tracking, 0);
+}
+.testimonial-card-body{
+  flex: 1 0 0;
+  color: #202020;
+text-align: left;
+font-family: Poppins, sans-serif;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: var(--Static-Title-Large-Line-Height, 28px); /* 175% */
+letter-spacing: var(--Static-Title-Large-Tracking, 0);
+}
+
 /*
 Add the correct text decoration in Chrome, Edge, and Safari.
 */
@@ -157,6 +223,10 @@ small {
 /*
 Prevent `sub` and `sup` elements from affecting the line height in all browsers.
 */
+
+p{
+  font-family:'Poppins', 'sans-serif'
+}
 
 sub,
 sup {
@@ -2931,8 +3001,42 @@ details.collapse summary::-webkit-details-marker {
   background-color: rgb(249 236 170 / var(--tw-bg-opacity));
 }
 
+.text-cream{
+  color:#FFFAEF;
+}
+
+.text-darkness{
+  color:#202020;
+}
+
+.bg-darkness{
+  background-color:#202020;
+}
+
+.bg-cream{
+  background-color:#FFFAEF;
+}
+
 .fill-zip-poncho {
   fill: rgb(249 236 170);
+}
+
+.section-heading{
+  font-size:xx-large;
+  font-family: 'Sansita One','sans-serif';
+}
+
+.testimonial-container{
+  display: flex;
+align-items: center;
+gap: 20px;
+align-self: stretch;
+}
+
+.testimonial-char{
+  padding:15px;
+  background-color:#98D8E0;
+  border-radius: 50px;
 }
 
 .object-cover {
@@ -3092,9 +3196,16 @@ details.collapse summary::-webkit-details-marker {
 .font-Daruma {
   font-family: Darumadrop One, sans-serif;
 }
+h2, .font-sansita {
+  font-family: Sansita One, sans-serif;
+}
 
 .font-RedHat {
   font-family: Red Hat Text, sans-serif;
+}
+
+.font-Poppins{
+  font-family: Poppins, sans-serif;
 }
 
 .font-Helvetica{
