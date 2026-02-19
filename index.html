@@ -23,10 +23,10 @@
  <script type="module" src="./build/js/home.js"></script>
 
 </head>
-<body class="min-h-screen bg-rata-eyeliner">
-  <header class="dark:rata-black-eyeliner.text-slate-50 bg-slate-100.text-black sticky top-0 z-10 dark">
-    <div class="navbar bg-rata-eyeliner">
-        <div class="navbar-start">
+<body class="min-h-screen bg-cream">
+  <header class="bg-cream sticky top-0 z-10">
+    <div class="navbar text-darkness mx-auto">
+        <div class="navbar-start ">
           <div class="dropdown">
             <div tabindex="0" aria-label="Main Menu" role="button" class="btn btn-ghost sm:hidden">
               <svg
@@ -44,43 +44,32 @@
             </div>
             <ul
               tabindex="0"
-              class="menu menu-sm dropdown-content text-slate-50 bg-rata-eyeliner rounded-box z-[1] mt-3 w-52 p-3 shadow">
-              <li><a href="build/WebDev.html" class="mt-2">Web Dev</a></li>
-              <li>
-                <a href="build/GraphicDesign.html">Graphic Design</a>
-              </li>
-              <li>
-                <a href="build/UX-UI.html">UX/UI Design</a>
-              </li>
-              <li>
-                <a href="build/3D-Art.html">3D Modeling</a>
-              </li>
-              <li>
-                <a href="build/video-games.html">Game Dev</a>
-              </li>
+              class="menu menu-sm dropdown-content text-darkness rounded-box z-[1] mt-3 w-52 p-3 shadow">
+              <li><a href="#hero" class="mt-2">About</a></li>
+              
             </ul>
           </div>
-          <a class="btn btn-ghost text-xl" href="../index.html">Emilia Hernandez</a>
+          <a class="text-xl font-sansita" href="../index.html">Emilia Hernandez</a>
         </div>
 
         <div class="navbar-end hidden lg:flex">            
-            <div class="dropdown dropdown-hover">
-            <div tabindex="0" role="button" class="pr-10 m-3 font-bold" ><a>Dev Projects</a></div>
-            <ul tabindex="0" class="dropdown-content menu text-black bg-pink-300 rounded-box z-50 w-52 p-2 shadow">
-              <li><a href="build/WebDev.html">Web Dev</a></li>
-              <li><a href="build/video-games.html">Game Dev</a></li>
-            </ul>
+            <div class="menu-item">
+            <div tabindex="0" role="button" class="pr-10 m-3 " ><a href="#hero">About</a></div>
           </div>
-          <div class="dropdown dropdown-hover pr-10">
-            <div tabindex="0" role="button" class=" m-1 font-bold"><a>Design Projects</a></div>
-            <ul tabindex="0" class="dropdown-content menu text-black bg-pink-300 rounded-box w-52 z-[40] p-2 shadow">
-              
-              <li><a href="build/GraphicDesign.html">Graphic Design</a></li>
-              <li><a href="build/UX-UI.html">UX/UI</a></li>
-              <li><a href="build/3D-Art.html">3D Art</a></li>
-            </ul>
+          <div class="menu-item">
+            <div tabindex="0" role="button" class="pr-10 m-3 " ><a href="#services">Services</a></div>
           </div>
-          <div class="dropdown dropdown-hover pr-10">
+          <div class="menu-item">
+<div tabindex="0" role="button" class="pr-10 m-3 " ><a href="#projects">Projects</a></div>
+          </div>
+          <div class="menu-item">
+            <div tabindex="0" role="button" class="pr-10 m-3 " ><a href="#skills">Skills</a></div>
+          </div>
+          <div class="menu-item">
+            <div tabindex="0" role="button" class="pr-10 m-3 " ><a href="#testimonials">Testimonials</a></div>
+          </div>
+          <div class="menu-item">
+            
           </div>
 
           <div>
@@ -88,19 +77,21 @@
       </div>
 </header>
         <main class="mx-auto bg-cream">
-        <section id="hero" class="p-4 z-30 w-[90%] m-auto">
-            <div class="items-center text-slate-50 justify-center w-[90%] mx-auto grid grid-cols-12 gap-6 ">        
-              <div class=" col-span-12 sm:col-span-6 gap-4 m-auto text-darkness">
-                  <p class="text-[25px] sm:text-[1.2vw] sm:text-left">WEB DESIGN & DEVELOPMENT</span>
+        <section id="hero" class="z-30 m-auto">
+            <div class="items-center text-slate-50 justify-center w-eighty mx-auto grid grid-cols-12 gap-6 ">        
+              <div class=" col-span-12 sm:col-span-6 gap-4 m-auto text-darkness hero-content">
+                <div class="hero-text-container">
+                  <p class="skinny-heading">WEB DESIGN & DEVELOPMENT</p>
                 </h2>
                     <h1 class="section-heading">I design and build conversion-focused websites for growing businesses. </h1>
-                
-                <p class="max-width text-[14px] sm:text-[1.2vw] mt-4 sm:text-left">* Design + development expertise across WordPress, HubSpot, and custom front-end builds</p>
-                <p class="max-width text-[14px] sm:text-[1.2vw] mt-4 sm:text-left">* Reliable delivery for time-sensitive launches, campaigns, and pitches</p>
-                <p class="max-width text-[14px] sm:text-[1.2vw] mt-4 sm:text-left">* Data-informed decisions using analytics, SEO, and UX best practices</p>
-
+              </div>
+                <div class="hero-bullets-container">
+                <p class="max-width hero-bullets">* Design + development expertise across WordPress, HubSpot, and custom front-end builds</p>
+                <p class="max-width hero-bullets">* Reliable delivery for time-sensitive launches, campaigns, and pitches</p>
+                <p class="max-width hero-bullets">* Data-informed decisions using analytics, SEO, and UX best practices</p>
+</div>
                 </div>
-              <div class="content-center pr-7 col-span-12 sm:col-span-6">
+              <div class="content-center pr-7 col-span-12 sm:col-span-5">
                     <img alt="gif of me on the computer" class=" mx-auto" src="build/img/AboutMeAnimation-Emilia Hernandez.gif">
                    <div class="textboxHome border-2 border-slate-50 relative p-5 bg-black" style="bottom:2vw;">
   <h1 class="text-white sm:text-[1.4vw]">
@@ -113,10 +104,10 @@
           </section>
 
 <!--services-->
-<Section class="bg-darkness m-auto">
-  <div class="w-[90%] m-auto pt-20 pb-10">
+<Section id="services" class="bg-darkness m-auto">
+  <div class="w-eighty m-auto">
 <h2 class="section-heading text-center text-cream pb-4 ">How I Can Help</h2>
-<div class="gap-8 grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 m-auto text-center w-[90%]">
+<div class="gap-8 grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 m-auto text-center">
 <Div class="service-card-container">
   <div class="service-card-inner">
     <h2 class="service-card-heading font-sansita">Website Design & Development</h2>
@@ -140,8 +131,8 @@
 </div>
 </Section>
 <!--projects-->
-        <section id="projects" class="p-4 z-30 w-[90%] m-auto">
-            <div class="items-center text-slate-50 justify-center w-[90%] mx-auto">        
+        <section id="projects" class="z-30 m-auto">
+            <div class="items-center text-slate-50 justify-center w-eighty mx-auto">        
               <div class="m-auto text-darkness">
                     <h1 class="section-heading">Featured Projects & Outcomes</h1>
                 
@@ -152,8 +143,8 @@
             </div>
           </section>
 <!--Testimonials-->
-          <Section class="bg-darkness m-auto">
-  <div class="w-[90%] m-auto pt-20 pb-10">
+          <Section id="testimonials" class="bg-darkness mx-auto">
+  <div class="w-eighty mx-auto">
 <h2 class="section-heading text-cream pb-4">Trusted by Teams & Clients</h2>
 <div class="gap-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 m-auto text-center">
 <Div class="service-card-container">
@@ -184,6 +175,114 @@
 </div>
 </Section>
 
+<!--skills-->
+        <section id="skills" class="z-30 m-auto">
+            <div class="items-center text-slate-50 justify-center w-eighty mx-auto">        
+              <div class="m-auto text-darkness">
+                    <h1 class="section-heading">Skills & Technical Expertise</h1>
+                </div>
+                <div class="skills-container">
+                  <div class="skill-row">
+                    <p class="skill">CMS</p>
+                    <div class="w-full grid grid-cols-1 sm:grid-cols-4 md:grid-cols-4 text-center">
+<img src="./build/img/skills/wordpress.png">
+<img src="./build/img/skills/hubspot.png">
+<img src="./build/img/skills/wix.png">
+<img src="./build/img/skills/webflow.png">
+</div>
+                  </div>
+                  <div class="skill-row">
+                    <p class="skill">Development</p>
+                    <div class="w-full grid grid-cols-1 sm:grid-cols-4 md:grid-cols-4 text-center">
+<img src="./build/img/skills/nextjs.png">
+<img src="./build/img/skills/react.png">
+<img src="./build/img/skills/html.png">
+<img src="./build/img/skills/github.png">
+</div>
+                  </div>
+                  <div class="skill-row">
+                    <p class="skill">Data & Optimization</p>
+                    <div class="w-full grid grid-cols-1 sm:grid-cols-4 md:grid-cols-4 text-center">
+<img src="./build/img/skills/analytics.png">
+<img src="./build/img/skills/clarity.png">
+<img src="./build/img/skills/power automate.png">
+<img src="./build/img/skills/hotjar.png">
+</div>
+                  </div>
+                  <div class="skill-row">
+                    <p class="skill">Design</p>
+                    <div class="w-full grid grid-cols-1 sm:grid-cols-4 md:grid-cols-4 text-center">
+<img src="./build/img/skills/figma.png">
+<img src="./build/img/skills/adobeIllustrator.png">
+<img src="./build/img/skills/Photoshop.png">
+<img src="./build/img/skills/Indesign.png">
+</div>
+                  </div>
+                </div>
+            </div>
+          </section>
+          <div>
+            <!--border-->
+            <img src="./build/img/2026/Border.png"></div>
+           <section id="skills" class="z-30 m-auto">
+            <div class="items-center text-slate-50 justify-center w-eighty mx-auto">        
+              <div class="m-auto text-darkness">
+                    <h1 class="section-heading">Professional Experience</h1>
+                </div>
+                            <div class=" text-slate-50 mx-auto grid grid-cols-12 gap-8 ">        
+              <div class=" col-span-12 sm:col-span-6 gap-4 text-darkness">
+ <div class="experience-container">
+                  <div class="experience-row">
+                    <img class="experience-img" src="">
+                    <div class="experience-text">
+                      <p class="experience-dates">May 2023 - present</p>
+                      <p class="experience-role">Web Designer at Ever.Ag</p>
+                    </div>
+                  </div>
+                  <div class="experience-row">
+                    <img class="experience-img" src="">
+                    <div class="experience-text">
+                      <p class="experience-dates">April 2025 - present</p>
+                      <p class="experience-role">Web Designer at ECHO</p>
+                    </div>
+                  </div>
+                  <div class="experience-row">
+                    <img class="experience-img" src="">
+                    <div class="experience-text">
+                      <p class="experience-dates">February 2022 - February 2024</p>
+                      <p class="experience-role">UX/UI Intern at Career Fair Plus</p>
+                    </div>
+                  </div>
+                  <div class="experience-row">
+                    <img class="experience-img" src="">
+                    <div class="experience-text">
+                      <p class="experience-dates">May 2021 - May 2023</p>
+                      <p class="experience-role">Web Designer at University of Central Florida</p>
+                    </div>
+                  </div>
+                </div>
+                </div>
+              <div class="content-center pr-7 col-span-12 sm:col-span-6">
+                    <img alt="gif of me on the computer" class=" mx-auto" src="build/img/GameDesign_and_DevelopmentByEmiliaHernandez.jpg">
+  </h1>
+</div>
+</div>
+                
+            </div>
+                
+
+            </div>
+          </section>
+          <!--Testimonials-->
+          <Section class="bg-darkness mx-auto">
+  <div class="w-eighty mx-auto">
+<h2 class="section-heading text-cream pb-4">Let’s Work Together</h2>
+<p>Available for freelance, contract, and part-time opportunities</p>
+<div class="gap-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 m-auto text-center">
+
+</div>
+</div>
+</Section>
     </main>
    
 </body>
