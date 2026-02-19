@@ -21,6 +21,26 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
  <script type="module" src="./build/js/home.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.project-card');
+
+    cards.forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        cards.forEach(c => {
+          c.classList.remove('is-open');
+          c.classList.add('is-closed');
+        });
+
+        card.classList.add('is-open');
+        card.classList.remove('is-closed');
+      });
+    });
+  });
+</script>
+
+
+
 
 </head>
 <body class="min-h-screen bg-cream">
@@ -143,16 +163,104 @@
 <!--projects-->
         <section id="projects" class="z-30 m-auto">
             <div class="items-center text-slate-50 justify-center w-eighty mx-auto">        
-              <div class="m-auto text-darkness">
+              <div class="m-auto text-darkness pb-8">
                     <h1 class="section-heading">Featured Projects & Outcomes</h1>
-                
                 <p class="max-width text-[14px] sm:text-[1.2vw] mt-4 sm:text-left">Each project reflects a balance of strategy, design, and development—whether optimizing performance, meeting tight deadlines, or supporting large-scale campaigns.</p>
-                
-
                 </div>
-                
+<div class="projects-grid">
+
+<div class="project-card is-open" data-project="1">
+  <!-- OPEN STATE -->
+  <div class="project-open">
+    <div class="project-details">
+      <div class="project-headings">
+        <p class="skinny-heading text-cream">PEGASUS PALOOZA</p>
+        <h1 class="section-heading">
+          Driving a 155% Increase in Website Traffic for a University-Wide Event
+        </h1>
+      </div>
+      <p>UX redesign, SEO optimization, and WordPress development for UCF’s official Welcome Week.</p>
+      <a class="button-main" href="#contact">
+        <button>Read More about Pegasus Palooza</button>
+      </a>
+    </div>
+
+    <div class="project-img-column">
+      <img class="project-image" src="./build/img/2026/featured-projects/Pegasus-Palooza.png">
+    </div>
+  </div>
+
+  <!-- CLOSED STATE -->
+  <div
+    class="project-closed"
+    style="background-image:url('./build/img/2026/featured-projects/Pegasus-Palooza.png');">
+  </div>
+
+</div>
+
+  <div class="project-card is-closed" data-project="2">
+  <!-- OPEN STATE -->
+  <div class="project-open">
+    <div class="project-details">
+      <div class="project-headings">
+        <p class="skinny-heading text-cream">EVER.AG</p>
+        <h1 class="section-heading">
+          Building Award-Winning Campaign Pages for a Global Ag Brand
+        </h1>
+      </div>
+      <p>Front-end development for a brand campaign recognized with a 2023 Platinum MarCom Award.</p>
+      <a class="button-main" href="#contact">
+        <button>Read More about Ever.Ag Project</button>
+      </a>
+    </div>
+
+    <div class="project-img-column">
+      <img class="project-image" src="./build/img/2026/featured-projects/EverAg.png">
+    </div>
+  </div>
+
+  <!-- CLOSED STATE -->
+  <div
+    class="project-closed"
+    style="background-image:url('./build/img/2026/featured-projects/EverAg.png');">
+  </div>
+
+  </div>
+
+  <div class="project-card is-closed" data-project="3">
+
+       <!-- OPEN STATE -->
+  <div class="project-open">
+    <div class="project-details">
+      <div class="project-headings">
+        <p class="skinny-heading text-cream">ECHO</p>
+        <h1 class="section-heading">
+          Launching a Nonprofit Website in Time for a High-Stakes Pitch
+        </h1>
+      </div>
+      <p>Designed and built a complete website in under one month to support ECHO’s Passion Pitch submission.</p>
+      <a class="button-main" href="#contact">
+        <button>Read More about ECHO Project</button>
+      </a>
+    </div>
+
+    <div class="project-img-column">
+      <img class="project-image" src="./build/img/2026/featured-projects/Echo.png">
+    </div>
+  </div>
+
+  <!-- CLOSED STATE -->
+  <div
+    class="project-closed"
+    style="background-image:url('./build/img/2026/featured-projects/Echo.png');">
+  </div>
+  </div>
+
+</div>
+
             </div>
           </section>
+          
 <!--Testimonials-->
           <Section id="testimonials" class="bg-darkness mx-auto">
   <div class="w-eighty mx-auto">
