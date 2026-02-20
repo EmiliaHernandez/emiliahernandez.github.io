@@ -12,73 +12,16 @@
   href="https://fonts.googleapis.com/css2?family=Sansita+One&display=swap"
   rel="stylesheet"
 />
-    <link rel="stylesheet" href="build/css/style.css">
-    <link href="./src/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="/build/css/style.css">
+    <link href="/src/output.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="icon" type="image/x-icon" href="build/img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/build/img/favicon.ico">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
- <script type="module" src="./build/js/home.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const cards = document.querySelectorAll('.project-card');
-
-    cards.forEach(card => {
-      card.addEventListener('mouseenter', () => {
-        cards.forEach(c => {
-          c.classList.remove('is-open');
-          c.classList.add('is-closed');
-        });
-
-        card.classList.add('is-open');
-        card.classList.remove('is-closed');
-      });
-    });
-  });
-</script>
-<script src="https://unpkg.com/lottie-web@5.12.2/build/player/lottie.min.js"></script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const container = document.getElementById('lottie-hover');
-
-    if (!container) {
-      console.error('Lottie container not found');
-      return;
-    }
-
-    const animation = lottie.loadAnimation({
-      container: container,
-      renderer: 'svg',
-      loop: false,
-      autoplay: false,
-      path: './build/img/2026/Lottie/badge-animation.json'
-    });
-
-    let isForward = true;
-    let isPlaying = false;
-
-    container.addEventListener('mouseenter', () => {
-      if (isPlaying) return;
-
-      isPlaying = true;
-      animation.setDirection(isForward ? 1 : -1);
-      animation.play();
-      isForward = !isForward;
-    });
-
-    animation.addEventListener('complete', () => {
-      isPlaying = false;
-    });
-  });
-</script>
-
 
 </head>
 <body class="min-h-screen bg-cream ">
-  <header class="homepage bg-cream sticky top-0 z-10">
+  <header class="bg-cream sticky top-0 z-10">
     <div class="navbar text-darkness mx-auto">
         <div class="navbar-start ">
           <div class="dropdown">
@@ -103,61 +46,82 @@
               
             </ul>
           </div>
-          <a class="text-xl font-sansita" href="../index.html">Emilia Hernandez</a>
+          <a class="text-xl font-sansita" href="/">Emilia Hernandez</a>
         </div>
 
         <div class="navbar-end hidden lg:flex">            
             <div class="menu-item">
-            <div tabindex="0" role="button" class=" m-3 " ><a href="#hero">About</a></div>
+            <div tabindex="0" role="button" class=" m-3 " ><a href="/#hero">About</a></div>
           </div>
           <div class="menu-item">
-            <div tabindex="0" role="button" class=" m-3 " ><a href="#services">Services</a></div>
+            <div tabindex="0" role="button" class=" m-3 " ><a href="/#services">Services</a></div>
           </div>
           <div class="menu-item">
-<div tabindex="0" role="button" class=" m-3 " ><a href="#projects">Projects</a></div>
+<div tabindex="0" role="button" class=" m-3 " ><a href="/#projects">Projects</a></div>
           </div>
           
           <div class="menu-item">
-            <div tabindex="0" role="button" class=" m-3 " ><a href="#testimonials">Testimonials</a></div>
+            <div tabindex="0" role="button" class=" m-3 " ><a href="/#testimonials">Testimonials</a></div>
           </div>
           <div class="menu-item">
-            <div tabindex="0" role="button" class=" m-3 " ><a href="#skills">Skills</a></div>
+            <div tabindex="0" role="button" class=" m-3 " ><a href="/#skills">Skills</a></div>
           </div>
            <div class="menu-item">
-            <div tabindex="0" role="button" class=" m-3 " ><a href="#experience">Experience</a></div>
+            <div tabindex="0" role="button" class=" m-3 " ><a href="/#experience">Experience</a></div>
           </div>
           <div class="menu-item">
-            <a class="button-main" href="#contact"><button>Work With Me</button></a>
+            <a class="button-main" href="/#contact"><button>Work With Me</button></a>
           </div>
 
           <div>
         </div>
       </div>
       </div>
+       <div class="project-navbar text-darkness bg-eggy">
+          
+            <div class="menu-item">
+            <div tabindex="0" role="button" class=" m-3 " ><a href="#overview">Overview</a></div>
+          </div>
+          <div class="menu-item">
+            <div tabindex="0" role="button" class=" m-3 " ><a href="#responsibilities">Role/Responsbilities</a></div>
+          </div>
+          <div class="menu-item">
+<div tabindex="0" role="button" class=" m-3 " ><a href="#challenge">Challenge</a></div>
+          </div>
+          
+          <div class="menu-item">
+            <div tabindex="0" role="button" class=" m-3 " ><a href="#process">Process & Key Improvements</a></div>
+          </div>
+           <div class="menu-item">
+            <div tabindex="0" role="button" class=" m-3 " ><a href="#results">Results & Impact</a></div>
+          </div>
+
+          <div>
+      </div>
+      </div>
 </header>
         <main class="mx-auto bg-cream">
         <section id="hero" class="z-30 m-auto">
             <div class="items-center text-slate-50 justify-center w-eighty mx-auto grid grid-cols-12 gap-6 ">        
-              <div class=" col-span-12 sm:col-span-7 gap-4 m-auto text-darkness hero-content">
+              <div class=" col-span-12 sm:col-span-5 gap-4 m-auto text-darkness hero-content">
                 <div class="hero-text-container">
-                  <p class="skinny-heading">WEB DESIGN & DEVELOPMENT</p>
+                  <p class="skinny-heading">UX REDESIGN & WORDPRESS DEVELOPMENT</p>
                 </h2>
-                    <h1 class="section-heading">I design and build conversion-focused websites for growing businesses. </h1>
+                    <h1 class="section-heading">Pegasus Palooza 
+Welcome Week Website </h1>
               </div>
                 <div class="hero-bullets-container">
-                <p class="max-width hero-bullets">* Design + development expertise across WordPress, HubSpot, and custom front-end builds</p>
-                <p class="max-width hero-bullets">* Reliable delivery for time-sensitive launches, campaigns, and pitches</p>
-                <p class="max-width hero-bullets">* Data-informed decisions using analytics, SEO, and UX best practices</p>
+                <p class="max-width hero-bullets">Pegasus Palooza is the University of Central Florida’s official week-long welcome week event. The event is supported by a dedicated microsite used to promote daily activities, sponsors, and key information for incoming students.</p>
 </div>
-<a class="button-main" href="#contact"><button>Work With Me</button></a>
+<hr>
                 </div>
-              <div class="content-center pr-7 col-span-12 sm:col-span-4 mobile-hide">
-                    <img alt="gif of me on the computer" class=" mx-auto rounded mb-5" src="build/img/AboutMeAnimation-Emilia Hernandez.gif">
-                   <div class="textboxHome border-2 border-black relative p-5 bg-cream" style="bottom:2vw;">
-  <p class="text-darkness">
-    <span><strong>Status: </strong></span><span id="typewriter-text"></span><span class="blinking-cursor">|</span>
-  </p>
-</div>
+              <div class="content-center pr-7 col-span-12 sm:col-span-7">
+                 <Div class="service-card-container">
+  <div class="service-card-inner">
+    <h2 class="service-card-heading font-sansita">Website Design & Development</h2>
+    <p class="service-card-body">UX/UI design and responsive builds using WordPress, HubSpot, and custom code.</p>
+  </div>
+</Div>
 </div>
                 
             </div>
@@ -213,7 +177,7 @@
         </h1>
       </div>
       <p>UX redesign, SEO optimization, and WordPress development for UCF’s official Welcome Week.</p>
-      <a class="button-main" href="projects/pegasus-palooza">
+      <a class="button-main" href="/projects/pegasus-palooza/index.html">
         <button>Read More about Pegasus Palooza</button>
       </a>
     </div>
@@ -281,7 +245,7 @@
         </h1>
       </div>
       <p>UX redesign, SEO optimization, and WordPress development for UCF’s official Welcome Week.</p>
-      <a class="button-main" href="projects/pegasus-palooza">
+      <a class="button-main" href="/projects/pegasus-palooza/index.html">
         <button>Read More about Pegasus Palooza</button>
       </a>
     </div>
