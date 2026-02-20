@@ -68,6 +68,8 @@ body {
   /* 1 */
   line-height: inherit;
   /* 2 */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-y: auto;
 }
 
 /*
@@ -76,17 +78,33 @@ body {
 3. Ensure horizontal rules are visible by default.
 */
 
-.carousel-card.is-open {
-  pointer-events: auto;
+.lottie-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 600px; /* adjust as needed */
+  height: 500px;    /* controls the stack height */
 }
 
-.carousel-card.is-open .closed-state {
-  opacity: 0;
+.shapes {
+  position: absolute;
+  inset: 0;               /* top:0 right:0 bottom:0 left:0 */
+  z-index: 0;
+  width: 601px;
+  margin-top: 30px;
+height: 601px;border-radius: 601px;
+background: radial-gradient(53.74% 53.74% at 50% 50%, #ECD274 0%, #FFFAEF 100%);
 }
 
-.carousel-card.is-open .open-state {
-  opacity: 1;
-  pointer-events: auto;
+.shapes svg {
+  width: 100%;
+  height: 100%;
+}
+
+#lottie-hover {
+  position: relative;
+  z-index: 1;
+  margin: auto;
+  width:140%;
 }
 
 .project-card {
@@ -345,6 +363,7 @@ letter-spacing: var(--Static-Display-Medium-Tracking, 0);
   width: 50px;
 height: 50px;
 aspect-ratio: 1/1;
+object-fit: contain;
 }
 
 .experience-text{
@@ -789,6 +808,7 @@ object {
   vertical-align: middle;
   /* 2 */
 }
+
 
 /*
 Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
@@ -3320,7 +3340,7 @@ letter-spacing: var(--Static-Display-Medium-Tracking, 0);
 text-transform: capitalize;
 }
 
-section{
+section, .col-padding-experience{
   padding: 60px 0px;
 }
 

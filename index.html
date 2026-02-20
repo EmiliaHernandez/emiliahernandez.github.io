@@ -38,12 +38,46 @@
     });
   });
 </script>
+<script src="https://unpkg.com/lottie-web@5.12.2/build/player/lottie.min.js"></script>
 
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('lottie-hover');
 
+    if (!container) {
+      console.error('Lottie container not found');
+      return;
+    }
+
+    const animation = lottie.loadAnimation({
+      container: container,
+      renderer: 'svg',
+      loop: false,
+      autoplay: false,
+      path: './build/img/2026/Lottie/badge-animation.json'
+    });
+
+    let isForward = true;
+    let isPlaying = false;
+
+    container.addEventListener('mouseenter', () => {
+      if (isPlaying) return;
+
+      isPlaying = true;
+      animation.setDirection(isForward ? 1 : -1);
+      animation.play();
+      isForward = !isForward;
+    });
+
+    animation.addEventListener('complete', () => {
+      isPlaying = false;
+    });
+  });
+</script>
 
 
 </head>
-<body class="min-h-screen bg-cream">
+<body class="min-h-screen bg-cream ">
   <header class="bg-cream sticky top-0 z-10">
     <div class="navbar text-darkness mx-auto">
         <div class="navbar-start ">
@@ -340,40 +374,42 @@
                 </div>
             </div>
           </section>
+          <!--need to customize this section so its a div-->
           <div>
             <!--border-->
             <img src="./build/img/2026/Border.png"></div>
-           <section id="experience" class="z-30 m-auto">
+           <div id="experience" class="z-30 m-auto">
             <div class="items-center text-slate-50 justify-center w-eighty mx-auto">        
-              <div class="m-auto text-darkness">
+             
+                            <div class=" text-slate-50 mx-auto grid grid-cols-12 gap-8 ">        
+              <div class=" col-span-12 sm:col-span-6 gap-4 text-darkness col-padding-experience">
+                 <div class="m-auto text-darkness">
                     <h1 class="section-heading">Professional Experience</h1>
                 </div>
-                            <div class=" text-slate-50 mx-auto grid grid-cols-12 gap-8 ">        
-              <div class=" col-span-12 sm:col-span-6 gap-4 text-darkness">
  <div class="experience-container">
                   <div class="experience-row">
-                    <img class="experience-img" src="">
+                    <img class="experience-img" src="./build/img/2026/jobs/everag.png">
                     <div class="experience-text">
                       <p class="experience-dates">May 2023 - present</p>
                       <p class="experience-role">Web Designer at Ever.Ag</p>
                     </div>
                   </div>
                   <div class="experience-row">
-                    <img class="experience-img" src="">
+                    <img class="experience-img" src="./build/img/2026/jobs/echo.webp">
                     <div class="experience-text">
                       <p class="experience-dates">April 2025 - present</p>
                       <p class="experience-role">Web Designer at ECHO</p>
                     </div>
                   </div>
                   <div class="experience-row">
-                    <img class="experience-img" src="">
+                    <img class="experience-img" src="./build/img/2026/jobs/cfp.webp">
                     <div class="experience-text">
                       <p class="experience-dates">February 2022 - February 2024</p>
                       <p class="experience-role">UX/UI Intern at Career Fair Plus</p>
                     </div>
                   </div>
                   <div class="experience-row">
-                    <img class="experience-img" src="">
+                    <img class="experience-img" src="./build/img/2026/jobs/UCF.png">
                     <div class="experience-text">
                       <p class="experience-dates">May 2021 - May 2023</p>
                       <p class="experience-role">Web Designer at University of Central Florida</p>
@@ -383,22 +419,27 @@
             <div class="pt-10"><a class="button-main" href="#contact"><button>Work With Me Next</button></a></div>
                 </div>
                 
-              <div class="content-center pr-7 col-span-12 sm:col-span-6">
-                    <img alt="gif of me on the computer" class=" mx-auto" src="build/img/GameDesign_and_DevelopmentByEmiliaHernandez.jpg">
-  </h1>
-</div>
+  <div class="pr-7 col-span-12 sm:col-span-6">
+  <div class="lottie-wrapper">
+
+    <div class="shapes">
+    </div>
+
+    <div id="lottie-hover"></div>
+
+  </div>
 </div>
                 
             </div>
                 
 
             </div>
-          </section>
+          </div>
           <!--Testimonials-->
           <Section class="bg-darkness mx-auto">
   <div class="w-eighty mx-auto">
 <h2 id="contact" class="section-heading text-cream pb-4">Let’s Work Together</h2>
-<p>Available for freelance, contract, and part-time opportunities</p>
+<p class="text-cream">Available for freelance, contract, and part-time opportunities</p>
 <div class="gap-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 m-auto text-center">
 
 </div>
