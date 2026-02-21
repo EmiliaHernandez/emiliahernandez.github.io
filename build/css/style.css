@@ -77,6 +77,56 @@ body {
 2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
 3. Ensure horizontal rules are visible by default.
 */
+.project-scroller{
+  height:25vw;
+}
+
+.process-scrollers > .project-scroller{
+  height:20vw;
+}
+
+.process-scrollers{
+  padding-bottom: 50px;
+}
+
+.challenges-grid{
+  display: inline-grid;
+row-gap: 20px;
+column-gap: 40px;
+align-self: stretch;
+grid-template-rows: repeat(2,fit-content(100%));
+grid-template-columns: repeat(2,minmax(0,1fr));
+padding-bottom: 20px;
+}
+
+.project-overview-grid{
+  display: inline-grid;
+row-gap: 40px;
+column-gap: 40px;
+align-self: stretch;
+grid-template-rows: repeat(2,fit-content(100%));
+grid-template-columns: repeat(2,minmax(0,1fr));
+padding-top: 30px;
+border-top: 1px solid #ECD274;
+}
+
+.project-overview-item{
+  display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-self: stretch;
+}
+
+ul{
+  font-family: 'poppins', 'sans-serif';
+  gap: 10px;
+  display:grid;
+}
+
+span.metrics{
+  color:#0B7576;
+  font-weight: 700;
+}
 
 .bg-eggy{
   background-color: #FAEBB7;
@@ -256,7 +306,6 @@ gap: 15px;
 flex: 1 0 0;
 border-radius: 20px;
 border: 1px dashed #FFF;
-margin-bottom:30px;
 }
 
 .results-card-container{
@@ -268,8 +317,41 @@ align-items: center;
 gap: 15px;
 flex: 1 0 0;
 border-radius: 20px;
-border: 1px dashed #FAEBB7;
+border: 1px dashed #000000;
 margin-bottom:30px;
+}
+
+.results-card-inner {
+  flex: 1;              /* ⬅️ THIS is the key */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 40px 40px;
+  border-radius: 20px;
+  background: var(--A2, #FAEBB7);
+}
+
+.results-card-heading{
+  flex: 1 0 0;
+  color: #202020;
+text-align: left;
+font-family: Sansita One, sans-serif;
+font-size: 36px;
+font-style: normal;
+line-height: var(--Static-Title-Large-Line-Height, 28px); /* 175% */
+letter-spacing: var(--Static-Title-Large-Tracking, 0);
+}
+
+.results-card-body{
+  flex: 1 0 0;
+  color: #202020;
+text-align: left;
+font-family: Poppins, sans-serif;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: var(--Static-Title-Large-Line-Height, 28px); /* 175% */
+letter-spacing: var(--Static-Title-Large-Tracking, 0);
 }
 
 @media only screen and (max-width: 1200px) {
@@ -290,7 +372,17 @@ margin-bottom:30px;
 }
 
 @media only screen and (max-width: 630px) {
-.projects-grid {
+
+.project-scroller{
+  height:45vw;
+}
+
+.process-scrollers > .project-scroller{
+  height:40vw;
+}
+
+
+  .projects-grid {
     display: grid;
   }
     .project-card.is-open {
@@ -305,7 +397,7 @@ margin-bottom:30px;
   width:100%;
 }
   .mobile-hide {
-display: none;
+display: none !important;
 }
 
 .skill-row{
@@ -321,12 +413,18 @@ display: none;
   padding-bottom: 20px;
   width: 100% !important;
 }
+
+.service-card-container{
+  padding-bottom: 0px !important;
+  margin-bottom: 0px;
+}
 }
 
 .service-card-inner {
   flex: 1;              /* ⬅️ THIS is the key */
   display: flex;
   flex-direction: column;
+  width: 100%;
   gap: 10px;
   padding: 20px 10px;
   border-radius: 20px;
@@ -344,13 +442,11 @@ align-self: stretch;
 }
 
 .service-card-heading{
-  flex: 1 0 0;
   color: #202020;
 text-align: center;
 font-family: Sansita One, sans-serif;
 font-size: 20px;
 font-style: normal;
-font-weight: 800;
 line-height: var(--Static-Title-Large-Line-Height, 28px); /* 175% */
 letter-spacing: var(--Static-Title-Large-Tracking, 0);
 }
