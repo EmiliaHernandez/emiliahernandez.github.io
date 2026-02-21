@@ -1842,6 +1842,7 @@ font-style: normal;
 font-weight: 400;
 line-height: var(--Static-Title-Large-Line-Height, 28px); /* 175% */
 letter-spacing: var(--Static-Title-Large-Tracking, 0);
+text-align: center;
 }
 .menu-item:hover{
   text-decoration: underline;
@@ -2320,6 +2321,10 @@ details.collapse summary::-webkit-details-marker {
   --tw-scale-x: 1;
   --tw-scale-y: 1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.r-0{
+  right:0px;
 }
 
 .footer-title {
@@ -3980,7 +3985,19 @@ h2, .font-sansita {
   .lg\:flex {
     display: flex;
   }
+.hide-larger-than-tab{
+  display: none;
 }
+
+}
+
+@media (max-width: 1024px) {
+.hide-smaller-than-tab{
+  display: none;
+}
+}
+
+
 
 @media (prefers-color-scheme: dark) {
   .dark\:border-rata-eyeliner {

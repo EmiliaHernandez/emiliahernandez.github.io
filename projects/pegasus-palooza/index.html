@@ -22,68 +22,55 @@
 </head>
 <body class="min-h-screen bg-cream ">
   <header class="bg-cream sticky top-0 z-10">
-    <div class="navbar text-darkness mx-auto">
-        <div class="navbar-start ">
-          <div class="dropdown">
-            <div tabindex="0" aria-label="Main Menu" role="button" class="btn btn-ghost sm:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h8m-8 6h16" />
-              </svg>
-            </div>
-            <ul
-              tabindex="0"
-              class="menu menu-sm dropdown-content text-darkness rounded-box z-[1] mt-3 w-52 p-3 shadow">
-              <li><a href="#hero" class="mt-2">About</a></li>
-              
-            </ul>
-          </div>
-          <a class="text-xl font-sansita" href="/">Emilia Hernandez</a>
-        </div>
+  <div class="navbar mx-auto text-darkness flex justify-between items-center">
 
-        <div class="navbar-end hidden lg:flex">            
-            <div class="menu-item">
-            <div tabindex="0" role="button" class=" m-3 " ><a href="/#hero">About</a></div>
-          </div>
-          <div class="menu-item">
-            <div tabindex="0" role="button" class=" m-3 " ><a href="/#services">Services</a></div>
-          </div>
-          <div class="menu-item">
-<div tabindex="0" role="button" class=" m-3 " ><a href="/#projects">Projects</a></div>
-          </div>
-          
-          <div class="menu-item">
-            <div tabindex="0" role="button" class=" m-3 " ><a href="/#testimonials">Testimonials</a></div>
-          </div>
-          <div class="menu-item">
-            <div tabindex="0" role="button" class=" m-3 " ><a href="/#skills">Skills</a></div>
-          </div>
-           <div class="menu-item">
-            <div tabindex="0" role="button" class=" m-3 " ><a href="/#experience">Experience</a></div>
-          </div>
-          <div class="menu-item">
-            <a class="button-main" href="/#contact"><button>Work With Me</button></a>
-          </div>
+    <!-- LEFT: Site Name -->
+    <a href="/" class="text-xl font-sansita">
+      Emilia Hernandez
+    </a>
 
-          <div>
-        </div>
+    <!-- RIGHT: Mobile Menu -->
+    <div class="hide-larger-than-tab">
+      <div class="dropdown dropdown-end">
+        <button aria-label="Main Menu" class="btn btn-ghost">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+          </svg>
+        </button>
+
+        <ul class="menu dropdown-content mt-3 p-3 shadow bg-eggy rounded-box w-52">
+          <li><a href="/#hero">About</a></li>
+          <li><a href="/#services">Services</a></li>
+          <li><a href="/#projects">Projects</a></li>
+          <li><a href="/#testimonials">Testimonials</a></li>
+          <li><a href="/#skills">Skills</a></li>
+          <li><a href="/#experience">Experience</a></li>
+          <li><a href="/#contact">Contact Me</a></li>
+        </ul>
       </div>
-      </div>
+    </div>
+
+    <!-- RIGHT: Desktop Menu -->
+    <nav class="hide-smaller-than-tab items-center gap-6">
+      <a class="menu-item" href="/#hero">About</a>
+      <a class="menu-item" href="/#services">Services</a>
+      <a class="menu-item" href="/#projects">Projects</a>
+      <a class="menu-item" href="/#testimonials">Testimonials</a>
+      <a class="menu-item" href="/#skills">Skills</a>
+      <a class="menu-item" href="/#experience">Experience</a>
+      <a  href="/#contact" class="button-main">Work With Me</a>
+    </nav>
+
+  </div>
        <div class="project-navbar text-darkness bg-eggy mobile-hide">
           
             <div class="menu-item">
             <div tabindex="0" role="button" class=" m-3 " ><a href="#overview">Overview</a></div>
           </div>
           <div class="menu-item">
-            <div tabindex="0" role="button" class=" m-3 " ><a href="#responsibilities">Role/Responsbilities</a></div>
+            <div tabindex="0" role="button" class=" m-3 " ><a href="#responsibilities">Role</a></div>
           </div>
           <div class="menu-item">
 <div tabindex="0" role="button" class=" m-3 " ><a href="#challenge">Challenge</a></div>
@@ -218,13 +205,13 @@ Welcome Week Website </h1>
 <div class="text-slate-50 mx-auto grid grid-cols-12 gap-8">        
               <div class=" col-span-12 sm:col-span-6 text-cream">
                 <h2 class="section-heading text-center text-cream">Old Homepage</h2>
-<p class="text-center text-cream pb-4 ">Lacking in energy, minimal rich content for SEO</p>
+<p class="text-center text-cream pb-4 ">Lacking in energy, little info for SEO, CTA for further exploration is buried</p>
 <div class="project-scroller w-full overflow-y-scroll border-2 dark:border-rata-eyeliner rounded-lg">
   <img src="/build/img/2026/projects/palooza/Home - old.png" alt="Old Palooza" class="w-full" />
 </div>
             </div>
              <div class="col-span-12 sm:col-span-6 gap-4 text-cream">
-                <h2 class="section-heading text-center text-cream">Redesigned Homepage</h2>
+                <h2 class="section-heading text-center text-cream">New Homepage</h2>
 <p class="text-center text-cream pb-4 ">Energetic presentation, provides more details, enhanced navigation</p>
 <div class="project-scroller w-full overflow-y-scroll border-2 dark:border-rata-eyeliner rounded-lg">
   <img src="/build/img/2026/projects/palooza/Home.png" alt="Old Palooza" class="w-full" />
@@ -234,8 +221,6 @@ Welcome Week Website </h1>
 </Section>
 
 
-          <div class="cute-border"></div>
-
 
 
 <!--process-->
@@ -243,8 +228,8 @@ Welcome Week Website </h1>
                       <div class="text-slate-50 w-eighty mx-auto grid grid-cols-12 gap-8">        
               <div class="col-span-12 sm:col-span-6 gap-4 text-darkness hero-content">
             <div class="items-center text-slate-50 justify-center mx-auto">        
-              <div class="m-auto text-darkness">
-                    <h1 class="section-heading">Process & Key Improvements</h1>
+              <div class="text-darkness">
+                    <h1 class="section-heading text-center sm:text-left">Process & Key Improvements</h1>
                 </div>
                 <div class="skill-row">
                 <div class="skills-container">
@@ -288,7 +273,7 @@ Welcome Week Website </h1>
 </div>
 </div>
 <div class="process-scrollers">
-<p class="text-center pb-4 ">Redesigned "About" Page</p>
+<p class="text-center pb-4 ">New "About" Page</p>
 <div class="project-scroller w-full overflow-y-scroll border-2 dark:border-rata-eyeliner rounded-lg">
   <img src="/build/img/2026/projects/palooza/about.png" alt="Old Palooza" class="w-full" />
 </div>
@@ -314,51 +299,30 @@ Welcome Week Website </h1>
   <footer class="footer">
      <div class="navbar text-darkness mx-auto">
         <div class="footer-start ">
-          <div class="dropdown">
-            <div tabindex="0" aria-label="Main Menu" role="button" class="btn btn-ghost sm:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h8m-8 6h16" />
-              </svg>
-            </div>
-            <ul
-              tabindex="0"
-              class="menu menu-sm dropdown-content text-darkness rounded-box z-[1] mt-3 w-52 p-3 shadow">
-              <li><a href="#hero" class="mt-2">About</a></li>
-              
-            </ul>
-          </div>
+
           <a class="text-xl font-sansita" href="../index.html">Emilia Hernandez</a>
           
         </div>
 
-        <div class="footer-end grid grid-cols-4">            
+        <div class="footer-end grid grid-cols-2 sm:grid-cols-4">            
             <div class="menu-item">
-            <div tabindex="0" role="button" class=" m-3 " ><a href="#hero">About</a></div>
+            <div tabindex="0" role="button" class=" m-3 " ><a href="/#hero">About</a></div>
           </div>
           <div class="menu-item">
-            <div tabindex="0" role="button" class=" m-3 " ><a href="#services">Services</a></div>
+            <div tabindex="0" role="button" class=" m-3 " ><a href="/#services">Services</a></div>
           </div>
           <div class="menu-item">
-<div tabindex="0" role="button" class=" m-3 " ><a href="#projects">Projects</a></div>
+<div tabindex="0" role="button" class=" m-3 " ><a href="/#projects">Projects</a></div>
           </div>
           
           <div class="menu-item">
-            <div tabindex="0" role="button" class=" m-3 " ><a href="#testimonials">Testimonials</a></div>
+            <div tabindex="0" role="button" class=" m-3 " ><a href="/#testimonials">Testimonials</a></div>
           </div>
           <div class="menu-item">
-            <div tabindex="0" role="button" class=" m-3 " ><a href="#skills">Skills</a></div>
+            <div tabindex="0" role="button" class=" m-3 " ><a href="/#skills">Skills</a></div>
           </div>
            <div class="menu-item">
-            <div tabindex="0" role="button" class=" m-3 " ><a href="#experience">Experience</a></div>
+            <div tabindex="0" role="button" class=" m-3 " ><a href="/#experience">Experience</a></div>
           </div>
 
           <div>

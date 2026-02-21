@@ -78,62 +78,49 @@
 
 </head>
 <body class="min-h-screen bg-cream ">
-  <header class="homepage bg-cream sticky top-0 z-10">
-    <div class="navbar text-darkness mx-auto">
-        <div class="navbar-start ">
-          <div class="dropdown">
-            <div tabindex="0" aria-label="Main Menu" role="button" class="btn btn-ghost sm:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h8m-8 6h16" />
-              </svg>
-            </div>
-            <ul
-              tabindex="0"
-              class="menu menu-sm dropdown-content text-darkness rounded-box z-[1] mt-3 w-52 p-3 shadow">
-              <li><a href="#hero" class="mt-2">About</a></li>
-              
-            </ul>
-          </div>
-          <a class="text-xl font-sansita" href="../index.html">Emilia Hernandez</a>
-        </div>
+  <header class="bg-cream sticky top-0 z-10">
+  <div class="navbar mx-auto text-darkness flex justify-between items-center">
 
-        <div class="navbar-end hidden lg:flex">            
-            <div class="menu-item">
-            <div tabindex="0" role="button" class=" m-3 " ><a href="#hero">About</a></div>
-          </div>
-          <div class="menu-item">
-            <div tabindex="0" role="button" class=" m-3 " ><a href="#services">Services</a></div>
-          </div>
-          <div class="menu-item">
-<div tabindex="0" role="button" class=" m-3 " ><a href="#projects">Projects</a></div>
-          </div>
-          
-          <div class="menu-item">
-            <div tabindex="0" role="button" class=" m-3 " ><a href="#testimonials">Testimonials</a></div>
-          </div>
-          <div class="menu-item">
-            <div tabindex="0" role="button" class=" m-3 " ><a href="#skills">Skills</a></div>
-          </div>
-           <div class="menu-item">
-            <div tabindex="0" role="button" class=" m-3 " ><a href="#experience">Experience</a></div>
-          </div>
-          <div class="menu-item">
-            <a class="button-main" href="#contact"><button>Work With Me</button></a>
-          </div>
+    <!-- LEFT: Site Name -->
+    <a href="/" class="text-xl font-sansita">
+      Emilia Hernandez
+    </a>
 
-          <div>
-        </div>
+    <!-- RIGHT: Mobile Menu -->
+    <div class="hide-larger-than-tab">
+      <div class="dropdown dropdown-end">
+        <button aria-label="Main Menu" class="btn btn-ghost">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+          </svg>
+        </button>
+
+        <ul class="menu dropdown-content mt-3 p-3 shadow bg-eggy rounded-box w-52">
+          <li><a href="#hero">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact Me</a></li>
+        </ul>
       </div>
-      </div>
+    </div>
+
+    <!-- RIGHT: Desktop Menu -->
+    <nav class="hide-smaller-than-tab items-center gap-6">
+      <a class="menu-item" href="#hero">About</a>
+      <a class="menu-item" href="#services">Services</a>
+      <a class="menu-item" href="#projects">Projects</a>
+      <a class="menu-item" href="#testimonials">Testimonials</a>
+      <a class="menu-item" href="#skills">Skills</a>
+      <a class="menu-item" href="#experience">Experience</a>
+      <a  href="#contact" class="button-main">Work With Me</a>
+    </nav>
+
+  </div>
 </header>
         <main class="mx-auto bg-cream">
         <section id="hero" class="z-30 m-auto">
@@ -509,37 +496,15 @@
     </main>
    
 </body>
-    
   <footer class="footer">
      <div class="navbar text-darkness mx-auto">
         <div class="footer-start ">
-          <div class="dropdown">
-            <div tabindex="0" aria-label="Main Menu" role="button" class="btn btn-ghost sm:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h8m-8 6h16" />
-              </svg>
-            </div>
-            <ul
-              tabindex="0"
-              class="menu menu-sm dropdown-content text-darkness rounded-box z-[1] mt-3 w-52 p-3 shadow">
-              <li><a href="#hero" class="mt-2">About</a></li>
-              
-            </ul>
-          </div>
+
           <a class="text-xl font-sansita" href="../index.html">Emilia Hernandez</a>
           
         </div>
 
-        <div class="footer-end grid grid-cols-4">            
+        <div class="footer-end grid grid-cols-2 sm:grid-cols-4">            
             <div class="menu-item">
             <div tabindex="0" role="button" class=" m-3 " ><a href="#hero">About</a></div>
           </div>

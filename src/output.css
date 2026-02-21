@@ -787,6 +787,34 @@ html {
     text-align: start;
   }
 }
+@media(max-width:640px){
+  .footer-start {
+  width: 40%;
+  justify-content: flex-start;
+}
+
+.footer-end {
+  width: 100% !important;
+  justify-content: flex-end;
+}
+
+footer > .navbar{
+display: block;
+}
+}
+
+@media(max-width:1200px){
+  .footer-start {
+  width: 20%;
+  justify-content: flex-start;
+}
+
+.footer-end {
+  width: 80% !important;
+  justify-content: flex-end;
+}
+
+}
 
 @media (hover:hover) {
   .link-hover:hover {
@@ -1271,21 +1299,12 @@ html {
   padding: var(--navbar-padding, 0.5rem);
   min-height: 4rem;
   width: 100%;
+      justify-content: space-between;
 }
 
 :where(.navbar > *:not(script, style)) {
   display: inline-flex;
   align-items: center;
-}
-
-.navbar-start {
-  width: 30%;
-  justify-content: flex-start;
-}
-
-.navbar-end {
-  width: 70%;
-  justify-content: flex-end;
 }
 
 .footer-start {
