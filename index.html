@@ -8,293 +8,558 @@
 <meta property="og:description" content="My portfolio of digital media experience and experiments" />
 <meta name="description" content="I'm Emilia Hernandez and I am a web designer and developer that focuses on building projects with all the wonderful digital media tools I can find.">
 <meta property="og:type" content="website" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Sansita+One&display=swap"
+  rel="stylesheet"
+/>
     <link rel="stylesheet" href="build/css/style.css">
     <link href="./src/output.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="icon" type="image/x-icon" href="build/img/favicon.ico">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
  <script type="module" src="./build/js/home.js"></script>
- <script>
-  if (localStorage.getItem('dark-mode') === 'true' || (!('dark-mode' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      document.querySelector('html').classList.add('dark');
-  } else {
-      document.querySelector('html').classList.remove('dark');
-  }
-  </script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.project-card');
+
+    cards.forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        cards.forEach(c => {
+          c.classList.remove('is-open');
+          c.classList.add('is-closed');
+        });
+
+        card.classList.add('is-open');
+        card.classList.remove('is-closed');
+      });
+    });
+  });
+</script>
+<script src="https://unpkg.com/lottie-web@5.12.2/build/player/lottie.min.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('lottie-hover');
+
+    if (!container) {
+      console.error('Lottie container not found');
+      return;
+    }
+
+    const animation = lottie.loadAnimation({
+      container: container,
+      renderer: 'svg',
+      loop: false,
+      autoplay: false,
+      path: './build/img/2026/Lottie/badge-animation.json'
+    });
+
+    let isForward = true;
+    let isPlaying = false;
+
+    container.addEventListener('mouseenter', () => {
+      if (isPlaying) return;
+
+      isPlaying = true;
+      animation.setDirection(isForward ? 1 : -1);
+      animation.play();
+      isForward = !isForward;
+    });
+
+    animation.addEventListener('complete', () => {
+      isPlaying = false;
+    });
+  });
+</script>
+
+
 </head>
-<body class="min-h-screen bg-rata-eyeliner text-slate-50 font-RedHat">
-  <header class="dark:rata-black-eyeliner.text-slate-50 bg-slate-100.text-black sticky top-0 z-10 dark">
-    <div class="navbar bg-rata-eyeliner">
-        <div class="navbar-start">
-          <div class="dropdown">
-            <div tabindex="0" aria-label="Main Menu" role="button" class="btn btn-ghost sm:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h8m-8 6h16" />
-              </svg>
+<body class="min-h-screen bg-cream ">
+  <header class="bg-cream sticky top-0 z-10">
+  <div class="navbar mx-auto text-darkness flex justify-between items-center">
+
+    <!-- LEFT: Site Name -->
+    <a href="/" class="text-xl font-sansita">
+      Emilia Hernandez
+    </a>
+
+    <!-- RIGHT: Mobile Menu -->
+    <div class="hide-larger-than-tab">
+      <div class="dropdown dropdown-end">
+        <button aria-label="Main Menu" class="btn btn-ghost">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+          </svg>
+        </button>
+
+        <ul class="menu dropdown-content mt-3 p-3 shadow bg-eggy rounded-box w-52">
+          <li><a href="#hero">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact Me</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- RIGHT: Desktop Menu -->
+    <nav class="hide-smaller-than-tab items-center gap-6">
+      <a class="menu-item" href="#hero">About</a>
+      <a class="menu-item" href="#services">Services</a>
+      <a class="menu-item" href="#projects">Projects</a>
+      <a class="menu-item" href="#testimonials">Testimonials</a>
+      <a class="menu-item" href="#skills">Skills</a>
+      <a class="menu-item" href="#experience">Experience</a>
+      <a  href="#contact" class="button-main">Work With Me</a>
+    </nav>
+
+  </div>
+</header>
+        <main class="mx-auto bg-cream">
+        <section id="hero" class="z-30 m-auto">
+            <div class="items-center text-slate-50 justify-center w-eighty mx-auto grid grid-cols-12 gap-6 ">        
+              <div class=" col-span-12 sm:col-span-7 gap-4 m-auto text-darkness hero-content">
+                <div class="hero-text-container">
+                  <p class="skinny-heading">WEB DESIGN & DEVELOPMENT</p>
+                </h2>
+                    <h1 class="section-heading">I design and build conversion-focused websites for growing businesses. </h1>
+              </div>
+                <div class="hero-bullets-container">
+                <p class="max-width hero-bullets">* Design + development expertise across WordPress, HubSpot, and custom front-end builds</p>
+                <p class="max-width hero-bullets">* Reliable delivery for time-sensitive launches, campaigns, and pitches</p>
+                <p class="max-width hero-bullets">* Data-informed decisions using analytics, SEO, and UX best practices</p>
+</div>
+<a class="button-main" href="#contact"><button>Work With Me</button></a>
+                </div>
+              <div class="content-center  col-span-12 sm:col-span-4 mobile-hide">
+                    <img alt="gif of me on the computer" class=" mx-auto rounded mb-5" src="build/img/AboutMeAnimation-Emilia Hernandez.gif">
+                   <div class="textboxHome border-2 border-black relative p-5 bg-cream" style="bottom:2vw;">
+  <p class="text-darkness">
+    <span><strong>Status: </strong></span><span id="typewriter-text"></span><span class="blinking-cursor">|</span>
+  </p>
+</div>
+</div>
+                
             </div>
-            <ul
-              tabindex="0"
-              class="menu menu-sm dropdown-content text-slate-50 bg-rata-eyeliner rounded-box z-[1] mt-3 w-52 p-3 shadow">
-              <li><a href="build/WebDev.html" class="mt-2">Web Dev</a></li>
-              <li>
-                <a href="build/GraphicDesign.html">Graphic Design</a>
-              </li>
-              <li>
-                <a href="build/UX-UI.html">UX/UI Design</a>
-              </li>
-              <li>
-                <a href="build/3D-Art.html">3D Modeling</a>
-              </li>
-              <li>
-                <a href="build/video-games.html">Game Dev</a>
-              </li>
-            </ul>
+          </section>
+
+<!--services-->
+<Section id="services" class="bg-darkness m-auto">
+  <div class="w-eighty m-auto col-span-12">
+<h2 class="section-heading text-center text-cream pb-4 ">How I Can Help</h2>
+<div class="gap-4 md:gap-8 grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 m-auto text-center pb-4">
+<Div class="service-card-container">
+  <div class="service-card-inner">
+    <h2 class="service-card-heading font-sansita">Website Design & Development</h2>
+    <p class="service-card-body">UX/UI design and responsive builds using WordPress, HubSpot, and custom code.</p>
+  </div>
+</Div>
+<Div class="service-card-container">
+  <div class="service-card-inner">
+    <h2 class="service-card-heading">Campaign & Launch Websites</h2>
+    <p class="service-card-body">Fast-turn, high-impact websites built for events, pitches, and brand campaigns.</p>
+  </div>
+</Div>
+<Div class="service-card-container">
+  <div class="service-card-inner">
+    <h2 class="service-card-heading">Optimization & Iteration</h2>
+    <p class="service-card-body">UX, SEO, and analytics-driven improvements to existing websites.</p>
+  </div>
+</Div>
+
+</div>
+<a href="#projects"><svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#98D8E0" viewBox="0 0 16 16">
+  <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+</svg>
+</a>
+</div>
+</Section>
+<!--projects-->
+        <section id="projects" class="z-30 m-auto">
+            <div class="items-center text-slate-50 justify-center w-eighty mx-auto col-span-12">        
+              <div class="m-auto text-darkness pb-8">
+                    <h1 class="section-heading">Featured Projects & Outcomes</h1>
+                <p class="max-width text-[14px] sm:text-[1.2vw] mt-4 sm:text-left">Each project reflects a balance of strategy, design, and development—whether optimizing performance, meeting tight deadlines, or supporting large-scale campaigns.</p>
+                </div>
+<div class="projects-grid desktop-hide">
+<div class="project-card is-open" data-project="1">
+  <!-- OPEN STATE -->
+  <div class="project-open">
+    <div class="project-details">
+      <div class="project-headings">
+        <p class="skinny-heading text-cream">PEGASUS PALOOZA</p>
+        <h1 class="section-heading">
+          Driving a 155% Increase in Website Traffic for a University-Wide Event
+        </h1>
+      </div>
+      <p>UX redesign, SEO optimization, and WordPress development for UCF’s official Welcome Week.</p>
+      <a class="button-main" href="projects/pegasus-palooza">
+        <button>Read More about Pegasus Palooza</button>
+      </a>
+    </div>
+
+    <div class="project-img-column">
+      <img class="project-image" src="./build/img/2026/featured-projects/Pegasus-Palooza.png">
+    </div>
+  </div>
+
+</div>
+
+  <div class="project-card is-open" data-project="2">
+  <!-- OPEN STATE -->
+  <div class="project-open">
+    <div class="project-details">
+      <div class="project-headings">
+        <p class="skinny-heading text-cream">EVER.AG</p>
+        <h1 class="section-heading">
+          Building Award-Winning Campaign Pages for a Global Ag Brand
+        </h1>
+      </div>
+      <p>Front-end development for a brand campaign recognized with a 2023 Platinum MarCom Award.</p>
+      <a class="button-main" href="projects/EverAg">
+        <button>Read More about Ever.Ag Project</button>
+      </a>
+    </div>
+  </div>
+
+  </div>
+
+  <div class="project-card is-open" data-project="3">
+
+       <!-- OPEN STATE -->
+  <div class="project-open">
+    <div class="project-details">
+      <div class="project-headings">
+        <p class="skinny-heading text-cream">ECHO</p>
+        <h1 class="section-heading">
+          Launching a Nonprofit Website in Time for a High-Stakes Pitch
+        </h1>
+      </div>
+      <p>Designed and built a complete website in under one month to support ECHO’s Passion Pitch submission.</p>
+      <a class="button-main" href="/projects/echo">
+        <button>Read More about ECHO Project</button>
+      </a>
+    </div>
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+<div class="projects-grid mobile-hide">
+<div class="project-card is-open" data-project="1">
+  <!-- OPEN STATE -->
+  <div class="project-open">
+    <div class="project-details">
+      <div class="project-headings">
+        <p class="skinny-heading text-cream">PEGASUS PALOOZA</p>
+        <h1 class="section-heading">
+          Driving a 155% Increase in Website Traffic for a University-Wide Event
+        </h1>
+      </div>
+      <p>UX redesign, SEO optimization, and WordPress development for UCF’s official Welcome Week.</p>
+      <a class="button-main" href="projects/pegasus-palooza">
+        <button>Read More about Pegasus Palooza</button>
+      </a>
+    </div>
+
+    <div class="project-img-column">
+      <img class="project-image" src="./build/img/2026/featured-projects/Pegasus-Palooza.png">
+    </div>
+  </div>
+
+  <!-- CLOSED STATE -->
+  <div
+    class="project-closed"
+    style="background-image:url('./build/img/2026/featured-projects/Pegasus-Palooza.png');">
+  </div>
+
+</div>
+
+  <div class="project-card is-closed" data-project="2">
+  <!-- OPEN STATE -->
+  <div class="project-open">
+    <div class="project-details">
+      <div class="project-headings">
+        <p class="skinny-heading text-cream">EVER.AG</p>
+        <h1 class="section-heading">
+          Building Award-Winning Campaign Pages for a Global Ag Brand
+        </h1>
+      </div>
+      <p>Front-end development for a brand campaign recognized with a 2023 Platinum MarCom Award.</p>
+      <a class="button-main" href="/projects/EverAg">
+        <button>Read More about Ever.Ag Project</button>
+      </a>
+    </div>
+
+    <div class="project-img-column">
+      <img class="project-image" src="./build/img/2026/featured-projects/EverAg.png">
+    </div>
+  </div>
+
+  <!-- CLOSED STATE -->
+  <div
+    class="project-closed"
+    style="background-image:url('./build/img/2026/featured-projects/EverAg.png');">
+  </div>
+
+  </div>
+
+  <div class="project-card is-closed" data-project="3">
+
+       <!-- OPEN STATE -->
+  <div class="project-open">
+    <div class="project-details">
+      <div class="project-headings">
+        <p class="skinny-heading text-cream">ECHO</p>
+        <h1 class="section-heading">
+          Launching a Nonprofit Website in Time for a High-Stakes Pitch
+        </h1>
+      </div>
+      <p>Designed and built a complete website in under one month to support ECHO’s Passion Pitch submission.</p>
+      <a class="button-main" href="/projects/echo">
+        <button>Read More about ECHO Project</button>
+      </a>
+    </div>
+
+    <div class="project-img-column">
+      <img class="project-image" src="./build/img/2026/featured-projects/Echo.png">
+    </div>
+  </div>
+
+  <!-- CLOSED STATE -->
+  <div
+    class="project-closed"
+    style="background-image:url('./build/img/2026/featured-projects/Echo.png');">
+  </div>
+  </div>
+
+</div>
+
+            </div>
+          </section>
+          
+<!--Testimonials-->
+          <Section id="testimonials" class="bg-darkness mx-auto">
+  <div class="w-eighty mx-auto col-span-12">
+<h2 class="section-heading text-cream pb-4">Trusted by Teams & Clients</h2>
+<div class="gap-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 m-auto text-center ">
+<Div class="service-card-container">
+  <div class="testimonial-card-inner">
+    <p class="testimonial-card-body ">Emilia’s attention to detail, responsiveness to feedback, and ability to translate ideas into impactful digital designs exceeded all expectations with her creativity and strong visual appeal.</p>
+    <div class="testimonial-container">
+      <div class="testimonial-char testimonial-credit">KU</div>
+      <div class="text-left testimonial-credit">
+        <p>Kimbery U.</p>
+        <p> ECHO Founder</p>
+      </div>
+    </div>
+  </div>
+</Div>
+<div class="service-card-container">
+    <div class="testimonial-card-inner">
+    <p class="testimonial-card-body ">Emilia is truly a rare gem to work with. She’s a proactive self-starter who is always several steps ahead, anticipating needs, researching solutions, and delivering high-quality results without waiting to be told what to do.</p>
+    <div class="testimonial-container">
+      <div class="testimonial-char testimonial-credit">PL</div>
+      <div class="text-left testimonial-credit">
+        <p>Patty L.</p>
+        <p>Ever.Ag Sr. Website and Digital Experience Manager</p>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+</Section>
+
+<!--skills-->
+        <section id="skills" class="z-30 m-auto">
+            <div class="items-center text-slate-50 justify-center w-eighty mx-auto col-span-12">        
+              <div class="m-auto text-darkness">
+                    <h1 class="section-heading">Skills & Technical Expertise</h1>
+                </div>
+                <div class="skills-container">
+                  <div class="skill-row">
+                    <p class="skill">CMS</p>
+                    <div class="skills-tiles w-full grid gap-4 grid-cols-1 sm:grid-cols-4 md:grid-cols-4 text-center">
+<img src="./build/img/skills/wordpress.png">
+<img src="./build/img/skills/hubspot.png">
+<img src="./build/img/skills/wix.png">
+<img src="./build/img/skills/webflow.png">
+</div>
+                  </div>
+                  <div class="skill-row">
+                    <p class="skill">Development</p>
+                    <div class="skills-tiles w-full grid gap-4 grid-cols-1 sm:grid-cols-4 md:grid-cols-4 text-center">
+<img src="./build/img/skills/nextjs.png">
+<img src="./build/img/skills/react.png">
+<img src="./build/img/skills/html.png">
+<img src="./build/img/skills/github.png">
+</div>
+                  </div>
+                  <div class="skill-row">
+                    <p class="skill">Data & Optimization</p>
+                    <div class="skills-tiles w-full grid gap-4 grid-cols-1 sm:grid-cols-4 md:grid-cols-4 text-center">
+<img src="./build/img/skills/analytics.png">
+<img src="./build/img/skills/clarity.png">
+<img src="./build/img/skills/power automate.png">
+<img src="./build/img/skills/hotjar.png">
+</div>
+                  </div>
+                  <div class="skill-row">
+                    <p class="skill">Design</p>
+                    <div class="skills-tiles w-full grid gap-4 grid-cols-1 sm:grid-cols-4 md:grid-cols-4 text-center">
+<img src="./build/img/skills/figma.png">
+<img src="./build/img/skills/adobeIllustrator.png">
+<img src="./build/img/skills/Photoshop.png">
+<img src="./build/img/skills/Indesign.png">
+</div>
+                  </div>
+                </div>
+            </div>
+          </section>
+     <!--need to customize this section so its a div-->
+          <div class="cute-border"></div>
+           <div id="experience"> 
+                            <div class="text-slate-50 mx-auto grid grid-cols-12 w-eighty">       
+              <div class=" sm:col-span-4 col-span-11 mx-auto  gap-4 text-darkness col-padding-experience">
+                 <div class="m-auto text-darkness">
+                    <h1 class="section-heading">Professional Experience</h1>
+                </div>
+ <div class="experience-container">
+                  <div class="experience-row">
+                    <img class="experience-img" src="./build/img/2026/jobs/everag.png">
+                    <div class="experience-text">
+                      <p class="experience-dates">May 2023 - present</p>
+                      <p class="experience-role">Web Designer at Ever.Ag</p>
+                    </div>
+                  </div>
+                  <div class="experience-row">
+                    <img class="experience-img" src="./build/img/2026/jobs/echo.webp">
+                    <div class="experience-text">
+                      <p class="experience-dates">April 2025 - present</p>
+                      <p class="experience-role">Web Designer at ECHO</p>
+                    </div>
+                  </div>
+                  <div class="experience-row">
+                    <img class="experience-img" src="./build/img/2026/jobs/cfp.webp">
+                    <div class="experience-text">
+                      <p class="experience-dates">February 2022 - February 2024</p>
+                      <p class="experience-role">UX/UI Intern at Career Fair Plus</p>
+                    </div>
+                  </div>
+                  <div class="experience-row">
+                    <img class="experience-img" src="./build/img/2026/jobs/UCF.png">
+                    <div class="experience-text">
+                      <p class="experience-dates">May 2021 - May 2023</p>
+                      <p class="experience-role">Web Designer at University of Central Florida</p>
+                    </div>
+                  </div>
+                </div>
+            <div class="pt-10"><a class="button-main" href="#contact"><button>Work With Me Next</button></a></div>
+                </div>
+                
+  <div class="col-span-12 sm:col-span-6 self-start mobile-hide">
+ <div class="lottie-wrapper">
+    <div id="lottie-hover"></div>
+
+  </div>
+</div>
+                
+            </div>
           </div>
-          <a class="btn btn-ghost text-xl" href="../index.html">Emilia Hernandez</a>
+
+
+
+<section id="contact" class="bg-darkness mx-auto">
+  <div class="desk-grid-mobile-block grid-flow-col auto-cols-max sm:auto-cols-min w-eighty mx-auto col-span-12">
+  <div>    
+    <h2 class="section-heading text-cream pb-4">Let’s Work Together</h2>
+      <p class="text-cream pb-10">
+        Available for freelance, contract, and part-time opportunities
+      </p></div>
+
+  <div>      
+    <form
+        class="w-full"
+        action="https://docs.google.com/forms/d/e/1FAIpQLSeh6pg2mlnc-YxqAt0KeR-2_QQvMEV-pwgW_t8V7ZfuxfybBQ/formResponse"
+      >
+        <div class="form-field">
+          <label>Name</label>
+          <input class="w-full" type="text" name="entry.2005620554" placeholder="Full Name">
         </div>
 
-        <div class="navbar-end hidden lg:flex">            
-            <div class="dropdown dropdown-hover">
-            <div tabindex="0" role="button" class="pr-10 m-3 font-bold" ><a>Dev Projects</a></div>
-            <ul tabindex="0" class="dropdown-content menu text-black bg-pink-300 rounded-box z-50 w-52 p-2 shadow">
-              <li><a href="build/WebDev.html">Web Dev</a></li>
-              <li><a href="build/video-games.html">Game Dev</a></li>
-            </ul>
+        <div class="form-field">
+          <label>Email</label>
+          <input class="w-full" type="text" name="entry.1045781291" placeholder="Email@email.com">
+        </div>
+
+        <div class="form-field">
+          <label>Phone</label>
+          <input class="w-full" type="text" name="entry.1166974658" placeholder="000-000-0000">
+        </div>
+
+        <div class="form-field">
+          <label>Project Info</label>
+          <input class="w-full" type="text" name="entry.839337160" placeholder="Enter project description">
+        </div>
+
+        <button type="submit" class="button-main mt-6">
+          Submit Form
+        </button>
+      </form>
+    </div>
+</div></section>
+
+
+    </main>
+   
+</body>
+  <footer class="footer">
+     <div class="navbar text-darkness mx-auto pt-5 pb-5">
+        <div class="footer-start ">
+
+          <a class="text-xl font-sansita" href="../index.html">Emilia Hernandez</a>
+          
+        </div>
+
+        <div class="footer-end grid grid-cols-2 sm:grid-cols-4">            
+            <div class="menu-item">
+            <div tabindex="0" role="button" class=" m-3 " ><a href="#hero">About</a></div>
           </div>
-          <div class="dropdown dropdown-hover pr-10">
-            <div tabindex="0" role="button" class=" m-1 font-bold"><a>Design Projects</a></div>
-            <ul tabindex="0" class="dropdown-content menu text-black bg-pink-300 rounded-box w-52 z-[40] p-2 shadow">
-              
-              <li><a href="build/GraphicDesign.html">Graphic Design</a></li>
-              <li><a href="build/UX-UI.html">UX/UI</a></li>
-              <li><a href="build/3D-Art.html">3D Art</a></li>
-            </ul>
+          <div class="menu-item">
+            <div tabindex="0" role="button" class=" m-3 " ><a href="#services">Services</a></div>
           </div>
-          <div class="dropdown dropdown-hover pr-10">
+          <div class="menu-item">
+<div tabindex="0" role="button" class=" m-3 " ><a href="#projects">Projects</a></div>
+          </div>
+          
+          <div class="menu-item">
+            <div tabindex="0" role="button" class=" m-3 " ><a href="#testimonials">Testimonials</a></div>
+          </div>
+          <div class="menu-item">
+            <div tabindex="0" role="button" class=" m-3 " ><a href="#skills">Skills</a></div>
+          </div>
+           <div class="menu-item">
+            <div tabindex="0" role="button" class=" m-3 " ><a href="#experience">Experience</a></div>
           </div>
 
           <div>
         </div>
       </div>
-</header>
-        <main class="mx-auto w-[90%] ">
-        <section id="hero" class="p-4 z-30">
-            <div class="items-center text-slate-50 justify-center w-[90%] mx-auto grid grid-cols-12 gap-6 ">        
-              <div class="content-center pr-7 col-span-12 sm:col-span-6">
-                    <img alt="gif of me on the computer" class=" mx-auto" src="build/img/AboutMeAnimation-Emilia Hernandez.gif">
-                   <div class="textboxHome border-2 border-slate-50 relative p-5 bg-black" style="bottom:2vw;">
-  <h1 class="text-white sm:text-[1.4vw]">
-    <span><strong>Status: </strong></span><span id="typewriter-text"></span><span class="blinking-cursor">|</span>
-  </h1>
-</div>
-</div>
-                <div class=" col-span-12 sm:col-span-6 gap-2 m-auto">
-                    <h1 class="text-pink-400 text-[32px] sm:text-[3.5vw] font-Helvetica font-bold">I'm Emilia,</h1>
-                <h2 class=" font-bold text-[25px] sm:text-[1.8vw] sm:text-left text-slate-50">Multi-Media Designer + Developer</span>
-                </h2>
-                <p class="max-width text-[14px] sm:text-[1.5vw] mt-4 sm:text-left text-slate-50 pb-10">My digital media services bring ideas to life and result in high-quality, thoughtfully designed assets. My specialties are digital design and development, and you can explore my projects below to fully understand what I can do for you!</p>
-                <div class="grid grid-flow-col gap-4">
-            <a aria-label="Linkedin Profile" class="transition ease-in-out  hover:-translate-y-1 hover:scale-110" target="_blank" href="https://www.linkedin.com/in/emilia-hernandez-560489159/">
-                <svg class=" hover:fill-purple-300 fill-pink-400 mx-auto sm:w-[3vw] sm:h-[3vw]" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"/></svg>
-            </a>
-            <a aria-label="Github Profile" class="text-center transition ease-in-out  hover:-translate-y-1 hover:scale-110" target="_blank" href="https://github.com/EmiliaHernandez">
-                <svg class="hover:fill-purple-300 fill-pink-400 mx-auto sm:w-[3vw] sm:h-[3vw]" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg> 
-          </a> 
-          </div>
-                </div>
-            </div>
-          </section>
-          
-<!--Nav for Specialties-->
-<Section class="mt-7 w-[90%] m-auto"><br>
-<h2 class="w-3\/4 m-auto text-left sm:text-[2.5vw] text-[4.5vw] pb-4 text-pink-400  font-Helvetica font-bold mt-7">View projects by <span class="text-purple-300">specialty</span> here or<br> check out <span class="text-purple-300">featured projects below</span></h2>
-<div class="gap-8 grid grid-cols-5 sm:grid-cols-5 md:grid-cols-5 m-auto text-center w-3\/4">
- <a href="./build/WebDev.html" class="group relative transition ease-in-out  hover:-translate-y-1 hover:scale-110">
-    <!-- Default image -->
-    <img alt="Website mockup" src="build/img/Icons/WebDev1.png"
-         class="w-full col-span-1 block group-hover:hidden"/>
-    <!-- Hover image -->
-    <img alt="Website mockup version 2" src="build/img/Icons/WebDev2.png"
-         class="w-full col-span-1 hidden group-hover:block" />
-      <div class="relative text-rata-eyeliner font-medium rounded-full px-3 text-md p-2 sm:text-[1.3vw] bg-pink-400   inline-block mt-2">Web Dev</div>
-
- </a>
-  <a href="./build/GraphicDesign.html" class="group relative transition ease-in-out  hover:-translate-y-1 hover:scale-110">
-    <!-- Default image -->
-    <img  alt="Summer of Connection Conference asset previews" src="build/img/Icons/GraphicDesign1.png"
-         class="w-full col-span-1 block group-hover:hidden"/>
-    <!-- Hover image -->
-    <img alt="storm drain stickers asset preview" src="build/img/Icons/GraphicDesign2.png"
-         class="w-full col-span-1 hidden group-hover:block" />
-      <div class="relative text-rata-eyeliner font-medium rounded-full px-3 text-md sm:text-[1.3vw] p-2 bg-pink-400   inline-block mt-2">Graphic Design</div>
-
- </a>
-
-   <a href="./build/UX-UI.html" class="group relative transition ease-in-out  hover:-translate-y-1 hover:scale-110">
-    <!-- Default image -->
-    <img alt="lo-fi wireframe design" src="build/img/Icons/UXUI1.png"
-         class="w-full col-span-1 block group-hover:hidden"/>
-    <!-- Hover image -->
-    <img alt="hi-fi wireframe design" src="build/img/Icons/UXUI2.png"
-         class="w-full col-span-1 hidden group-hover:block" />
-      <div class="relative text-rata-eyeliner font-medium rounded-full px-3 text-md p-2 bg-pink-400  sm:text-[1.3vw] inline-block mt-2">UX/UI Design</div>
-
- </a>
-
-    <a href="./build/3D-Art.html" class="group relative transition ease-in-out  hover:-translate-y-1 hover:scale-110">
-    <!-- Default image -->
-    <img alt="3d  model of gizmo character" src="build/img/Icons/3DModeling1.png"
-         class="w-full col-span-1 block group-hover:hidden"/>
-    <!-- Hover image -->
-    <img alt="3d model of Rata character" src="build/img/Icons/3DModeling2.png"
-         class="w-full col-span-1 hidden group-hover:block" />
-      <div class="relative text-rata-eyeliner font-medium rounded-full px-3 text-md p-2 bg-pink-400  sm:text-[1.3vw] inline-block mt-2">3D Modeling</div>
-
- </a>
-
-     <a href="./build/video-games.html" class="group relative transition ease-in-out  hover:-translate-y-1 hover:scale-110">
-    <!-- Default image -->
-    <img alt="preview of 2 video game play widgets" src="build/img/Icons/GameDev1.png"
-         class="w-full col-span-1 block group-hover:hidden"/>
-    <!-- Hover image -->
-    <img alt="preview of 2 more video game play widgets"  src="build/img/Icons/GameDev2.png"
-         class="w-full col-span-1 hidden group-hover:block" />
-      <div class="relative text-rata-eyeliner font-medium rounded-full px-3 text-md p-2 bg-pink-400 sm:text-[1.3vw]  inline-block mt-2">Game Dev</div>
-
- </a>
-   
-</div>
-</Section>
-<!--featured projects-->
-        <section id="SOC" class=" mt-32 bg-rata-eyeliner z-30 pb-10 border-zip-poncho ">
-            
-                <h2 class="text-center sm:text-[2.5vw] text-[4.5vw] pb-4 text-pink-400  font-Helvetica font-bold">Featured Projects</h2>
-            <div class="text-slate-50 justify-center w-3\/4 mx-auto grid grid-cols-4 gap-2 bg-rata-eyeliner   pt-10">
-                
-                <!-- pic -->
-                <div class="pl-5 col-span-4  sm:col-span-2">
-                    <img alt="screenshot of page I created for ever.ag" class="rounded-lg" src="build/img/Summer of Connection Emilia.png">
-
-                </div>
-                <!-- description -->
-                <div class="pl-5 col-span-4  sm:col-span-2">
-                  <h4 class="font-bold pb-2 sm:text-[1.3vw]">Taco Bell Foundation x CoLabl</h4>
-                    <h3 class="text-3xl pb-2 sm:text-[2.3vw] font-bold">Live Mas Scholarship(LMS) Assets</h3>
-                    <Br>
-                        <p class="font-bold sm:text-[1.2vw]">Learn more about my role in...</p>
-                      
-                            <ul class="list-disc pl-8 sm:text-[1.2vw]">
-                            <li>Creating designs for the conference postcard and sticker pack</li>
-                            <li>Designing with Figma, Adobe Illustrator, and Womp3D</li>
-                            <li>Designing a webpage for the LMS portal</li>
-                        </ul>
-                        <button class=" relative text-rata-eyeliner  focus:outline-none font-medium rounded-full text-md p-3 mt-5 bg-pink-400 hover:bg-purple-300 border-solid border-1 sm:text-[1.3vw]"><a href="build/lms.html">View LMS Designs</a></button>
-                </div>
-            </div>
-        </section>
-
-<!--EdEcho-->
-                <section id="SOC" class="bg-rata-eyeliner z-30 pb-10 border-zip-poncho ">
-            <div class="text-slate-50 justify-center w-3\/4 mx-auto grid grid-cols-4 gap-2 bg-rata-eyeliner   pt-10">
-                 <!-- pic -->
-                <div class="pl-5 col-span-4 sm:order-2 sm:col-span-2">
-                    <img alt="echo website mockup" class="rounded-lg" src="build/img/Echo site 2025.png">
-
-                </div>
-                <!-- description -->
-                <div class="pl-5 col-span-4 sm:order-1 sm:col-span-2 ">
-                  <h4 class="font-bold pb-2 sm:text-[1.3vw]">ECHO (Early Cardiovascular Health Outreach)</h4>
-                    <h3 class="text-3xl pb-2 font-bold sm:text-[2.3vw]">EdEcho.org</h3>
-                    <Br>
-                        <p class="font-bold sm:text-[1.3vw]">Learn more about my role in...</p>
-                            <ul class="list-disc pl-8 sm:text-[1.3vw]">
-                            <li>Designing ECHO's website using Figma</li>
-                            <li>Transforming the prototype into a live site using React, Next.Js, and TailwindCSS</li>
-                        </ul>
-                        <button class="relative text-rata-eyeliner  focus:outline-none font-medium rounded-full text-md p-3 mt-5 bg-pink-400 hover:bg-purple-300 border-solid border-1 sm:text-[1.3vw]"><a href="build/Echo.html">View Echo Designs</a></button>
-                </div>
-               
-            </div>
-        </section>
-
-        <section id="everAg" class="bg-rata-eyeliner z-30 pb-10">
-            <div class="text-slate-50 justify-center w-3\/4 mx-auto grid grid-cols-4 gap-2 bg-rata-eyeliner   pt-10">
-                
-                <!-- pic -->
-                <div class="pl-5 col-span-4  sm:col-span-2">
-                    <img alt="collage of different assets created for UCF" class="rounded-lg" src="build/img/ucfArt.png">
-
-                </div>
-                <!-- description -->
-                <div class="pl-5 col-span-4  sm:col-span-2">
-                  <h4 class="sm:text-[1.3vw] pb-2">University of Central Florida</h4>
-                    <h3 class="text-3xl pb-2 font-bold sm:text-[2.3vw]">Campus Art + Web Design</h3>
-                    
-                    <Br>
-                        <p class="font-bold sm:text-[1.3vw]">Learn more about my role in...</p>
-                            <ul class="list-disc pl-8 sm:text-[1.3vw]">
-                            <li>Co-managing 3 UCF subdomain sites</li>
-                            <li>Designing a campus mural and stormdrain signage</li>
-                            <li>Participating in art shows</li>
-                        </ul>
-                        <button class="relative text-rata-eyeliner  focus:outline-none font-medium rounded-full text-md p-3 mt-5 bg-pink-400 hover:bg-purple-300 border-solid border-1 sm:text-[1.3vw]"><a href="build/ucf.html">View UCF Designs</a></button>
-                </div>
-            </div>
-        </section>
-
-    </main>
-    <script>
-        if (localStorage.getItem('dark-mode') === 'true' || (!('dark-mode' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.querySelector('html').classList.add('dark');
-        } else {
-            document.querySelector('html').classList.remove('dark');
-        }
-        </script>
-</body>
-    
-  <footer class="footer bg-purple-300 text-rata-eyeliner p-10 mt-20">
-    <nav>
-      <h2 class="footer-title"><a>Design Projects</a></h2>
-      <a class="link link-hover" href="build/UX-UI.html">UX/UI Design</a>
-      <a class="link link-hover" href="build/GraphicDesign.html">Graphic Design</a>
-      <a class="link link-hover" href="build/3D-Art.html">3D Modeling</a>
-    </nav>
-    <nav>
-      <h2 class="footer-title"><a>Dev Projects</a></h2>
-      <a class="link link-hover" href="build/WebDev.html">Web Dev</a>
-      <a class="link link-hover" href="build/video-games.html">Game Dev</a>
-    </nav>
-  </footer>
-  <footer class="footer bg-purple-300 text-rata-eyeliner border-base-300 border-t px-10 py-4">
-    <aside class="grid-flow-col items-center">
-      <p class="italic font-medium">
-        Site Developed by Emilia Hernandez
-        
-      </p>
-    </aside>
-    <nav class="md:place-self-center md:justify-self-end">
-      <div class="grid grid-flow-col gap-4">
-        <a target="_blank" href="https://www.linkedin.com/in/emilia-hernandez-560489159/">
-          <svg class="fill-rata-eyeliner mx-auto" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"/></svg>LinkedIn
-      </a>
-      <a class="text-center" target="_blank" href="https://github.com/EmiliaHernandez">
-          <svg class="fill-rata-eyeliner mx-auto" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>Github
-      </a>
-      
       </div>
-    </nav>
   </footer>
+
     </section>
 </footer>
 </html>

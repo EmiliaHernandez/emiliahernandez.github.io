@@ -1,12 +1,12 @@
   const lines = [
     "Deploying website...",
-    "Rendering 3D models on Womp...",
-    "Booting up Adobe Illustrator...",
     "Loading Figma workspace...",
     "Developing Hubspot modules...",
-    "Editing graphics for printing...",
-    "Designing video games...",
-    "Crafting social media content...",
+    "NPM run dev...",
+    "Writing PHP functions...",
+    "Creating page wireframes...",
+    "Designing WordPress Themes...",
+    "Previewing GitHub pull request..."
   ];
 
   const shuffledLines = lines

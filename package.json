@@ -5,13 +5,14 @@
   "main": "tailwind.config.js",
   "scripts": {
     "tailwind": "npx tailwindcss -i ./src/input.css -o ./build/css/style.css --watch",
-    "prettier": "npx prettier --write **/*.html"
+    "prettier": "npx prettier --write **/*.html",
+    "build:css": "npx @tailwindcss/cli -i app.css -o public/output.css"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "daisyui": "^4.12.10",
+    "daisyui": "^5.5.19",
     "prettier-plugin-tailwindcss": "^0.6.6",
     "tailwindcss": "^3.4.17"
   },

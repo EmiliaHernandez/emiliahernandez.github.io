@@ -55,6 +55,7 @@ html,
   /* 6 */
   -webkit-tap-highlight-color: transparent;
   /* 7 */
+  scroll-behavior: smooth;
 }
 
 /*
@@ -67,13 +68,261 @@ body {
   /* 1 */
   line-height: inherit;
   /* 2 */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-y: auto;
 }
 
+/* Project page anchor offset */
+.project-page #overview,
+.project-page #challenge,
+.project-page #responsibilities,
+.project-page #process,
+.project-page #results,
+.project-page #reflection {
+  scroll-margin-top: 150px;
+}
+
+/* Homepage anchor offset */
+#hero,
+#services,
+#projects,
+#testimonials,
+#skills,
+#experience,
+#contact {
+  scroll-margin-top: 50px;
+}
 /*
 1. Add the correct height in Firefox.
 2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
 3. Ensure horizontal rules are visible by default.
 */
+
+#experience{
+  
+  padding: 0px 20px;
+}
+
+.desk-grid-mobile-block{
+  display: grid;
+}
+
+blockquote{
+padding-left: 10px;
+border-left: 3px solid #ECD274;
+
+}
+.project-scroller{
+  height:25vw;
+}
+
+.process-scrollers > .project-scroller{
+  height:20vw;
+}
+
+.process-scrollers{
+  padding-bottom: 50px;
+}
+
+.challenges-grid{
+  display: inline-grid;
+row-gap: 20px;
+column-gap: 40px;
+align-self: stretch;
+grid-template-rows: repeat(2,fit-content(100%));
+grid-template-columns: repeat(2,minmax(0,1fr));
+padding-bottom: 20px;
+}
+
+.project-overview-grid{
+  display: inline-grid;
+row-gap: 40px;
+column-gap: 40px;
+align-self: stretch;
+grid-template-rows: repeat(2,fit-content(100%));
+grid-template-columns: repeat(2,minmax(0,1fr));
+padding-top: 30px;
+border-top: 1px solid #ECD274;
+}
+
+.project-overview-item{
+  display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-self: stretch;
+}
+
+ul{
+  font-family: 'poppins', 'sans-serif';
+  gap: 10px;
+  display:grid;
+}
+
+span.metrics{
+  color:#0B7576;
+  font-weight: 700;
+}
+
+.bg-eggy{
+  background-color: #FAEBB7;
+}
+.cute-border{
+  width: 100%;
+height: 18px;
+border: 1px solid var(--A1, #202020);
+ background-color: #FFFAEF;
+  background-image: url('../img/2026/textures/Dark\ Tile.png');
+  background-repeat: repeat;
+  background-size: 20px 20px;
+  background-position: 0 0;
+}
+
+.lottie-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* adjust as needed */
+  height: 850px;    /* controls the stack height */
+}
+
+.shapes {
+  position: absolute;
+  inset: 0;               /* top:0 right:0 bottom:0 left:0 */
+  z-index: 0;
+  width: 601px;
+  margin-top: 30px;
+height: 601px;border-radius: 601px;
+background: radial-gradient(53.74% 53.74% at 50% 50%, #ECD274 0%, #FFFAEF 100%);
+}
+
+.shapes svg {
+  width: 100%;
+  height: 100%;
+}
+
+#lottie-hover {
+  position: relative;
+  z-index: 1;
+  margin: auto;
+  width:140%;
+}
+
+.project-card {
+  border-radius: 10px;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+/* OPEN STATE */
+.project-card.is-open {
+  display: flex;
+  position: relative;
+  width: 770px;
+  padding: 30px 38px;
+  gap: 47px;
+  background-color: #202020;
+  background-image: url('../img/2026/textures/pale tile - lighter.png');
+  background-repeat: repeat;
+  background-size: 40px 40px;
+  background-position: 0 0;
+}
+
+/* CLOSED STATE */
+.project-card.is-closed {
+  flex: 1;
+  height: 414px;
+  background-size: cover;
+  background-position: center;
+}
+
+.project-card.is-closed:hover {
+  transform: translateY(-4px);
+}
+/* default safety */
+.project-open,
+.project-closed {
+  transition: all 0.4s ease;
+}
+
+/* OPEN STATE */
+.project-card.is-open .project-open {
+  display: flex;
+}
+
+.project-card.is-open .project-closed {
+  display: none;
+}
+
+/* CLOSED STATE */
+.project-card.is-closed .project-open {
+  display: none;
+}
+
+.project-card.is-closed .project-closed {
+  display: block;
+  height: 414px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+
+
+.projects-grid{
+  display: flex;
+width: auto;
+align-items: flex-start;
+gap: 30px;
+}
+
+.project-container-closed{
+  display: flex;
+height: 414px;
+padding: 30px 38px;
+align-items: flex-start;
+gap: 47px;
+flex: 1 0 0;
+border-radius: 10px;
+}
+
+
+.project-details{
+  display: flex;
+width: 55%;
+flex-direction: column;
+align-items: flex-start;
+gap: 30px;
+flex-shrink: 0;
+}
+
+.project-headings{
+  display: flex;
+flex-direction: column;
+align-items: flex-start;
+align-self: stretch;
+}
+
+.project-img-column{
+  display: flex;
+padding: 5px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+position: absolute;
+right: 16px;
+top: -57px;
+border-radius: 10px;
+}
+
+.project-image{
+width: 300px;
+height: auto;
+flex-shrink: 0;
+border-radius: 10px;
+}
+
+a.outbound-link{
+  text-decoration: underline;
+}
 
 hr {
   height: 0;
@@ -84,6 +333,353 @@ hr {
   /* 3 */
 }
 
+.service-card-container{
+display: flex;
+padding: 10px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 15px;
+flex: 1 0 0;
+border-radius: 20px;
+border: 1px dashed #FFF;
+}
+
+.results-card-container{
+display: flex;
+padding: 10px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 15px;
+flex: 1 0 0;
+border-radius: 20px;
+border: 1px dashed #000000;
+margin-bottom:30px;
+}
+
+.results-card-inner {
+  flex: 1;              /* ⬅️ THIS is the key */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 40px 40px;
+  border-radius: 20px;
+  background: var(--A2, #FAEBB7);
+}
+
+.results-card-heading{
+  flex: 1 0 0;
+  color: #202020;
+text-align: left;
+font-family: Sansita One, sans-serif;
+font-size: 36px;
+font-style: normal;
+line-height: var(--Static-Title-Large-Line-Height, 28px); /* 175% */
+letter-spacing: var(--Static-Title-Large-Tracking, 0);
+}
+
+.results-card-body{
+  flex: 1 0 0;
+  color: #202020;
+text-align: left;
+font-family: Poppins, sans-serif;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: var(--Static-Title-Large-Line-Height, 28px); /* 175% */
+letter-spacing: var(--Static-Title-Large-Tracking, 0);
+}
+
+@media only screen and (max-width: 1200px) {
+  .project-card.is-open {
+    width: 680px;}
+    .project-image {
+    width: 250px;
+}
+.skill{
+  width: 100%;
+}
+
+.lottie-wrapper {
+  position: relative;
+  width: 80%;
+  max-width: 850px; /* adjust as needed */
+  height: 850px;    /* controls the stack height */
+}
+}
+
+@media only screen and (min-width: 630px) {
+  .desktop-hide{
+    display:none;
+  }
+}
+.col-span-12 {
+  padding: 0px 20px;
+margin: auto;
+}
+@media only screen and (max-width: 630px) {
+
+.desk-grid-mobile-block{
+  display: block;
+}
+
+.col-span-12 {
+  padding: 0px 20px;
+margin: auto;
+}
+
+.project-scroller{
+  height:45vw;
+}
+
+.process-scrollers > .project-scroller{
+  height:40vw;
+}
+
+
+  .projects-grid {
+    display: grid;
+  }
+    .project-card.is-open {
+        width: 100%;}
+.project-img-column{
+  display: none;
+}
+.project-open{
+  display: block !important;
+}
+.project-details{
+  width:100%;
+}
+  .mobile-hide {
+display: none !important;
+}
+
+.skill-row{
+  display: block !important;
+}
+
+.skills-tiles{
+  place-items: anchor-center;
+}
+
+.skill{
+  align-items: center !important;
+  padding-bottom: 20px;
+  width: 100% !important;
+}
+
+.service-card-container{
+  padding-bottom: 0px !important;
+  margin-bottom: 0px;
+}
+}
+
+.service-card-inner {
+  flex: 1;              /* ⬅️ THIS is the key */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  padding: 20px 10px;
+  border-radius: 20px;
+  background: var(--A2, #FFFAEF);
+}
+.testimonial-card-inner{
+  border-radius: 20px;
+background: var(--A2, #FFFAEF);
+display: flex;
+flex: 1;     
+padding: 30px;
+flex-direction: column;
+gap: 10px;
+align-self: stretch;
+}
+
+.service-card-heading{
+  color: #202020;
+text-align: center;
+font-family: Sansita One, sans-serif;
+font-size: 20px;
+font-style: normal;
+line-height: var(--Static-Title-Large-Line-Height, 28px); /* 175% */
+letter-spacing: var(--Static-Title-Large-Tracking, 0);
+}
+
+.service-card-body{
+  flex: 1 0 0;
+  color: #202020;
+text-align: center;
+font-family: Poppins, sans-serif;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: var(--Static-Title-Large-Line-Height, 28px); /* 175% */
+letter-spacing: var(--Static-Title-Large-Tracking, 0);
+}
+.testimonial-card-body{
+  flex: 1 0 0;
+  color: #202020;
+text-align: left;
+font-family: Poppins, sans-serif;
+font-size: 20px;
+font-style: normal;
+line-height: var(--Static-Title-Large-Line-Height, 28px); /* 175% */
+letter-spacing: var(--Static-Title-Large-Tracking, 0);
+padding-bottom: 20px;
+}
+
+.skills-container{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
+.skill-row{
+  display: flex;
+padding: 33px 0;
+align-items: center;
+gap: 20px;
+align-self: stretch;
+border-bottom: 1px solid #ECD274;
+}
+
+.skill{
+  display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 20px;
+color: #202020;
+font-family: 'sansita one', 'serif';
+font-size:20px;
+width: 400px;
+}
+
+.experience-container{
+  display: flex;
+flex-direction: column;
+align-items: flex-start;
+align-self: stretch;
+
+}
+
+.experience-row{
+  display: inline-flex;
+padding: 40px 0;
+align-items: center;
+gap: 29px;
+width:100%;
+border-bottom: 1px solid #000;
+}
+.experience-role{
+color: #202020;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: var(--Static-Title-Large-Line-Height, 28px); /* 175% */
+letter-spacing: var(--Static-Title-Large-Tracking, 0);
+}
+.experience-dates{
+  color: #202020;
+
+/* Body */
+font-family: Poppins;
+font-size: var(--Static-Body-Medium-Size, 14px);
+font-style: normal;
+font-weight: 400;
+line-height: var(--Static-Body-Medium-Line-Height, 20px); /* 142.857% */
+letter-spacing: var(--Static-Display-Medium-Tracking, 0);
+}
+
+.experience-img{
+  width: 50px;
+height: 50px;
+aspect-ratio: 1/1;
+object-fit: contain;
+}
+
+.experience-text{
+  display: flex;
+flex-direction: column;
+align-items: flex-start;
+align-self: stretch;
+color: #202020
+}
+
+.hero-bullets{
+  color: #000;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: var(--Static-Title-Large-Line-Height, 28px); /* 175% */
+letter-spacing: var(--Static-Title-Large-Tracking, 0);
+}
+
+.testimonial-credit{
+  color: #1E1E1E;
+font-size: var(--Static-Body-Medium-Size, 14px);
+font-style: normal;
+font-weight: 400;
+line-height: var(--Static-Body-Medium-Line-Height, 20px); /* 142.857% */
+letter-spacing: var(--Static-Display-Medium-Tracking, 0);
+}
+
+.hero-bullets-container{
+  display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 10px;
+align-self: stretch;
+}
+
+.hero-text-container{
+  display: flex;
+flex-direction: column;
+align-items: flex-start;
+align-self: stretch;
+}
+
+.hero-content{
+  display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 30px;
+}
+.skinny-heading{
+  color: #202020;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 28px; /* 175% */
+letter-spacing: var(--Static-Title-Large-Tracking, 0);
+}
+
+.button-main{
+  display: flex;
+padding: 12px 25px;
+justify-content: center;
+align-items: center;
+gap: 8px;
+border-radius: 32px;
+background: #98D8E0;
+color: #202020;
+text-align: center;
+font-family: Poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+}
+
+.button-main:hover{
+background:#000000;
+color:#FFFAEF;
+transition-duration: 0.5s;
+border: 2px solid #FFFAEF;
+}
 /*
 Add the correct text decoration in Chrome, Edge, and Safari.
 */
@@ -158,6 +754,10 @@ small {
 Prevent `sub` and `sup` elements from affecting the line height in all browsers.
 */
 
+p{
+  font-family:'Poppins', 'sans-serif'
+}
+
 sub,
 sup {
   font-size: 75%;
@@ -226,6 +826,27 @@ textarea {
 Remove the inheritance of text transform in Edge and Firefox.
 */
 
+form{
+  background-color: #FFFAEF;
+  width:100%;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+label{
+  
+font-family: "Sansita One";
+}
+
+input{
+      margin-top: 20px;
+      padding: 10px;
+}
+
+.form-field{
+  padding-bottom: 20px;
+}
+
 button,
 select {
   text-transform: none;
@@ -238,10 +859,6 @@ select {
   @keyframes blink {
     0%, 50%, 100% { opacity: 1; }
     25%, 75% { opacity: 0; }
-  }
-
-  .textboxHome{
-    background-color: black;
   }
 
 
@@ -341,6 +958,7 @@ summary {
 /*
 Removes the default spacing and border for appropriate elements.
 */
+
 
 blockquote,
 dl,
@@ -448,6 +1066,39 @@ object {
   /* 2 */
 }
 
+.project-card {
+  width: 100%;
+}
+
+@media (hover: hover) {
+  .project-card.is-closed {
+    /* desktop hover behavior */
+  }
+}
+
+@media (hover: none) {
+  .project-closed {
+    display: none;
+  }
+
+  .project-open {
+    display: block;
+  }
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 */
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 /*
 Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
 */
@@ -1271,12 +1922,39 @@ html {
   justify-self: end;
 }
 
+header.homepage{
+  border-bottom: 1px solid #202020;
+}
+
 .navbar {
   display: flex;
   align-items: center;
   padding: var(--navbar-padding, 0.5rem);
   min-height: 4rem;
-  width: 100%;
+  width: 80% !important;
+}
+.project-navbar {
+  display: flex;
+  align-items: center;
+  padding: var(--navbar-padding, 0.1rem);
+  width: 100% !important;
+  place-content: center;
+  border-bottom: 1px solid #202020;
+  border-top: 1px solid #202020;
+}
+
+.menu-item{
+  color: #202020;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: var(--Static-Title-Large-Line-Height, 28px); /* 175% */
+letter-spacing: var(--Static-Title-Large-Tracking, 0);
+text-align: center;
+}
+.menu-item:hover{
+  text-decoration: underline;
 }
 
 :where(.navbar > *:not(script, style)) {
@@ -1285,13 +1963,14 @@ html {
 }
 
 .navbar-start {
-  width: 50%;
+  width: 20%;
   justify-content: flex-start;
 }
 
 .navbar-end {
-  width: 50%;
+  width: 80%;
   justify-content: flex-end;
+  gap:20px;
 }
 
 .progress {
@@ -1751,6 +2430,10 @@ details.collapse summary::-webkit-details-marker {
   --tw-scale-x: 1;
   --tw-scale-y: 1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.r-0{
+  right:0px;
 }
 
 .footer-title {
@@ -2660,6 +3343,10 @@ details.collapse summary::-webkit-details-marker {
   display: none;
 }
 
+.h-longer-scroll {
+  max-height: 60vh;
+}
+
 .h-1\/2 {
   height: 50%;
 }
@@ -2749,6 +3436,10 @@ details.collapse summary::-webkit-details-marker {
   width: 100%;
 }
 
+.w-eighty {
+  max-width: 80rem; /* or whatever your design system uses */
+  width: 100%;
+}
 .max-w-4xl {
   max-width: 56rem;
 }
@@ -2931,8 +3622,58 @@ details.collapse summary::-webkit-details-marker {
   background-color: rgb(249 236 170 / var(--tw-bg-opacity));
 }
 
+.text-cream{
+  color:#FFFAEF;
+}
+
+.text-darkness{
+  color:#202020;
+}
+
+.bg-darkness {
+  background-color: #202020;
+  background-image: url('../img/2026/textures/pale tile.png');
+  background-repeat: repeat;
+  background-size: 40px 40px;
+  background-position: 0 0;
+}
+
+.bg-cream{
+  background-color:#FFFAEF;
+}
+
 .fill-zip-poncho {
   fill: rgb(249 236 170);
+}
+
+.section-heading{
+font-family: "Sansita One";
+font-size: 36px;
+font-style: normal;
+font-weight: 400;
+line-height: var(--Static-Display-Medium-Line-Height, 52px); /* 144.444% */
+letter-spacing: var(--Static-Display-Medium-Tracking, 0);
+text-transform: capitalize;
+}
+
+section, .col-padding-experience{
+  padding: 60px 0px;
+}
+
+
+.testimonial-container{
+  display: flex;
+align-items: center;
+gap: 20px;
+align-self: stretch;
+}
+
+.testimonial-char{
+  padding:15px;
+  width:60px;
+  height:60px;
+  background-color:#98D8E0;
+  border-radius: 50px;
 }
 
 .object-cover {
@@ -3092,9 +3833,16 @@ details.collapse summary::-webkit-details-marker {
 .font-Daruma {
   font-family: Darumadrop One, sans-serif;
 }
+h2, .font-sansita {
+  font-family: Sansita One, sans-serif;
+}
 
 .font-RedHat {
   font-family: Red Hat Text, sans-serif;
+}
+
+.font-Poppins{
+  font-family: Poppins, sans-serif;
 }
 
 .font-Helvetica{
@@ -3351,7 +4099,19 @@ details.collapse summary::-webkit-details-marker {
   .lg\:flex {
     display: flex;
   }
+.hide-larger-than-tab{
+  display: none;
 }
+
+}
+
+@media (max-width: 1024px) {
+.hide-smaller-than-tab{
+  display: none;
+}
+}
+
+
 
 @media (prefers-color-scheme: dark) {
   .dark\:border-rata-eyeliner {
