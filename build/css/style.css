@@ -72,11 +72,40 @@ body {
     overflow-y: auto;
 }
 
+/* Project page anchor offset */
+.project-page #overview,
+.project-page #challenge,
+.project-page #responsibilities,
+.project-page #process,
+.project-page #results,
+.project-page #reflection {
+  scroll-margin-top: 150px;
+}
+
+/* Homepage anchor offset */
+#hero,
+#services,
+#projects,
+#testimonials,
+#skills,
+#experience,
+#contact {
+  scroll-margin-top: 50px;
+}
 /*
 1. Add the correct height in Firefox.
 2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
 3. Ensure horizontal rules are visible by default.
 */
+
+#experience{
+  
+  padding: 0px 20px;
+}
+
+.desk-grid-mobile-block{
+  display: grid;
+}
 
 blockquote{
 padding-left: 10px;
@@ -151,8 +180,8 @@ border: 1px solid var(--A1, #202020);
 .lottie-wrapper {
   position: relative;
   width: 100%;
-  max-width: 600px; /* adjust as needed */
-  height: 500px;    /* controls the stack height */
+  max-width: 800px; /* adjust as needed */
+  height: 850px;    /* controls the stack height */
 }
 
 .shapes {
@@ -291,7 +320,9 @@ flex-shrink: 0;
 border-radius: 10px;
 }
 
-
+a.outbound-link{
+  text-decoration: underline;
+}
 
 hr {
   height: 0;
@@ -369,6 +400,13 @@ letter-spacing: var(--Static-Title-Large-Tracking, 0);
 .skill{
   width: 100%;
 }
+
+.lottie-wrapper {
+  position: relative;
+  width: 80%;
+  max-width: 850px; /* adjust as needed */
+  height: 850px;    /* controls the stack height */
+}
 }
 
 @media only screen and (min-width: 630px) {
@@ -381,6 +419,10 @@ letter-spacing: var(--Static-Title-Large-Tracking, 0);
 margin: auto;
 }
 @media only screen and (max-width: 630px) {
+
+.desk-grid-mobile-block{
+  display: block;
+}
 
 .col-span-12 {
   padding: 0px 20px;
@@ -518,14 +560,13 @@ width: 400px;
   display: flex;
 flex-direction: column;
 align-items: flex-start;
-gap: 31px;
 align-self: stretch;
 
 }
 
 .experience-row{
   display: inline-flex;
-padding: 20px 0;
+padding: 40px 0;
 align-items: center;
 gap: 29px;
 width:100%;
@@ -784,6 +825,27 @@ textarea {
 /*
 Remove the inheritance of text transform in Edge and Firefox.
 */
+
+form{
+  background-color: #FFFAEF;
+  width:100%;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+label{
+  
+font-family: "Sansita One";
+}
+
+input{
+      margin-top: 20px;
+      padding: 10px;
+}
+
+.form-field{
+  padding-bottom: 20px;
+}
 
 button,
 select {

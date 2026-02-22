@@ -1697,6 +1697,15 @@ details.collapse summary::-webkit-details-marker {
   opacity: 0.6;
 }
 
+/*my custom code*/
+input{
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 10px;
+border: 1px solid var(--A1, #202020);
+}
+
+
 .input input {
   --tw-bg-opacity: 1;
   background-color: var(--fallback-p,oklch(var(--p)/var(--tw-bg-opacity)));
