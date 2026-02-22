@@ -3,6 +3,10 @@
     "Loading Figma workspace...",
     "Developing Hubspot modules...",
     "NPM run dev...",
+    "Writing PHP functions...",
+    "Creating page wireframes...",
+    "Designing WordPress Themes...",
+    "Previewing GitHub pull request..."
   ];
 
   const shuffledLines = lines
