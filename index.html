@@ -15,11 +15,9 @@
     <link rel="stylesheet" href="build/css/style.css">
     <link href="./src/output.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="icon" type="image/x-icon" href="./build/img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/x-icon" href="/build/img/favicon_io/favicon-32x32.png">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
  <script type="module" src="./build/js/home.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
@@ -74,7 +72,27 @@
     });
   });
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const fadeElements = document.querySelectorAll(".fade-in");
 
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target); // animate once
+        }
+      });
+    },
+    {
+      threshold: 0.15, // 15% visible before triggering
+    }
+  );
+
+  fadeElements.forEach(el => observer.observe(el));
+});
+</script>
 
 </head>
 <!-- Google tag (gtag.js) -->
@@ -132,7 +150,7 @@
   </div>
 </header>
         <main class="mx-auto bg-cream">
-        <section id="hero" class="z-30 m-auto">
+        <section id="hero" class="z-30 m-auto fade-in">
             <div class="items-center text-slate-50 justify-center w-eighty mx-auto grid grid-cols-12 gap-6 ">        
               <div class=" col-span-12 sm:col-span-7 gap-4 m-auto text-darkness hero-content">
                 <div class="hero-text-container">
@@ -160,8 +178,8 @@
           </section>
 
 <!--services-->
-<Section id="services" class="bg-darkness m-auto">
-  <div class="w-eighty m-auto col-span-12">
+<Section id="services" class="bg-darkness m-auto fade-in">
+  <div class="w-eighty m-auto col-span-12 ">
 <h2 class="section-heading text-center text-cream pb-4 ">How I Can Help</h2>
 <div class="gap-4 md:gap-8 grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 m-auto text-center pb-4">
 <Div class="service-card-container">
@@ -184,16 +202,16 @@
 </Div>
 
 </div>
-<a href="#projects"><svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#98D8E0" viewBox="0 0 16 16">
+<a href="#projects"><svg class="mx-auto animate-bounce" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#98D8E0" viewBox="0 0 16 16">
   <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
 </svg>
 </a>
 </div>
 </Section>
 <!--projects-->
-        <section id="projects" class="z-30 m-auto">
+        <section id="projects" class="z-30 m-auto fade-in">
             <div class="items-center text-slate-50 justify-center w-eighty mx-auto col-span-12">        
-              <div class="m-auto text-darkness pb-8">
+              <div class="m-auto text-darkness pb-8 ">
                     <h1 class="section-heading">Featured Projects & Outcomes</h1>
                 <p class="max-width text-[14px] sm:text-[1.2vw] mt-4 sm:text-left">Each project reflects a balance of strategy, design, and development—whether optimizing performance, meeting tight deadlines, or supporting large-scale campaigns.</p>
                 </div>
@@ -356,9 +374,9 @@
           </section>
           
 <!--Testimonials-->
-          <Section id="testimonials" class="bg-darkness mx-auto">
+          <Section id="testimonials" class="bg-darkness mx-auto fade-in">
   <div class="w-eighty mx-auto col-span-12">
-<h2 class="section-heading text-cream pb-4">Trusted by Teams & Clients</h2>
+<h2 class="section-heading text-cream pb-4 ">Trusted by Teams & Clients</h2>
 <div class="gap-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 m-auto text-center ">
 <Div class="service-card-container">
   <div class="testimonial-card-inner">
@@ -389,7 +407,7 @@
 </Section>
 
 <!--skills-->
-        <section id="skills" class="z-30 m-auto">
+        <section id="skills" class="z-30 m-auto fade-in">
             <div class="items-center text-slate-50 justify-center w-eighty mx-auto col-span-12">        
               <div class="m-auto text-darkness">
                     <h1 class="section-heading">Skills & Technical Expertise</h1>
@@ -437,7 +455,7 @@
      <!--need to customize this section so its a div-->
           <div class="cute-border"></div>
            <div id="experience"> 
-                            <div class="text-slate-50 mx-auto grid grid-cols-12 w-eighty">       
+                            <div class="text-slate-50 mx-auto grid grid-cols-12 w-eighty fade-in">       
               <div class=" sm:col-span-4 col-span-11 mx-auto  gap-4 text-darkness col-padding-experience">
                  <div class="m-auto text-darkness">
                     <h1 class="section-heading">Professional Experience</h1>
@@ -487,9 +505,9 @@
 
 
 
-<section id="contact" class="bg-darkness mx-auto">
+<section id="contact" class="bg-darkness mx-auto fade-in">
   <div class="desk-grid-mobile-block grid-flow-col auto-cols-max sm:auto-cols-min w-eighty mx-auto col-span-12">
-  <div>    
+  <div class="">    
     <h2 class="section-heading text-cream pb-4">Let’s Work Together</h2>
       <p class="text-cream pb-10">
         Available for freelance, contract, and part-time opportunities

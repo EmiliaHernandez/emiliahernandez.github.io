@@ -39,6 +39,27 @@ Designed and built a complete website in under one month to support ECHO’s Pas
     });
   });
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const fadeElements = document.querySelectorAll(".fade-in");
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target); // animate once
+        }
+      });
+    },
+    {
+      threshold: 0.15, // 15% visible before triggering
+    }
+  );
+
+  fadeElements.forEach(el => observer.observe(el));
+});
+</script>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW82KZXX61"></script>
@@ -160,7 +181,7 @@ Designed and built a complete website in under one month to support ECHO’s Pas
 </div>
                 </div>
               <div class="content-center col-span-12 sm:col-span-6">
-                 <Div id="results" class="results-card-container">
+                 <Div id="results" class="results-card-container fade-in">
   <div class="results-card-inner">
     <h1 class="results-card-heading font-sansita">Results & Impact</h1>
     <p class="text-darkness results-card-body"><i>While the original Passion Pitch was cancelled, the website became a catalyst for broader visibility, funding opportunities, and continued organizational growth.</i></p>
@@ -183,7 +204,7 @@ Designed and built a complete website in under one month to support ECHO’s Pas
 
           <div class="cute-border"></div>
 <!--Challenge-->
- <section id="challenge" class="z-30 m-auto w-eighty">
+ <section id="challenge" class="z-30 m-auto w-eighty fade-in">
  
             <div class="text-slate-50 mx-auto grid grid-cols-12 gap-8">        
               <div class="col-span-12 sm:col-span-6 gap-4 text-darkness hero-content">
@@ -213,7 +234,7 @@ The challenge was to design and develop a site that could:</p>
 </div>
           </section>
 <!--roles-->
-<Section id="responsibilities" class="bg-darkness m-auto">
+<Section id="responsibilities" class="bg-darkness m-auto fade-in">
   <div class="w-eighty col-span-12 m-auto">
 <h2 class="section-heading text-center text-cream">My Role & Responsibilities</h2>
 <p class="text-center text-cream pb-4 ">As the Web Designer and Front-End Developer, I was responsible for translating <a href="https://www.edecho.org/" class="outbound-link">ECHO's</a> mission into a functional, engaging digital experience.</p>
@@ -260,7 +281,7 @@ The challenge was to design and develop a site that could:</p>
 
 
 <!--process-->
-        <section id="process" class="z-30 m-auto">
+        <section id="process" class="z-30 m-auto fade-in">
                       <div class="text-slate-50 w-eighty m-auto grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 gap-8">        
               <div class="col-span-12 sm:col-span-6 gap-4 text-darkness">
             <div class="items-center text-slate-50 justify-center mx-auto">        
@@ -300,7 +321,7 @@ The challenge was to design and develop a site that could:</p>
             </div>
           </section>
 <!--Reflection-->
-<Section id="reflection" class="bg-darkness m-auto">
+<Section id="reflection" class="bg-darkness m-auto fade-in">
   <div class="w-eighty m-auto">
 <div class="text-slate-50 mx-auto grid grid-cols-12 gap-8">        
               <div class=" col-span-12 sm:col-span-6 text-cream">
@@ -322,7 +343,7 @@ Working with <a href="https://www.edecho.org/" class="outbound-link">ECHO</a> st
                 </div>
 </Section>
 <!--other projects-->
-  <section id="projects" class="z-30 m-auto">
+  <section id="projects" class="z-30 m-auto fade-in">
             <div class="items-center text-slate-50 justify-center w-eighty mx-auto col-span-12">        
               <div class="m-auto pb-8">
                     <h1 class="text-darkness section-heading pb-8">Explore More Projects</h1>
@@ -450,7 +471,7 @@ Working with <a href="https://www.edecho.org/" class="outbound-link">ECHO</a> st
 
 
           <!--contact-->
-<section id="contact" class="bg-darkness mx-auto">
+<section id="contact" class="bg-darkness mx-auto fade-in">
   <div class="desk-grid-mobile-block grid-flow-col auto-cols-max sm:auto-cols-min w-eighty mx-auto col-span-12">
   <div>    
     <h2 class="section-heading text-cream pb-4">Let’s Work Together</h2>
