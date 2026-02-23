@@ -1298,7 +1298,7 @@ display: block;
   align-items: center;
   padding: var(--navbar-padding, 0.5rem);
   min-height: 4rem;
-  width: 100% !important;
+  width: 95% !important;
       justify-content: space-between;
 }
 
