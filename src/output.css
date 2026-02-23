@@ -1703,6 +1703,7 @@ input{
       padding: 10px;
       border-radius: 10px;
 border: 1px solid var(--A1, #202020);
+background-color: white;
 }
 
 
