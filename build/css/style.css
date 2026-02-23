@@ -226,6 +226,19 @@ background: radial-gradient(53.74% 53.74% at 50% 50%, #ECD274 0%, #FFFAEF 100%);
   background-position: 0 0;
 }
 
+.project-card-mob {
+  display: flex;
+  position: relative;
+  border-radius: 10px;
+  padding: 30px 38px;
+  gap: 47px;
+  background-color: #202020;
+  background-image: url('../img/2026/textures/pale tile - lighter.png');
+  background-repeat: repeat;
+  background-size: 40px 40px;
+  background-position: 0 0;
+}
+
 /* CLOSED STATE */
 .project-card.is-closed {
   flex: 1;
@@ -443,6 +456,7 @@ margin: auto;
   }
     .project-card.is-open {
         width: 100%;}
+
 .project-img-column{
   display: none;
 }
@@ -452,6 +466,25 @@ margin: auto;
 .project-details{
   width:100%;
 }
+
+  .projects-grid {
+    display: grid;
+  }
+    .project-card.is-open {
+        width: 100%;}
+
+.project-img-column{
+  display: none;
+}
+.project-open{
+  display: block !important;
+}
+.project-details{
+  width:100%;
+}
+
+
+
   .mobile-hide {
 display: none !important;
 }
@@ -3632,7 +3665,7 @@ details.collapse summary::-webkit-details-marker {
 
 .bg-darkness {
   background-color: #202020;
-  background-image: url('../img/2026/textures/pale tile.png');
+  background-image: url('../img/2026/textures/Pale\ Tile\ -\ Lighter.png');
   background-repeat: repeat;
   background-size: 40px 40px;
   background-position: 0 0;
