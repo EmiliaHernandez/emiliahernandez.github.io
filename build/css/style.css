@@ -63,6 +63,10 @@ html,
 2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
 */
 
+.bg-blue{
+  background: #98D8E0;
+}
+
 @keyframes bounce {
     0%,to {
         transform: translateY(-25%);
