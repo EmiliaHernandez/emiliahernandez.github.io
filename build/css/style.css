@@ -444,6 +444,13 @@ line-height: var(--Static-Title-Large-Line-Height, 28px); /* 175% */
 letter-spacing: var(--Static-Title-Large-Tracking, 0);
 }
 
+
+@media (min-width:630px) and (max-width: 1200px) {
+  .w-eighty{
+     max-width: 70rem !important; 
+  }
+}
+
 @media only screen and (max-width: 1200px) {
   .project-card.is-open {
     width: 680px;}
