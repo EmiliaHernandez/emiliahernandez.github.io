@@ -445,9 +445,9 @@ letter-spacing: var(--Static-Title-Large-Tracking, 0);
 }
 
 
-@media (min-width:630px) and (max-width: 1200px) {
+@media (min-width:630px) and (max-width: 1300px) {
   .w-eighty{
-     max-width: 70rem !important; 
+     max-width: 90vwv !important; 
   }
 }
 
