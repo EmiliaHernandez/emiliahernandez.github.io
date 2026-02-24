@@ -63,6 +63,47 @@ html,
 2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
 */
 
+
+.bg-blue{
+  background: #98D8E0;
+}
+
+@keyframes bounce {
+    0%,to {
+        transform: translateY(-25%);
+        animation-timing-function: cubic-bezier(.8,0,1,1)
+    }
+
+    50% {
+        transform: none;
+        animation-timing-function: cubic-bezier(0,0,.2,1)
+    }
+}
+
+.animate-bounce {
+    animation: bounce 1s infinite
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px); /* optional but recommended */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0; /* start hidden */
+}
+
+.fade-in.is-visible {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+
 body {
   margin: 0;
   /* 1 */
@@ -97,6 +138,8 @@ body {
 2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
 3. Ensure horizontal rules are visible by default.
 */
+
+
 
 #experience{
   
@@ -404,6 +447,13 @@ line-height: var(--Static-Title-Large-Line-Height, 28px); /* 175% */
 letter-spacing: var(--Static-Title-Large-Tracking, 0);
 }
 
+
+@media (min-width:630px) and (max-width: 1300px) {
+  .w-eighty{
+     max-width: 90vw !important; 
+  }
+}
+
 @media only screen and (max-width: 1200px) {
   .project-card.is-open {
     width: 680px;}
@@ -651,14 +701,7 @@ line-height: var(--Static-Title-Large-Line-Height, 28px); /* 175% */
 letter-spacing: var(--Static-Title-Large-Tracking, 0);
 }
 
-.testimonial-credit{
-  color: #1E1E1E;
-font-size: var(--Static-Body-Medium-Size, 14px);
-font-style: normal;
-font-weight: 400;
-line-height: var(--Static-Body-Medium-Line-Height, 20px); /* 142.857% */
-letter-spacing: var(--Static-Display-Medium-Tracking, 0);
-}
+
 
 .hero-bullets-container{
   display: flex;
@@ -867,7 +910,7 @@ form{
 }
 
 label{
-  
+  color: #202020;
 font-family: "Sansita One";
 }
 
@@ -3702,11 +3745,27 @@ align-self: stretch;
 }
 
 .testimonial-char{
-  padding:15px;
-  width:60px;
-  height:60px;
-  background-color:#98D8E0;
-  border-radius: 50px;
+display: flex;
+width: 60px;
+height: 60px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 10px;
+background: #98D8E0;
+border-radius: 50%;
+}
+
+.testimonial-credit{
+  color: #1E1E1E;
+font-size: var(--Static-Body-Medium-Size, 14px);
+font-style: normal;
+font-weight: 400;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+flex: 1 0 0;
 }
 
 .object-cover {

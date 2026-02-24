@@ -17,7 +17,7 @@ Front-end development for a brand campaign recognized with a 2023 Platinum MarCo
     <link rel="stylesheet" href="/build/css/style.css">
     <link href="/src/output.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="icon" type="image/x-icon" href="/build/img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/build/img/favicon_io/favicon-32x32.png">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <script>
@@ -36,6 +36,27 @@ Front-end development for a brand campaign recognized with a 2023 Platinum MarCo
       });
     });
   });
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const fadeElements = document.querySelectorAll(".fade-in");
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target); // animate once
+        }
+      });
+    },
+    {
+      threshold: 0.15, // 15% visible before triggering
+    }
+  );
+
+  fadeElements.forEach(el => observer.observe(el));
+});
 </script>
 </head>
 <!-- Google tag (gtag.js) -->
@@ -71,6 +92,11 @@ Front-end development for a brand campaign recognized with a 2023 Platinum MarCo
           <li><a href="/#hero">About</a></li>
           <li><a href="/#services">Services</a></li>
           <li><a href="/#projects">Projects</a></li>
+                    <li><a class="pl-5" href="/projects/pegasus-palooza/"> > Pegasus Palooza</a></li>
+          
+          <li><a class="pl-5" href="/projects/EverAg/"> > Ever.Ag</a></li>
+          
+          <li><a class="pl-5" href="/projects/echo/"> > ECHO</a></li>
           <li><a href="/#testimonials">Testimonials</a></li>
           <li><a href="/#skills">Skills</a></li>
           <li><a href="/#experience">Experience</a></li>
@@ -83,7 +109,16 @@ Front-end development for a brand campaign recognized with a 2023 Platinum MarCo
     <nav class="hide-smaller-than-tab items-center gap-6">
       <a class="menu-item" href="/#hero">About</a>
       <a class="menu-item" href="/#services">Services</a>
-      <a class="menu-item" href="/#projects">Projects</a>
+      <div class="dropdown dropdown-hover menu-item">
+            <div tabindex="0" role="button"><a href="/#projects">Projects</a></div>
+            <ul tabindex="0" class="dropdown-content menu text-black bg-blue rounded-box w-52 z-[40] p-2 shadow">
+                 <li><a href="/projects/pegasus-palooza/">Pegasus Palooza</a></li>
+          
+          <li><a href="/projects/EverAg/">Ever.Ag</a></li>
+          
+          <li><a href="/projects/echo/">ECHO</a></li>
+            </ul>
+          </div>
       <a class="menu-item" href="/#testimonials">Testimonials</a>
       <a class="menu-item" href="/#skills">Skills</a>
       <a class="menu-item" href="/#experience">Experience</a>
@@ -152,7 +187,7 @@ This project formed the foundation of a larger campaign ecosystem that went on t
 </div>
                 </div>
               <div class="content-center col-span-12 sm:col-span-6">
-                 <Div id="results" class="results-card-container">
+                 <Div id="results" class="results-card-container fade-in">
   <div class="results-card-inner">
     <h1 class="results-card-heading font-sansita">Results & Impact</h1>
     <p class="results-card-body">The microsite successfully launched in coordination with the Everything Ever.Ag brand campaign and became a central digital touchpoint for users encountering the campaign online.</p>
@@ -174,7 +209,7 @@ This project formed the foundation of a larger campaign ecosystem that went on t
 
           <div class="cute-border"></div>
 <!--Challenge-->
- <section id="challenge" class="z-30 m-auto w-eighty">
+ <section id="challenge" class="z-30 m-auto w-eighty fade-in">
   
             <div class="text-slate-50 mx-auto grid grid-cols-12 gap-8">        
               <div class="col-span-12 sm:col-span-6 gap-4 text-darkness hero-content">
@@ -199,7 +234,7 @@ This project formed the foundation of a larger campaign ecosystem that went on t
 </div>
           </section>
 <!--roles-->
-<Section id="responsibilities" class="bg-darkness m-auto">
+<Section id="responsibilities" class="bg-darkness m-auto fade-in">
   <div class="w-eighty col-span-12 m-auto">
 <h2 class="section-heading text-center text-cream">My Role & Responsibilities</h2>
 <p class="text-center text-cream pb-4 ">As Web Designer and Developer, my responsibilities included:</p>
@@ -242,7 +277,7 @@ This project formed the foundation of a larger campaign ecosystem that went on t
 
 
 <!--process-->
-        <section id="process" class="z-30 m-auto">
+        <section id="process" class="z-30 m-auto fade-in">
                       <div class="text-slate-50 w-eighty m-auto grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 gap-8">        
               <div class="col-span-12 sm:col-span-6 gap-4 text-darkness">
             <div class="items-center text-slate-50 justify-center mx-auto">        
@@ -296,7 +331,7 @@ This project formed the foundation of a larger campaign ecosystem that went on t
             </div>
           </section>
 <!--Reflection-->
-<Section id="reflection" class="bg-darkness m-auto">
+<Section id="reflection" class="bg-darkness m-auto fade-in">
   <div class="w-eighty m-auto">
 <div class="text-slate-50 mx-auto grid grid-cols-12 gap-8">        
               <div class=" col-span-12 sm:col-span-6 text-cream">
@@ -326,7 +361,7 @@ This project formed the foundation of a larger campaign ecosystem that went on t
 </Section>
 
 <!--other projects-->
-  <section id="projects" class="z-30 m-auto">
+  <section id="projects" class="z-30 m-auto fade-in">
             <div class="items-center text-slate-50 justify-center w-eighty mx-auto col-span-12">        
               <div class="m-auto pb-8">
                     <h1 class="text-darkness section-heading pb-8">Explore More Projects</h1>
@@ -394,7 +429,7 @@ This project formed the foundation of a larger campaign ecosystem that went on t
     </div>
 
     <div class="project-img-column">
-      <img class="project-image" src="/build/img/2026/featured-projects/Pegasus-Palooza.png">
+      <img alt="pegasus palooza events page snapshot" class="project-image" src="/build/img/2026/featured-projects/Pegasus-Palooza.png">
     </div>
   </div>
 
@@ -426,7 +461,7 @@ This project formed the foundation of a larger campaign ecosystem that went on t
     </div>
 
     <div class="project-img-column">
-      <img class="project-image" src="/build/img/2026/featured-projects/Echo.png">
+      <img alt="Echo character page snapshot - vienna" class="project-image" src="/build/img/2026/featured-projects/Echo.png">
     </div>
   </div>
 
@@ -444,7 +479,7 @@ This project formed the foundation of a larger campaign ecosystem that went on t
 
 
           <!--contact-->
-<section id="contact" class="bg-darkness mx-auto">
+<section id="contact" class="bg-darkness mx-auto fade-in">
   <div class="desk-grid-mobile-block grid-flow-col auto-cols-max sm:auto-cols-min w-eighty mx-auto col-span-12">
   <div>    
     <h2 class="section-heading text-cream pb-4">Let’s Work Together</h2>
@@ -453,34 +488,58 @@ This project formed the foundation of a larger campaign ecosystem that went on t
       </p></div>
 
   <div>      
-    <form
-        class="w-full"
-        action="https://docs.google.com/forms/d/e/1FAIpQLSeh6pg2mlnc-YxqAt0KeR-2_QQvMEV-pwgW_t8V7ZfuxfybBQ/formResponse"
-      >
-        <div class="form-field">
-          <label>Name</label>
-          <input class="w-full" type="text" name="entry.2005620554" placeholder="Full Name">
-        </div>
+<form
+  class="w-full"
+  action="https://docs.google.com/forms/d/e/1FAIpQLSeh6pg2mlnc-YxqAt0KeR-2_QQvMEV-pwgW_t8V7ZfuxfybBQ/formResponse"
+>
+  <div class="form-field">
+    <label for="name">Name</label>
+    <input
+      id="name"
+      class="w-full"
+      type="text"
+      name="entry.2005620554"
+      placeholder="Full Name"
+    >
+  </div>
 
-        <div class="form-field">
-          <label>Email</label>
-          <input class="w-full" type="text" name="entry.1045781291" placeholder="Email@email.com">
-        </div>
+  <div class="form-field">
+    <label for="email">Email</label>
+    <input
+      id="email"
+      class="w-full"
+      type="email"
+      name="entry.1045781291"
+      placeholder="Email@email.com"
+    >
+  </div>
 
-        <div class="form-field">
-          <label>Phone</label>
-          <input class="w-full" type="text" name="entry.1166974658" placeholder="000-000-0000">
-        </div>
+  <div class="form-field">
+    <label for="phone">Phone</label>
+    <input
+      id="phone"
+      class="w-full"
+      type="tel"
+      name="entry.1166974658"
+      placeholder="000-000-0000"
+    >
+  </div>
 
-        <div class="form-field">
-          <label>Project Info</label>
-          <input class="w-full" type="text" name="entry.839337160" placeholder="Enter project description">
-        </div>
+  <div class="form-field">
+    <label for="project-info">Project Info</label>
+    <input
+      id="project-info"
+      class="w-full"
+      type="text"
+      name="entry.839337160"
+      placeholder="Enter project description"
+    >
+  </div>
 
-        <button type="submit" class="button-main mt-6">
-          Submit Form
-        </button>
-      </form>
+  <button type="submit" class="button-main mt-6">
+    Submit Form
+  </button>
+</form>
     </div>
 </div></section>
     </main>
