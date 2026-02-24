@@ -528,34 +528,58 @@ document.addEventListener("DOMContentLoaded", () => {
       </p></div>
 
   <div>      
-    <form
-        class="w-full"
-        action="https://docs.google.com/forms/d/e/1FAIpQLSeh6pg2mlnc-YxqAt0KeR-2_QQvMEV-pwgW_t8V7ZfuxfybBQ/formResponse"
-      >
-        <div class="form-field">
-          <label for="entry.2005620554">Name</label>
-          <input class="w-full" type="text" name="entry.2005620554" placeholder="Full Name">
-        </div>
+<form
+  class="w-full"
+  action="https://docs.google.com/forms/d/e/1FAIpQLSeh6pg2mlnc-YxqAt0KeR-2_QQvMEV-pwgW_t8V7ZfuxfybBQ/formResponse"
+>
+  <div class="form-field">
+    <label for="name">Name</label>
+    <input
+      id="name"
+      class="w-full"
+      type="text"
+      name="entry.2005620554"
+      placeholder="Full Name"
+    >
+  </div>
 
-        <div class="form-field">
-          <label for="entry.1045781291">Email</label>
-          <input class="w-full" type="text" name="entry.1045781291" placeholder="Email@email.com">
-        </div>
+  <div class="form-field">
+    <label for="email">Email</label>
+    <input
+      id="email"
+      class="w-full"
+      type="email"
+      name="entry.1045781291"
+      placeholder="Email@email.com"
+    >
+  </div>
 
-        <div class="form-field">
-          <label for="entry.1166974658">Phone</label>
-          <input class="w-full" type="text" name="entry.1166974658" placeholder="000-000-0000">
-        </div>
+  <div class="form-field">
+    <label for="phone">Phone</label>
+    <input
+      id="phone"
+      class="w-full"
+      type="tel"
+      name="entry.1166974658"
+      placeholder="000-000-0000"
+    >
+  </div>
 
-        <div class="form-field">
-          <label for="entry.839337160">Project Info</label>
-          <input class="w-full" type="text" name="entry.839337160" placeholder="Enter project description">
-        </div>
+  <div class="form-field">
+    <label for="project-info">Project Info</label>
+    <input
+      id="project-info"
+      class="w-full"
+      type="text"
+      name="entry.839337160"
+      placeholder="Enter project description"
+    >
+  </div>
 
-        <button type="submit" class="button-main mt-6">
-          Submit Form
-        </button>
-      </form>
+  <button type="submit" class="button-main mt-6">
+    Submit Form
+  </button>
+</form>
     </div>
 </div></section>
 
