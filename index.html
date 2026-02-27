@@ -93,7 +93,29 @@ document.addEventListener("DOMContentLoaded", () => {
   fadeElements.forEach(el => observer.observe(el));
 });
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contact-form");
 
+  if (!form) return; // safety guard
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const data = new FormData(form);
+
+    fetch(form.action, {
+      method: "POST",
+      body: data,
+      mode: "no-cors"
+    }).then(() => {
+      window.location.href = "/thank-you/";
+    }).catch(() => {
+      alert("Something went wrong. Please try again.");
+    });
+  });
+});
+</script>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW82KZXX61"></script>
@@ -531,8 +553,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   <div>      
 <form
+  id="contact-form"
   class="w-full"
   action="https://docs.google.com/forms/d/e/1FAIpQLSeh6pg2mlnc-YxqAt0KeR-2_QQvMEV-pwgW_t8V7ZfuxfybBQ/formResponse"
+  method="POST"
 >
   <div class="form-field">
     <label for="name">Name</label>

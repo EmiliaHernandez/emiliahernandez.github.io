@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Design & Development | Emilia Hernandez</title>
+    <meta property="og:title" content="Emilia Hernandez: Web Designer and Developer" />
+<meta property="og:description" content="Oregon-based web designer specializing in UX-driven websites, campaign launches, and front-end development for startups, nonprofits, and growing businesses." />
+<meta name="description" content="Oregon-based web designer specializing in UX-driven websites, campaign launches, and front-end development for startups, nonprofits, and growing businesses.">
+<meta property="og:type" content="website" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Sansita+One&display=swap"
+  rel="stylesheet"
+/>
+    <link rel="stylesheet" href="../build/css/style.css">
+    <link href="../src/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/x-icon" href="/build/img/favicon_io/favicon-32x32.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+ <script type="module" src="../build/js/home.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const fadeElements = document.querySelectorAll(".fade-in");
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target); // animate once
+        }
+      });
+    },
+    {
+      threshold: 0.15, // 15% visible before triggering
+    }
+  );
+
+  fadeElements.forEach(el => observer.observe(el));
+});
+</script>
+
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MW82KZXX61"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MW82KZXX61');
+</script>
+<body class="min-h-screen bg-cream ">
+  <header class="bg-cream sticky top-0 z-10 homepage">
+  <div class="navbar mx-auto text-darkness flex justify-between items-center">
+
+    <!-- LEFT: Site Name -->
+    <a href="/" class="text-xl font-sansita">
+      Emilia Hernandez
+    </a>
+
+    <!-- RIGHT: Mobile Menu -->
+    <div class="hide-larger-than-tab">
+      <div class="dropdown dropdown-end">
+        <button aria-label="Main Menu" class="btn btn-ghost">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+          </svg>
+        </button>
+
+        <ul class="menu dropdown-content mt-3 p-3 shadow bg-eggy rounded-box w-52">
+          <li><a href="/#hero">About</a></li>
+          <li><a href="/#services">Services</a></li>
+          <li><a href="/#projects">Projects</a></li>
+                    <li><a class="pl-5" href="../projects/pegasus-palooza/"> > Pegasus Palooza</a></li>
+          
+          <li><a class="pl-5" href="../projects/EverAg/"> > Ever.Ag</a></li>
+          
+          <li><a class="pl-5" href="../projects/echo/"> > ECHO</a></li>
+          <li><a href="/#testimonials">Testimonials</a></li>
+          <li><a href="/#skills">Skills</a></li>
+          <li><a href="/#experience">Experience</a></li>
+          <li><a href="/#contact">Contact Me</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- RIGHT: Desktop Menu -->
+    <nav class="hide-smaller-than-tab items-center gap-6">
+      <a class="menu-item" href="/#hero">About</a>
+      <a class="menu-item" href="/#services">Services</a>
+          <div class="dropdown dropdown-hover menu-item">
+            <div tabindex="0" role="button"><a href="/#projects">Projects</a></div>
+            <ul tabindex="0" class="dropdown-content menu text-black bg-blue rounded-box w-52 z-[40] p-2 shadow">
+                 <li><a href="../projects/pegasus-palooza/">Pegasus Palooza</a></li>
+          
+          <li><a href="../projects/EverAg/">Ever.Ag</a></li>
+          
+          <li><a href="../projects/echo/">ECHO</a></li>
+            </ul>
+          </div>
+      <a class="menu-item" href="/#testimonials">Testimonials</a>
+      <a class="menu-item" href="/#skills">Skills</a>
+      <a class="menu-item" href="/#experience">Experience</a>
+      <a  href="/#contact" class="button-main">Work With Me</a>
+    </nav>
+
+  </div>
+</header>
+        <main class="mx-auto bg-cream">
+        <section id="hero" class="z-30 m-auto fade-in">
+            <div class="items-center text-slate-50 justify-center w-eighty mx-auto grid grid-cols-12 gap-6 ">        
+              <div class=" col-span-12 sm:col-span-7 gap-4 m-auto text-darkness hero-content">
+                <div class="hero-text-container">
+                  <p class="skinny-heading">THANK YOU</p>
+                </h2>
+                    <h1 class="section-heading">I will be in touch with you shortly about your inquiry </h1>
+              </div>
+<a class="button-main" href="/"><button>Return Home</button></a>
+                </div>
+              <div class="content-center  col-span-12 sm:col-span-5 mobile-hide">
+                    <img alt="gif of me on the computer" class=" mx-auto rounded mb-5" src="../build/img/AboutMeAnimation-Emilia Hernandez.gif">
+</div>
+                
+            </div>
+          </section>
+
+
+
+
+    </main>
+   
+</body>
+
+</html>
