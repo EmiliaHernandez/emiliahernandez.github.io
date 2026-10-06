@@ -8,7 +8,7 @@
     <meta property="og:description" content="Color-pencil style digital illustrations of the Lucky Little Darlings, characters created by Emilia Hernandez." />
     <meta name="description" content="Color-pencil style digital illustrations of the Lucky Little Darlings, characters created by Emilia Hernandez.">
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="/build/img/art/EmiliaHernandez_PonchoDarling_Quilt.png" />
+    <meta property="og:image" content="/build/img/Art/EmiliaHernandez_PonchoDarling_Quilt.png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Sansita+One&display=swap"
       rel="stylesheet"
@@ -23,7 +23,7 @@
     <!-- Art page layout. Uses plain CSS (not Tailwind utilities) so it works even if
          these classes were never compiled into /src/output.css -->
     <style>
-      .art-hero-img {
+      .Art-hero-img {
         display: block;
         width: 100%;
         max-width: 560px;
@@ -31,10 +31,10 @@
         margin: 0 auto;
       }
 
-      .art-gallery-intro { margin-bottom: 2rem; }
+      .Art-gallery-intro { margin-bottom: 2rem; }
 
       /* Mobile: 1 column */
-      .art-gallery {
+      .Art-gallery {
         display: grid;
         grid-template-columns: 1fr;
         gap: 1.5rem;
@@ -42,29 +42,29 @@
 
       /* Tablet: 2 columns x 3 rows */
       @media (min-width: 640px) {
-        .art-gallery { grid-template-columns: repeat(2, 1fr); }
+        .Art-gallery { grid-template-columns: repeat(2, 1fr); }
       }
 
       /* Desktop: 3 columns x 2 rows */
       @media (min-width: 1024px) {
-        .art-gallery { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+        .Art-gallery { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
       }
 
-      .art-piece {
+      .Art-piece {
         margin: 0;
         overflow: hidden;
         border-radius: 0.5rem;
         aspect-ratio: 1 / 1;
       }
 
-      .art-piece img {
+      .Art-piece img {
         display: block;
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
 
-      .art-contact-img {
+      .Art-contact-img {
         display: block;
         width: 100%;
         max-width: 480px;
@@ -72,11 +72,11 @@
         margin: 0 auto;
       }
 
-      .art-contact-grid { align-items: center; }
+      .Art-contact-grid { align-items: center; }
 
-      .art-hero-grid { align-items: center; }
+      .Art-hero-grid { align-items: center; }
 
-      .art-gallery-section { padding-bottom: 4rem; }
+      .Art-gallery-section { padding-bottom: 4rem; }
 
       @media (prefers-reduced-motion: reduce) {
         .fade-in { transition: none !important; }
@@ -213,7 +213,7 @@
 
     <!--HERO / INTRO-->
     <section id="overview" class="z-30 m-auto">
-      <div class="text-slate-50 w-eighty mx-auto grid grid-cols-12 gap-8 art-hero-grid">
+      <div class="text-slate-50 w-eighty mx-auto grid grid-cols-12 gap-8 Art-hero-grid">
 
         <!-- Text column -->
         <div class="col-span-12 sm:col-span-6 gap-4 text-darkness hero-content">
@@ -232,9 +232,9 @@
         <!-- Image column -->
         <div class="content-center col-span-12 sm:col-span-6">
           <img
-            src="/build/img/art/EmiliaHernandez_PonchoDarling_Quilt.png"
+            src="/build/img/Art/EmiliaHernandez_PonchoDarling_Quilt.png"
             alt="Poncho Darling, one of the Lucky Little Darlings, wrapped in a patchwork quilt. Color-pencil style digital illustration."
-            class="art-hero-img"
+            class="Art-hero-img"
           />
         </div>
 
@@ -244,61 +244,61 @@
     <div class="cute-border"></div>
 
     <!--GALLERY-->
-    <section id="gallery" class="z-30 m-auto art-gallery-section fade-in">
+    <section id="gallery" class="z-30 m-auto Art-gallery-section fade-in">
       <div class="w-eighty mx-auto">
-        <div class="art-gallery-intro text-darkness">
+        <div class="Art-gallery-intro text-darkness">
           <h2 class="section-heading">Gallery</h2>
         </div>
 
-        <div class="art-gallery">
+        <div class="Art-gallery">
          
-          <figure class="art-piece">
+          <figure class="Art-piece">
             <img
-              src="/build/img/art/EmiliaHernandez_PonchoDarling_wave.png"
+              src="/build/img/Art/EmiliaHernandez_PonchoDarling_wave.png"
               alt="Character drawing of gizmo and leonessa waving"
               loading="lazy"
               width="1000" height="1000"
             />
           </figure>
 
-          <figure class="art-piece">
+          <figure class="Art-piece">
             <img
-              src="/build/img/art/EmiliaHernandez_PonchDarling_Flowers.png"
+              src="/build/img/Art/EmiliaHernandez_PonchDarling_Flowers.png"
               alt="Poncho Darling surrounded by flowers. Color-pencil style digital illustration."
               loading="lazy"
               width="1000" height="1000"
             />
           </figure>
 
-          <figure class="art-piece">
+          <figure class="Art-piece">
             <img
-              src="/build/img/art/EmiliaHernandez_PonchoDarling_Ladybug.png"
+              src="/build/img/Art/EmiliaHernandez_PonchoDarling_Ladybug.png"
               alt="Poncho Darling with a ladybug. Color-pencil style digital illustration."
               loading="lazy"
               width="1000" height="1000"
             />
           </figure>
- <figure class="art-piece">
+ <figure class="Art-piece">
             <img
-              src="/build/img/art/EmiliaHernandez_PonchoDarling_Baloon.png"
+              src="/build/img/Art/EmiliaHernandez_PonchoDarling_Baloon.png"
               alt="Poncho Darling holding a balloon. Color-pencil style digital illustration."
               loading="lazy"
               width="1000" height="1000"
             />
           </figure>
 
-          <figure class="art-piece">
+          <figure class="Art-piece">
             <img
-              src="/build/img/art/EmiliaHernandez_PonchoDarling_strawberry.png"
+              src="/build/img/Art/EmiliaHernandez_PonchoDarling_strawberry.png"
               alt="Poncho Darling with a strawberry. Color-pencil style digital illustration."
               loading="lazy"
               width="1000" height="1000"
             />
           </figure>
 
-          <figure class="art-piece">
+          <figure class="Art-piece">
             <img
-              src="/build/img/art/EmiliaHernandez_PonchoDarling_Book.png"
+              src="/build/img/Art/EmiliaHernandez_PonchoDarling_Book.png"
               alt="Poncho Darling reading a book. Color-pencil style digital illustration."
               loading="lazy"
               width="1000" height="1000"
@@ -310,7 +310,7 @@
 
     <!--CONTACT-->
     <section id="contact" class="bg-darkness mx-auto fade-in">
-      <div class="w-eighty mx-auto grid grid-cols-12 gap-8 art-contact-grid">
+      <div class="w-eighty mx-auto grid grid-cols-12 gap-8 Art-contact-grid">
 
         <!-- Form column -->
         <div class="col-span-12 sm:col-span-6">
@@ -378,9 +378,9 @@
         <!-- Image column -->
         <div class="col-span-12 sm:col-span-6 content-center">
           <img
-            src="/build/img/art/EmiliaHernandez_PonchoDarling_Character.png"
+            src="/build/img/Art/EmiliaHernandez_PonchoDarling_Character.png"
             alt="Character sheet for the Lucky Little Darlings. Color-pencil style digital illustration."
-            class="art-contact-img"
+            class="Art-contact-img"
             loading="lazy"
           />
         </div>
