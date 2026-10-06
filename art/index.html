@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art | Illustration by Emilia Hernandez</title>
+    <meta property="og:title" content="Art | Illustration by Emilia Hernandez" />
+    <meta property="og:description" content="Color-pencil style digital illustrations of the Lucky Little Darlings, characters created by Emilia Hernandez." />
+    <meta name="description" content="Color-pencil style digital illustrations of the Lucky Little Darlings, characters created by Emilia Hernandez.">
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/build/img/art/EmiliaHernandez_PonchoDarling_Quilt.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sansita+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/build/css/style.css">
+    <link href="/src/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/x-icon" href="/build/img/favicon_io/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Art page layout. Uses plain CSS (not Tailwind utilities) so it works even if
+         these classes were never compiled into /src/output.css -->
+    <style>
+      .art-hero-img {
+        display: block;
+        width: 100%;
+        max-width: 560px;
+        height: auto;
+        margin: 0 auto;
+      }
+
+      .art-gallery-intro { margin-bottom: 2rem; }
+
+      /* Mobile: 1 column */
+      .art-gallery {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      /* Tablet: 2 columns x 3 rows */
+      @media (min-width: 640px) {
+        .art-gallery { grid-template-columns: repeat(2, 1fr); }
+      }
+
+      /* Desktop: 3 columns x 2 rows */
+      @media (min-width: 1024px) {
+        .art-gallery { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+      }
+
+      .art-piece {
+        margin: 0;
+        overflow: hidden;
+        border-radius: 0.5rem;
+        aspect-ratio: 1 / 1;
+      }
+
+      .art-piece img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .art-contact-img {
+        display: block;
+        width: 100%;
+        max-width: 480px;
+        height: auto;
+        margin: 0 auto;
+      }
+
+      .art-contact-grid { align-items: center; }
+
+      .art-hero-grid { align-items: center; }
+
+      .art-gallery-section { padding-bottom: 4rem; }
+
+      @media (prefers-reduced-motion: reduce) {
+        .fade-in { transition: none !important; }
+      }
+    </style>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const fadeElements = document.querySelectorAll(".fade-in");
+
+        const observer = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target); // animate once
+              }
+            });
+          },
+          { threshold: 0.15 }
+        );
+
+        fadeElements.forEach(el => observer.observe(el));
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("contact-form");
+
+        if (!form) return; // safety guard
+
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+
+          const data = new FormData(form);
+
+          fetch(form.action, {
+            method: "POST",
+            body: data,
+            mode: "no-cors"
+          }).then(() => {
+            window.location.href = "/thank-you/";
+          }).catch(() => {
+            alert("Something went wrong. Please try again.");
+          });
+        });
+      });
+    </script>
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MW82KZXX61"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MW82KZXX61');
+</script>
+
+<body class="min-h-screen bg-cream project-page">
+  <header class="bg-cream sticky top-0 z-10">
+    <div class="navbar mx-auto text-darkness flex justify-between items-center">
+
+      <!-- LEFT: Site Name -->
+      <a href="/" class="text-xl font-sansita">
+        Emilia Hernandez
+      </a>
+
+      <!-- RIGHT: Mobile Menu -->
+      <div class="hide-larger-than-tab">
+        <div class="dropdown dropdown-end">
+          <button aria-label="Main Menu" class="btn btn-ghost">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </button>
+
+          <ul class="menu dropdown-content mt-3 p-3 shadow bg-eggy rounded-box w-52">
+            <li><a href="/#hero">About</a></li>
+            <li><a href="/#services">Services</a></li>
+            <li><a href="/#projects">Projects</a></li>
+            <li><a class="pl-5" href="/projects/pegasus-palooza/"> > Pegasus Palooza</a></li>
+            <li><a class="pl-5" href="/projects/EverAg/"> > Ever.Ag</a></li>
+            <li><a class="pl-5" href="/projects/echo/"> > ECHO</a></li>
+            <li><a href="/art/">Art</a></li>
+            <li><a href="/#testimonials">Testimonials</a></li>
+            <li><a href="/#skills">Skills</a></li>
+            <li><a href="/#experience">Experience</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- RIGHT: Desktop Menu -->
+      <nav class="hide-smaller-than-tab items-center gap-6">
+        <a class="menu-item" href="/#hero">About</a>
+        <a class="menu-item" href="/#services">Services</a>
+        <div class="dropdown dropdown-hover menu-item">
+          <div tabindex="0" role="button"><a href="/#projects">Projects</a></div>
+          <ul tabindex="0" class="dropdown-content menu text-black bg-blue rounded-box w-52 z-[40] p-2 shadow">
+            <li><a href="/projects/pegasus-palooza/">Pegasus Palooza</a></li>
+            <li><a href="/projects/EverAg/">Ever.Ag</a></li>
+            <li><a href="/projects/echo/">ECHO</a></li>
+          </ul>
+        </div>
+        <a class="menu-item" href="/art/">Art</a>
+        <a class="menu-item" href="/#testimonials">Testimonials</a>
+        <a class="menu-item" href="/#skills">Skills</a>
+        <a class="menu-item" href="/#experience">Experience</a>
+        <a href="#contact" class="button-main">Say Hello</a>
+      </nav>
+
+    </div>
+
+    <!-- Secondary page nav -->
+    <div class="project-navbar text-darkness bg-eggy mobile-hide">
+      <div class="menu-item">
+        <div tabindex="0" role="button" class="m-3"><a href="#overview">Hello</a></div>
+      </div>
+      <div class="menu-item">
+        <div tabindex="0" role="button" class="m-3"><a href="#gallery">Gallery</a></div>
+      </div>
+      <div class="menu-item">
+        <div tabindex="0" role="button" class="m-3"><a href="#contact">Contact</a></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="mx-auto bg-cream">
+
+    <!--HERO / INTRO-->
+    <section id="overview" class="z-30 m-auto">
+      <div class="text-slate-50 w-eighty mx-auto grid grid-cols-12 gap-8 art-hero-grid">
+
+        <!-- Text column -->
+        <div class="col-span-12 sm:col-span-6 gap-4 text-darkness hero-content">
+          <div class="hero-text-container">
+            <p class="skinny-heading">ILLUSTRATION</p>
+            <h1 class="section-heading">Meet PonchoDarling</h1>
+          </div>
+          <div class="hero-bullets-container">
+            <p class="max-width hero-bullets">
+              Aside from being Emilia Hernandez, the web designer, I also go by <a class="underline" href="https://instagram.com/poncho.darling" target="_blank" rel="noopener noreferrer">PonchoDarling</a> on most art pieces that I publish online. I create digital illustrations with a color-pencil style, and normally enjoy drawing whimsical characters. Scroll down to see some of my work featuring the "Lucky Little Darlings", an ensemble of my own creation.</p>
+         
+            <a href="#gallery" class="button-main">See the gallery</a>
+          </div>
+        </div>
+
+        <!-- Image column -->
+        <div class="content-center col-span-12 sm:col-span-6">
+          <img
+            src="/build/img/art/EmiliaHernandez_PonchoDarling_Quilt.png"
+            alt="Poncho Darling, one of the Lucky Little Darlings, wrapped in a patchwork quilt. Color-pencil style digital illustration."
+            class="art-hero-img"
+          />
+        </div>
+
+      </div>
+    </section>
+
+    <div class="cute-border"></div>
+
+    <!--GALLERY-->
+    <section id="gallery" class="z-30 m-auto art-gallery-section fade-in">
+      <div class="w-eighty mx-auto">
+        <div class="art-gallery-intro text-darkness">
+          <h2 class="section-heading">Gallery</h2>
+        </div>
+
+        <div class="art-gallery">
+         
+          <figure class="art-piece">
+            <img
+              src="/build/img/art/EmiliaHernandez_PonchoDarling_wave.png"
+              alt="Character drawing of gizmo and leonessa waving"
+              loading="lazy"
+              width="1000" height="1000"
+            />
+          </figure>
+
+          <figure class="art-piece">
+            <img
+              src="/build/img/art/EmiliaHernandez_PonchDarling_Flowers.png"
+              alt="Poncho Darling surrounded by flowers. Color-pencil style digital illustration."
+              loading="lazy"
+              width="1000" height="1000"
+            />
+          </figure>
+
+          <figure class="art-piece">
+            <img
+              src="/build/img/art/EmiliaHernandez_PonchoDarling_Ladybug.png"
+              alt="Poncho Darling with a ladybug. Color-pencil style digital illustration."
+              loading="lazy"
+              width="1000" height="1000"
+            />
+          </figure>
+ <figure class="art-piece">
+            <img
+              src="/build/img/art/EmiliaHernandez_PonchoDarling_Baloon.png"
+              alt="Poncho Darling holding a balloon. Color-pencil style digital illustration."
+              loading="lazy"
+              width="1000" height="1000"
+            />
+          </figure>
+
+          <figure class="art-piece">
+            <img
+              src="/build/img/art/EmiliaHernandez_PonchoDarling_strawberry.png"
+              alt="Poncho Darling with a strawberry. Color-pencil style digital illustration."
+              loading="lazy"
+              width="1000" height="1000"
+            />
+          </figure>
+
+          <figure class="art-piece">
+            <img
+              src="/build/img/art/EmiliaHernandez_PonchoDarling_Book.png"
+              alt="Poncho Darling reading a book. Color-pencil style digital illustration."
+              loading="lazy"
+              width="1000" height="1000"
+            />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!--CONTACT-->
+    <section id="contact" class="bg-darkness mx-auto fade-in">
+      <div class="w-eighty mx-auto grid grid-cols-12 gap-8 art-contact-grid">
+
+        <!-- Form column -->
+        <div class="col-span-12 sm:col-span-6">
+          <h2 class="section-heading text-cream pb-4">Let's Connect</h2>
+          <p class="text-cream pb-10">
+            Want to know more about me or my art? Send me a note.
+          </p>
+
+          <form
+            id="contact-form"
+            class="w-full"
+            action="https://docs.google.com/forms/d/e/1FAIpQLSeh6pg2mlnc-YxqAt0KeR-2_QQvMEV-pwgW_t8V7ZfuxfybBQ/formResponse"
+            method="POST"
+          >
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input
+                id="name"
+                class="w-full"
+                type="text"
+                name="entry.2005620554"
+                placeholder="Full Name"
+              >
+            </div>
+
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input
+                id="email"
+                class="w-full"
+                type="email"
+                name="entry.1045781291"
+                placeholder="Email@email.com"
+              >
+            </div>
+
+            <div class="form-field">
+              <label for="phone">Phone</label>
+              <input
+                id="phone"
+                class="w-full"
+                type="tel"
+                name="entry.1166974658"
+                placeholder="000-000-0000"
+              >
+            </div>
+
+            <div class="form-field">
+              <label for="project-info">Message</label>
+              <input
+                id="project-info"
+                class="w-full"
+                type="text"
+                name="entry.839337160"
+                placeholder="Write your message"
+              >
+            </div>
+
+            <button type="submit" class="button-main mt-6">
+              Submit Form
+            </button>
+          </form>
+        </div>
+
+        <!-- Image column -->
+        <div class="col-span-12 sm:col-span-6 content-center">
+          <img
+            src="/build/img/art/EmiliaHernandez_PonchoDarling_Character.png"
+            alt="Character sheet for the Lucky Little Darlings. Color-pencil style digital illustration."
+            class="art-contact-img"
+            loading="lazy"
+          />
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="navbar text-darkness mx-auto pt-5 pb-5">
+      <div class="footer-start mobile-hide">
+        <a class="text-xl font-sansita" href="/">Emilia Hernandez</a>
+      </div>
+
+      <div class="footer-end grid grid-cols-2 sm:grid-cols-4 mx-auto">
+        <div class="menu-item">
+          <div tabindex="0" role="button" class="m-3"><a href="/#hero">About</a></div>
+        </div>
+        <div class="menu-item">
+          <div tabindex="0" role="button" class="m-3"><a href="/#services">Services</a></div>
+        </div>
+        <div class="menu-item">
+          <div tabindex="0" role="button" class="m-3"><a href="/#projects">Projects</a></div>
+        </div>
+        <div class="menu-item">
+          <div tabindex="0" role="button" class="m-3"><a href="/art/">Art</a></div>
+        </div>
+        <div class="menu-item">
+          <div tabindex="0" role="button" class="m-3"><a href="/#testimonials">Testimonials</a></div>
+        </div>
+        <div class="menu-item">
+          <div tabindex="0" role="button" class="m-3"><a href="/#skills">Skills</a></div>
+        </div>
+        <div class="menu-item">
+          <div tabindex="0" role="button" class="m-3"><a href="/#experience">Experience</a></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
